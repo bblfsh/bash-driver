@@ -1,34 +1,44 @@
 package bblfsh.bash;
 
 import com.ansorgit.plugins.bash.lang.BashVersion;
+import com.ansorgit.plugins.bash.lang.lexer.BashElementType;
 import com.ansorgit.plugins.bash.lang.lexer.BashLexer;
+import com.ansorgit.plugins.bash.lang.parser.BashParser;
 import com.ansorgit.plugins.bash.lang.parser.BashParserDefinition;
 import com.ansorgit.plugins.bash.lang.parser.BashPsiBuilder;
 import com.ansorgit.plugins.bash.lang.parser.FileParsing;
 import com.intellij.core.CoreApplicationEnvironment;
 import com.intellij.core.CoreProjectEnvironment;
 import com.intellij.lang.ASTNode;
+import com.intellij.lang.ParserDefinition;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.impl.PsiBuilderFactoryImpl;
 import com.intellij.mock.MockProject;
 import com.intellij.openapi.Disposable;
+import com.intellij.psi.tree.IElementType;
+import com.intellij.openapi.extensions.ExtensionsArea;
+import com.intellij.lang.MetaLanguage;
+
+import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang.StringUtils;
+
+import java.util.Properties;
 
 public class ParserDemo {
     public static ASTNode run(CharSequence code, BashVersion version) {
-        BashPsiBuilder b = builder(code, version);
-        FileParsing fp = new FileParsing();
+        MockProject project = project();
+        BashParser parser = new BashParser(project, version);
+        ParserDefinition parserDefinition = new BashParserDefinition();
 
-        fp.parseFile(b);
+        PsiBuilder builder = builder(parserDefinition, code);
+        IElementType root = parserDefinition.getFileNodeType();
 
-        System.out.println(b.getOriginalText());
-        System.out.flush();
-
-        return b.getTreeBuilt();
+        return parser.parse(root, builder);
     }
 
-    private static BashPsiBuilder builder(CharSequence code, BashVersion version) {
-        com.intellij.openapi.extensions.ExtensionsArea rootArea = com.intellij.openapi.extensions.Extensions.getRootArea();
-        CoreApplicationEnvironment.registerExtensionPoint(rootArea, com.intellij.lang.MetaLanguage.EP_NAME, com.intellij.lang.MetaLanguage.class);
+    private static MockProject project() {
+        ExtensionsArea rootArea = Extensions.getRootArea();
+        CoreApplicationEnvironment.registerExtensionPoint(rootArea, MetaLanguage.EP_NAME, MetaLanguage.class);
 
         CoreApplicationEnvironment appEnv = new CoreApplicationEnvironment(new Disposable() {
             @Override
@@ -41,12 +51,14 @@ public class ParserDemo {
             }
         }, appEnv);
 
-        MockProject project = environment.getProject();
-        PsiBuilder builder = new PsiBuilderFactoryImpl().createBuilder(
-                new BashParserDefinition(),
+        return environment.getProject();
+    }
+
+    private static PsiBuilder builder(ParserDefinition parserDefinition, CharSequence code) {
+        return new PsiBuilderFactoryImpl().createBuilder(
+                parserDefinition,
                 new BashLexer(),
                 code
         );
-        return new BashPsiBuilder(project, builder, version);
     }
 }
