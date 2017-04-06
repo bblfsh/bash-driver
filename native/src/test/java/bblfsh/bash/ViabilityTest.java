@@ -8,9 +8,9 @@ import static org.junit.Assert.assertNotNull;
 public class ViabilityTest {
     @Test
     public void canParse() {
-        String code = "#!/bin/bash\na=3; echo ${a}";
-        BashVersion version = BashVersion.Bash_v4;
-        ASTNode root = ParserDemo.run(code, version);
+        final String code = "#!/bin/bash\na=3; echo ${a}";
+        final BashVersion version = BashVersion.Bash_v4;
+        final ASTNode root = BashParser.run(code, version);
         assertNotNull(root);
     }
 }
