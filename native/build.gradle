@@ -13,5 +13,5 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile 'com.github.jansorg:BashSupport:idea-171.x-SNAPSHOT'
-    compile fileTree(dir: '/home/alberto/opt/idea-IC-171.3780.107/lib', include: ['*.jar'])
+    compile fileTree(dir: 'vendor/idea-IC-171.3780.107/lib', include: ['*.jar'])
 }
