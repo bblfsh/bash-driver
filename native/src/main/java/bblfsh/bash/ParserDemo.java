@@ -1,4 +1,4 @@
-package tech.sourced;
+package bblfsh.bash;
 
 import com.ansorgit.plugins.bash.lang.BashVersion;
 import com.ansorgit.plugins.bash.lang.lexer.BashLexer;
@@ -14,7 +14,7 @@ import com.intellij.mock.MockProject;
 import com.intellij.openapi.Disposable;
 
 public class ParserDemo {
-    public static void run(CharSequence code, BashVersion version) {
+    public static ASTNode run(CharSequence code, BashVersion version) {
         BashPsiBuilder b = builder(code, version);
         FileParsing fp = new FileParsing();
 
@@ -23,9 +23,7 @@ public class ParserDemo {
         System.out.println(b.getOriginalText());
         System.out.flush();
 
-        ASTNode root = b.getTreeBuilt();
-        report(root);
-        System.out.flush();
+        return b.getTreeBuilt();
     }
 
     private static BashPsiBuilder builder(CharSequence code, BashVersion version) {
@@ -50,9 +48,5 @@ public class ParserDemo {
                 code
         );
         return new BashPsiBuilder(project, builder, version);
-    }
-
-    private static void report(ASTNode root) {
-        System.out.println(root);
     }
 }

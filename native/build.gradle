@@ -1,10 +1,7 @@
-group 'tech.sourced'
+group 'bblfsh'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-apply plugin: 'application'
-
-mainClassName = "tech.sourced.Main"
 
 sourceCompatibility = 1.8
 
