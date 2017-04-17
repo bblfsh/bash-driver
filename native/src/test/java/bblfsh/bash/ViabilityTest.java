@@ -10,7 +10,7 @@ public class ViabilityTest {
     public void canParse() {
         final String code = "#!/bin/bash\na=3; echo ${a}";
         final BashVersion version = BashVersion.Bash_v4;
-        final ASTNode root = BashParser.run(code, version);
+        final ASTNode root = Parser.run(code, version);
         assertNotNull(root);
     }
 }
