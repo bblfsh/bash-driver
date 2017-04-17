@@ -3,6 +3,7 @@ package bblfsh.bash;
 import com.ansorgit.plugins.bash.lang.BashVersion;
 import com.ansorgit.plugins.bash.lang.lexer.BashElementType;
 import com.ansorgit.plugins.bash.lang.lexer.BashLexer;
+import com.ansorgit.plugins.bash.lang.parser.BashParser;
 import com.ansorgit.plugins.bash.lang.parser.BashParserDefinition;
 import com.ansorgit.plugins.bash.lang.parser.BashPsiBuilder;
 import com.ansorgit.plugins.bash.lang.parser.FileParsing;
@@ -19,11 +20,10 @@ import com.intellij.openapi.extensions.ExtensionsArea;
 import com.intellij.openapi.extensions.Extensions;
 import com.intellij.lang.MetaLanguage;
 
-public class BashParser {
+public class Parser {
     public static ASTNode run(final CharSequence code, final BashVersion version) {
         final MockProject project = project();
-        final com.ansorgit.plugins.bash.lang.parser.BashParser parser =
-                new com.ansorgit.plugins.bash.lang.parser.BashParser(project, version);
+        final BashParser parser = new BashParser(project, version);
         final ParserDefinition parserDefinition = new BashParserDefinition();
 
         final PsiBuilder builder = builder(parserDefinition, code);
