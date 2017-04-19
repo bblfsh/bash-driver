@@ -7,6 +7,7 @@ import com.ansorgit.plugins.bash.lang.parser.BashParser;
 import com.ansorgit.plugins.bash.lang.parser.BashParserDefinition;
 import com.ansorgit.plugins.bash.lang.parser.BashPsiBuilder;
 import com.ansorgit.plugins.bash.lang.parser.FileParsing;
+import com.ansorgit.plugins.bash.lang.parser.BashParser;
 import com.intellij.core.CoreApplicationEnvironment;
 import com.intellij.core.CoreProjectEnvironment;
 import com.intellij.lang.ASTNode;
@@ -21,9 +22,9 @@ import com.intellij.openapi.extensions.Extensions;
 import com.intellij.lang.MetaLanguage;
 
 public class Parser {
-    public static ASTNode run(final CharSequence code, final BashVersion version) {
+    public static ASTNode parse(final CharSequence code) {
         final MockProject project = project();
-        final BashParser parser = new BashParser(project, version);
+        final BashParser parser = new BashParser(project, BashVersion.Bash_v4);
         final ParserDefinition parserDefinition = new BashParserDefinition();
 
         final PsiBuilder builder = builder(parserDefinition, code);
@@ -34,7 +35,8 @@ public class Parser {
 
     private static MockProject project() {
         final ExtensionsArea rootArea = Extensions.getRootArea();
-        CoreApplicationEnvironment.registerExtensionPoint(rootArea, MetaLanguage.EP_NAME, MetaLanguage.class);
+        CoreApplicationEnvironment.registerExtensionPoint(
+                rootArea, MetaLanguage.EP_NAME, MetaLanguage.class);
 
         final CoreApplicationEnvironment appEnv = new CoreApplicationEnvironment(new Disposable() {
             @Override
