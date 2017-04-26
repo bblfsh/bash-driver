@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import static org.fest.assertions.Assertions.*;
 
 public class RequestReaderTest {
@@ -19,7 +20,8 @@ public class RequestReaderTest {
         final String input = "{\"content\":\"" + content1 +
             "\"}\n{\"content\":\"" + content2 + "\"}\n";
         final InputStream in = new ByteArrayInputStream(input.getBytes());
-        final RequestReader reader = new RequestReader(in);
+        final ObjectMapper mapper = Registry.objectMapper();
+        final RequestReader reader = new RequestReader(in, mapper);
 
         Request request = reader.read();
         Request expected = new Request();
@@ -38,7 +40,8 @@ public class RequestReaderTest {
     public void oneMalformedOnValid() throws IOException {
         final String input = "foo\n{\"content\":\"" + content1 + "\"}\n";
         final InputStream in = new ByteArrayInputStream(input.getBytes());
-        final RequestReader reader = new RequestReader(in);
+        final ObjectMapper mapper = Registry.objectMapper();
+        final RequestReader reader = new RequestReader(in, mapper);
 
         boolean thrown = false;
         try {
@@ -63,7 +66,8 @@ public class RequestReaderTest {
                 throw new IOException("closed");
             }
         };
-        final RequestReader reader = new RequestReader(in);
+        final ObjectMapper mapper = Registry.objectMapper();
+        final RequestReader reader = new RequestReader(in, mapper);
 
         boolean thrown = false;
         try {

@@ -1,21 +1,22 @@
 package bblfsh.bash;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
+import static org.fest.assertions.Assertions.assertThat;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-import static org.fest.assertions.Assertions.assertThat;
-
 public class ResponseWriterTest {
 
     @Test
     public void error() throws IOException {
         final ByteArrayOutputStream out = new ByteArrayOutputStream();
-        final ResponseWriter writer = new ResponseWriter(out);
+        final ObjectMapper mapper = Registry.objectMapper();
+        final ResponseWriter writer = new ResponseWriter(out, mapper);
 
         Response response;
 
@@ -32,20 +33,29 @@ public class ResponseWriterTest {
 
     @Test
     public void valid() throws IOException {
-        final ByteArrayOutputStream out = new ByteArrayOutputStream();
-        final ResponseWriter writer = new ResponseWriter(out);
-        final Parser parser = new Parser();
-        Response response;
+        final String inputPath = "/helloWorld.bash";
+        final String expectedPath = "/helloWorld.expected";
 
         final String source = IOUtils.toString(
-                getClass().getResourceAsStream("/helloWorld.bash"),
+                getClass().getResourceAsStream(inputPath),
+                StandardCharsets.UTF_8);
+        final String expected = IOUtils.toString(
+                getClass().getResourceAsStream(expectedPath),
                 StandardCharsets.UTF_8);
 
-        response = new Response();
+        final ByteArrayOutputStream out = new ByteArrayOutputStream();
+        final ObjectMapper mapper = Registry.objectMapper();
+        final ResponseWriter writer = new ResponseWriter(out, mapper);
+        final Parser parser = new Parser();
+
+        Response response = new Response();
         response.status = "ok";
         response.ast = parser.parse(source);
+
         writer.write(response);
-        //TODO: check output
+
+        final String obtained = out.toString(StandardCharsets.UTF_8.name());
+        assertThat(obtained).isEqualTo(expected);
     }
 
 }

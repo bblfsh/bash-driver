@@ -1,10 +1,13 @@
 package bblfsh.bash;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class Main {
 
     public static void main(String args[]) {
-        final RequestReader reader = new RequestReader(System.in);
-        final ResponseWriter writer = new ResponseWriter(System.out);
+        final ObjectMapper mapper = Registry.objectMapper();
+        final RequestReader reader = new RequestReader(System.in, mapper);
+        final ResponseWriter writer = new ResponseWriter(System.out, mapper);
         final Driver driver = new Driver(reader, writer);
 
         try {
@@ -15,4 +18,5 @@ public class Main {
             System.exit(1);
         }
     }
+
 }
