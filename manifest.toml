@@ -1,0 +1,12 @@
+language = "bash"
+status = "planning"
+
+[documentation]
+description  = """
+bash driver for [babelfish](https://github.com/bblfsh/server).
+"""
+
+[runtime]
+os = "alpine"
+go_version = "1.8"
+native_version = ["8.121.13-r0"]

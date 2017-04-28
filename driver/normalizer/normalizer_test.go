@@ -2,7 +2,6 @@ package normalizer
 
 import (
 	"encoding/json"
-	"fmt"
 	"os"
 	"path/filepath"
 	"testing"
@@ -19,7 +18,7 @@ func TestNativeToNoder(t *testing.T) {
 	n, err := NativeToNoder.ToNode(f)
 	require.NoError(err)
 	require.NotNil(n)
-	fmt.Println("NODE", n)
+	//fmt.Println("NODE", n)
 	// check n
 }
 
