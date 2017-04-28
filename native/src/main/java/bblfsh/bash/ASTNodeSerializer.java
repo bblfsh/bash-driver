@@ -35,6 +35,9 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
         final int length = root.getTextLength();
         jG.writeNumberField("textLength", length);
 
+        final String text = root.getText();
+        jG.writeStringField("text", text);
+
         jG.writeFieldName("children");
         jG.writeStartArray();
         final TokenSet filter = null;
