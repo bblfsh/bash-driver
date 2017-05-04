@@ -11,4 +11,5 @@ var NativeToNoder = &uast.BaseToNoder{
 	InternalTypeKey:    "type",
 	OffsetKey:          "startOffset",
 	TopLevelIsRootNode: true,
+	TokenKeys:          map[string]bool{"text": true},
 }

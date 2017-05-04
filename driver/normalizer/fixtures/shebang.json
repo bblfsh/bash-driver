@@ -1,0 +1,23 @@
+{
+   "children" : [
+      {
+         "text" : "#!/bin/bash\n",
+         "textLength" : 12,
+         "startOffset" : 0,
+         "elementType" : "[Bash] shebang element",
+         "children" : [
+            {
+               "children" : [],
+               "text" : "#!/bin/bash\n",
+               "textLength" : 12,
+               "startOffset" : 0,
+               "elementType" : "[Bash] Shebang"
+            }
+         ]
+      }
+   ],
+   "elementType" : "FILE",
+   "textLength" : 12,
+   "text" : "#!/bin/bash\n",
+   "startOffset" : 0
+}

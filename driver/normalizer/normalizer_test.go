@@ -2,6 +2,7 @@ package normalizer
 
 import (
 	"encoding/json"
+	"fmt"
 	"os"
 	"path/filepath"
 	"testing"
@@ -9,17 +10,15 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestNativeToNoder(t *testing.T) {
+func TestNativeToNoderVeryLong(t *testing.T) {
 	require := require.New(t)
 
-	f, err := getFixture("bash_example_1.json")
+	f, err := getFixture("very_long.json")
 	require.NoError(err)
 
 	n, err := NativeToNoder.ToNode(f)
 	require.NoError(err)
 	require.NotNil(n)
-	//fmt.Println("NODE", n)
-	// check n
 }
 
 const (
@@ -44,4 +43,29 @@ func getFixture(name string) (data map[string]interface{}, err error) {
 	}
 
 	return data, nil
+}
+
+func TestNativeToNoderSheBang(t *testing.T) {
+	require := require.New(t)
+
+	f, err := getFixture("shebang.json")
+	require.NoError(err)
+
+	n, err := NativeToNoder.ToNode(f)
+	require.NoError(err)
+	require.NotNil(n)
+	// do some checks
+}
+
+func TestNativeToNoderVar(t *testing.T) {
+	require := require.New(t)
+
+	f, err := getFixture("var.json")
+	require.NoError(err)
+
+	n, err := NativeToNoder.ToNode(f)
+	require.NoError(err)
+	require.NotNil(n)
+	fmt.Println(n)
+	// do some checks
 }
