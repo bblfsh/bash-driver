@@ -7,33 +7,43 @@ FILE {
     echo "bla"
 }
 "
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 0
+.  .  Col: 0
+.  }
 .  Properties: {
 .  .  textLength: 32
 .  }
 .  Children: {
-.  .  0: [Bash] linefeed {
-.  .  .  TOKEN "
-"
+.  .  0: function-def-element {
+.  .  .  TOKEN "function foo {
+    echo "bla"
+}"
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 31
+.  .  .  .  Offset: 0
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
-.  .  .  }
-.  .  }
-.  .  1: function-def-element {
-.  .  .  TOKEN "function foo {
-    echo "bla"
-}"
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  textLength: 31
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: WHITE_SPACE {
+.  .  .  .  0: [Bash] function {
+.  .  .  .  .  Roles: FunctionDeclaration
+.  .  .  .  .  TOKEN "function"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  Col: 0
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  textLength: 8
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: WHITE_SPACE {
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 8
@@ -45,7 +55,7 @@ FILE {
 .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: [Bash] named symbol {
+.  .  .  .  2: [Bash] named symbol {
 .  .  .  .  .  Roles: FunctionDeclarationName
 .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  StartPosition: {
@@ -72,7 +82,7 @@ FILE {
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: WHITE_SPACE {
+.  .  .  .  3: WHITE_SPACE {
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
@@ -84,7 +94,7 @@ FILE {
 .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  3: group element {
+.  .  .  .  4: group element {
 .  .  .  .  .  Roles: FunctionDeclarationBody,Block
 .  .  .  .  .  TOKEN "{
     echo "bla"
@@ -315,14 +325,19 @@ FILE {
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  4: [Bash] function {
-.  .  .  .  .  Roles: FunctionDeclaration
-.  .  .  .  .  TOKEN "function"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 8
-.  .  .  .  .  }
-.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: [Bash] linefeed {
+.  .  .  TOKEN "
+"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 31
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  }

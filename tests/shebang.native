@@ -1,4 +1,6 @@
 {
+    "status": "ok",
+    "errors": [],
     "ast": {
         "children": [
             {
@@ -21,7 +23,5 @@
         "startOffset": 0,
         "text": "#!/bin/bash\n",
         "textLength": 12
-    },
-    "errors": [],
-    "status": "ok"
+    }
 }

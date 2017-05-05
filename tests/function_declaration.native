@@ -1,4 +1,6 @@
 {
+    "status": "ok",
+    "errors": [],
     "ast": {
         "children": [
             {
@@ -188,7 +190,5 @@
         "startOffset": 0,
         "text": "function foo {\n    echo \"bla\"\n}\n",
         "textLength": 32
-    },
-    "errors": [],
-    "status": "ok"
+    }
 }

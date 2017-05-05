@@ -8,11 +8,84 @@ ${B}
 "$C"
 "${D}"
 "
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 0
+.  .  Col: 0
+.  }
 .  Properties: {
 .  .  textLength: 20
 .  }
 .  Children: {
-.  .  0: [Bash] linefeed {
+.  .  0: simple-command {
+.  .  .  TOKEN "$A"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 2
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: [Bash] generic bash command {
+.  .  .  .  .  TOKEN "$A"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  Col: 0
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  textLength: 2
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: [Bash] combined word {
+.  .  .  .  .  .  .  TOKEN "$A"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  textLength: 2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: var-use-element {
+.  .  .  .  .  .  .  .  .  TOKEN "$A"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  textLength: 2
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: [Bash] variable {
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "$A"
+.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: [Bash] linefeed {
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -25,7 +98,7 @@ ${B}
 .  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
-.  .  1: simple-command {
+.  .  2: simple-command {
 .  .  .  TOKEN "${B}"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 3
@@ -157,7 +230,7 @@ ${B}
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  2: [Bash] linefeed {
+.  .  3: [Bash] linefeed {
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -170,7 +243,7 @@ ${B}
 .  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
-.  .  3: simple-command {
+.  .  4: simple-command {
 .  .  .  TOKEN ""$C""
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 8
@@ -262,7 +335,7 @@ ${B}
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  4: [Bash] linefeed {
+.  .  5: [Bash] linefeed {
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -275,7 +348,7 @@ ${B}
 .  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
-.  .  5: simple-command {
+.  .  6: simple-command {
 .  .  .  TOKEN ""${D}""
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 13
@@ -431,7 +504,7 @@ ${B}
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  6: [Bash] linefeed {
+.  .  7: [Bash] linefeed {
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -442,49 +515,6 @@ ${B}
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
 .  .  .  .  textLength: 1
-.  .  .  }
-.  .  }
-.  .  7: simple-command {
-.  .  .  TOKEN "$A"
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  .  textLength: 2
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  TOKEN "$A"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  TOKEN "$A"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: var-use-element {
-.  .  .  .  .  .  .  .  .  TOKEN "$A"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: [Bash] variable {
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "$A"
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
 .  .  .  }
 .  .  }
 .  }

@@ -5,6 +5,11 @@ FILE {
 .  Roles: File
 .  TOKEN "#!/bin/bash
 "
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 0
+.  .  Col: 0
+.  }
 .  Properties: {
 .  .  textLength: 12
 .  }
@@ -13,6 +18,11 @@ FILE {
 .  .  .  Roles: Comment,Documentation
 .  .  .  TOKEN "#!/bin/bash
 "
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
 .  .  .  .  textLength: 12
@@ -21,6 +31,11 @@ FILE {
 .  .  .  .  0: [Bash] Shebang {
 .  .  .  .  .  TOKEN "#!/bin/bash
 "
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  Col: 0
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
 .  .  .  .  .  .  textLength: 12
