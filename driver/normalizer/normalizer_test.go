@@ -1,6 +1,10 @@
 package normalizer
 
 import (
+	"encoding/json"
+	"fmt"
+	"os"
+	"path/filepath"
 	"sort"
 	"testing"
 
@@ -9,19 +13,58 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-// Reads the contents of a file form the fixture directory, runs
-// NativeToNoder on it and annotate it with AnnotationsRules.
-func annotateFixture(path string) (*uast.Node, error) {
-	return annotateFixtureWith(path, NativeToNoder, AnnotationRules)
+// the directories with the fixtures for the integration and the unit
+// tests (we will be reusing some fixtures from the integration tests
+// in this unit tests).
+const (
+	integration = "../../tests"
+	unit        = "fixtures"
+)
+
+// Reads a native AST encoded in JSON from a file in the fixture directory.
+func getFixture(dir, file string) (data map[string]interface{}, err error) {
+	path := filepath.Join(dir, file)
+	f, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer func() {
+		if errClose := f.Close(); err == nil {
+			err = errClose
+		}
+	}()
+
+	d := json.NewDecoder(f)
+	if err := d.Decode(&data); err != nil {
+		return nil, err
+	}
+
+	ast, ok := data["ast"]
+	if !ok {
+		return nil, fmt.Errorf("ast object not found")
+	}
+
+	asMap, ok := ast.(map[string]interface{})
+	if !ok {
+		return nil, fmt.Errorf("cannot convert ast to map")
+	}
+
+	return asMap, nil
 }
 
-// Reads the contents of a file form the fixture directory, runs
-// the given ToNoder on it and annotate it with the given annotation rules.
+// Reads a native AST encoded in JSON from a file in the fixture directory, runs
+// NativeToNoder on it and annotate it with AnnotationsRules.
+func annotateFixture(dir, file string) (*uast.Node, error) {
+	return annotateFixtureWith(dir, file, NativeToNoder, AnnotationRules)
+}
+
+// The same as annotateFixture above but using the ToNoder and the
+// Annotation rules provided as argguments.
 func annotateFixtureWith(
-	path string, toNoder *uast.BaseToNoder, rules *ann.Rule) (
+	dir, file string, toNoder *uast.BaseToNoder, rules *ann.Rule) (
 	*uast.Node, error) {
 
-	f, err := getFixture(path)
+	f, err := getFixture(dir, file)
 	if err != nil {
 		return nil, err
 	}
@@ -37,32 +80,6 @@ func annotateFixtureWith(
 	}
 
 	return n, err
-}
-
-func TestAnnotationsErrorIfRootIsNotFile(t *testing.T) {
-	require := require.New(t)
-	_, err := annotateFixture("root_is_not_file.json")
-	require.Error(err)
-	require.EqualError(err, ErrRootMustBeFile)
-}
-
-func TestAnnotationsRootIsFile(t *testing.T) {
-	require := require.New(t)
-	n, err := annotateFixture("var.json")
-	require.NoError(err)
-	require.Contains(n.Roles, uast.File)
-}
-
-func TestAnnotationsCommentAreComments(t *testing.T) {
-	n, err := annotateFixture("comments.json")
-	require.NoError(t, err)
-
-	expected := []string{
-		"# comment 1",
-		"# comment 2",
-	}
-	comments := tokens(find(n, uast.Comment)...)
-	require.Equal(t, expected, comments)
 }
 
 // return an slice with all the nodes in the tree that contains the role
@@ -85,39 +102,97 @@ func _find(n *uast.Node, r uast.Role, ret *[]*uast.Node) {
 	}
 }
 
-// returns a slice whith the tokens in the given nodes, sorted alphabetically.
+func mustBeTheSame(t *testing.T, expected, obtained []string) {
+	sort.Strings(expected)
+	sort.Strings(obtained)
+	require.Equal(t, expected, obtained)
+}
+
+// returns a slice whith the tokens in the given nodes.
 func tokens(s ...*uast.Node) []string {
 	var ret []string
 	for _, e := range s {
 		ret = append(ret, e.Token)
 	}
-	sort.Strings(ret)
 	return ret
 }
 
+func TestAnnotationsErrorIfRootIsNotFile(t *testing.T) {
+	require := require.New(t)
+	_, err := annotateFixture(unit, "root_is_not_file.json")
+	require.Error(err)
+	require.EqualError(err, ErrRootMustBeFile)
+}
+
+func TestAnnotationsRootIsFile(t *testing.T) {
+	require := require.New(t)
+	n, err := annotateFixture(integration, "var_declaration.native")
+	require.NoError(err)
+	require.Contains(n.Roles, uast.File)
+}
+
+func TestAnnotationsCommentAreComments(t *testing.T) {
+	n, err := annotateFixture(integration, "comments.native")
+	require.NoError(t, err)
+
+	expected := []string{
+		"# comment 1",
+		"# comment 2",
+	}
+	obtained := tokens(find(n, uast.Comment)...)
+	mustBeTheSame(t, expected, obtained)
+}
 func TestAnnotationsShebangIsComment(t *testing.T) {
-	n, err := annotateFixture("shebang.json")
+	n, err := annotateFixture(integration, "shebang.native")
 	require.NoError(t, err)
 
 	expected := []string{"#!/bin/bash\n"}
-	comments := tokens(find(n, uast.Comment)...)
-	require.Equal(t, expected, comments)
+	obtained := tokens(find(n, uast.Comment)...)
+	mustBeTheSame(t, expected, obtained)
 }
 
 func TestAnnotationsShebangIsDocumentation(t *testing.T) {
-	n, err := annotateFixture("shebang.json")
+	n, err := annotateFixture(integration, "shebang.native")
 	require.NoError(t, err)
 
 	expected := []string{"#!/bin/bash\n"}
-	documentation := tokens(find(n, uast.Documentation)...)
-	require.Equal(t, expected, documentation)
+	obtained := tokens(find(n, uast.Documentation)...)
+	mustBeTheSame(t, expected, obtained)
 }
 
 func TestAnnotationsOrdinatyCommentsAreNotDocumentation(t *testing.T) {
-	n, err := annotateFixture("comments.json")
+	n, err := annotateFixture(integration, "comments.native")
 	require.NoError(t, err)
 
 	var expected []string // we don't expect to find any documentation in the file
-	documentation := tokens(find(n, uast.Documentation)...)
-	require.Equal(t, expected, documentation)
+	obtained := tokens(find(n, uast.Documentation)...)
+	mustBeTheSame(t, expected, obtained)
+}
+
+func TestAnnotationsVariableDeclaration(t *testing.T) {
+	n, err := annotateFixture(integration, "var_declaration.native")
+	require.NoError(t, err)
+
+	var expected = []string{"a"}
+	obtained := tokens(find(n, uast.SimpleIdentifier)...)
+	mustBeTheSame(t, expected, obtained)
+}
+
+func TestAnnotationsFunctionDeclaration(t *testing.T) {
+	n, err := annotateFixture(integration, "function_declaration.native")
+	require.NoError(t, err)
+
+	var expected = []string{"function"}
+	obtained := tokens(find(n, uast.FunctionDeclaration)...)
+	mustBeTheSame(t, expected, obtained)
+
+	expected = []string{"foo"}
+	obtained = tokens(find(n, uast.FunctionDeclarationName)...)
+	mustBeTheSame(t, expected, obtained)
+
+	bodies := find(n, uast.FunctionDeclarationBody)
+	require.Equal(t, 1, len(bodies))
+
+	blocks := find(n, uast.Block)
+	require.Equal(t, 1, len(blocks))
 }

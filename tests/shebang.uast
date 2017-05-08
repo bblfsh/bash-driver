@@ -1,0 +1,33 @@
+Status:  ok
+Errors: 
+UAST: 
+FILE {
+.  Roles: File
+.  TOKEN "#!/bin/bash
+"
+.  Properties: {
+.  .  textLength: 12
+.  }
+.  Children: {
+.  .  0: [Bash] shebang element {
+.  .  .  Roles: Comment,Documentation
+.  .  .  TOKEN "#!/bin/bash
+"
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 12
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: [Bash] Shebang {
+.  .  .  .  .  TOKEN "#!/bin/bash
+"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  textLength: 12
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
+

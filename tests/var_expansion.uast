@@ -1,0 +1,492 @@
+Status:  ok
+Errors: 
+UAST: 
+FILE {
+.  Roles: File
+.  TOKEN "$A
+${B}
+"$C"
+"${D}"
+"
+.  Properties: {
+.  .  textLength: 20
+.  }
+.  Children: {
+.  .  0: [Bash] linefeed {
+.  .  .  TOKEN "
+"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 2
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 1
+.  .  .  }
+.  .  }
+.  .  1: simple-command {
+.  .  .  TOKEN "${B}"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 3
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 4
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: [Bash] generic bash command {
+.  .  .  .  .  TOKEN "${B}"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 3
+.  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  Col: 0
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  textLength: 4
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: [Bash] combined word {
+.  .  .  .  .  .  .  TOKEN "${B}"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 3
+.  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  textLength: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: [Bash] composed variable, like subshell {
+.  .  .  .  .  .  .  .  .  TOKEN "${B}"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 3
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  textLength: 4
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: [Bash] $ {
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "$"
+.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 3
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: [Bash] var substitution {
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "{B}"
+.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 4
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  textLength: 3
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] { {
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "{"
+.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 4
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: var-use-element {
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "B"
+.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "B"
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  2: [Bash] } {
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "}"
+.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 6
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: [Bash] linefeed {
+.  .  .  TOKEN "
+"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 7
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 1
+.  .  .  }
+.  .  }
+.  .  3: simple-command {
+.  .  .  TOKEN ""$C""
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 8
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 4
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: [Bash] generic bash command {
+.  .  .  .  .  TOKEN ""$C""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 8
+.  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  Col: 0
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  textLength: 4
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: [Bash] string {
+.  .  .  .  .  .  .  TOKEN ""$C""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 8
+.  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  textLength: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: [Bash] string begin {
+.  .  .  .  .  .  .  .  .  TOKEN """
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 8
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: var-use-element {
+.  .  .  .  .  .  .  .  .  TOKEN "$C"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 9
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  textLength: 2
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: [Bash] variable {
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "$C"
+.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 9
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: [Bash] string end {
+.  .  .  .  .  .  .  .  .  TOKEN """
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 11
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  4: [Bash] linefeed {
+.  .  .  TOKEN "
+"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 12
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 1
+.  .  .  }
+.  .  }
+.  .  5: simple-command {
+.  .  .  TOKEN ""${D}""
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 13
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 6
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: [Bash] generic bash command {
+.  .  .  .  .  TOKEN ""${D}""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 13
+.  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  Col: 0
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  textLength: 6
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: [Bash] string {
+.  .  .  .  .  .  .  TOKEN ""${D}""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 13
+.  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  textLength: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: [Bash] string begin {
+.  .  .  .  .  .  .  .  .  TOKEN """
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 13
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: [Bash] composed variable, like subshell {
+.  .  .  .  .  .  .  .  .  TOKEN "${D}"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  textLength: 4
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: [Bash] $ {
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "$"
+.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: [Bash] var substitution {
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "{D}"
+.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 15
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  textLength: 3
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] { {
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "{"
+.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 15
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: var-use-element {
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "D"
+.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 16
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "D"
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 16
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  2: [Bash] } {
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "}"
+.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 17
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: [Bash] string end {
+.  .  .  .  .  .  .  .  .  TOKEN """
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 18
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  textLength: 1
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  6: [Bash] linefeed {
+.  .  .  TOKEN "
+"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 19
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 1
+.  .  .  }
+.  .  }
+.  .  7: simple-command {
+.  .  .  TOKEN "$A"
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 2
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: [Bash] generic bash command {
+.  .  .  .  .  TOKEN "$A"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  textLength: 2
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: [Bash] combined word {
+.  .  .  .  .  .  .  TOKEN "$A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  textLength: 2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: var-use-element {
+.  .  .  .  .  .  .  .  .  TOKEN "$A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  textLength: 2
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: [Bash] variable {
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "$A"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
+

@@ -1,60 +1,64 @@
 {
-   "children" : [
-      {
-         "elementType" : "simple-command",
-         "textLength" : 3,
-         "startOffset" : 0,
-         "children" : [
+    "ast": {
+        "children": [
             {
-               "elementType" : "var-def-element",
-               "textLength" : 3,
-               "startOffset" : 0,
-               "text" : "a=1",
-               "children" : [
-                  {
-                     "elementType" : "[Bash] assignment_word",
-                     "textLength" : 1,
-                     "children" : [],
-                     "text" : "a",
-                     "startOffset" : 0
-                  },
-                  {
-                     "textLength" : 1,
-                     "elementType" : "[Bash] =",
-                     "startOffset" : 1,
-                     "children" : [],
-                     "text" : "="
-                  },
-                  {
-                     "elementType" : "[Bash] combined word",
-                     "textLength" : 1,
-                     "startOffset" : 2,
-                     "children" : [
-                        {
-                           "startOffset" : 2,
-                           "children" : [],
-                           "text" : "1",
-                           "textLength" : 1,
-                           "elementType" : "[Bash] int literal"
-                        }
-                     ],
-                     "text" : "1"
-                  }
-               ]
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "elementType": "[Bash] assignment_word",
+                                "startOffset": 0,
+                                "text": "a",
+                                "textLength": 1
+                            },
+                            {
+                                "children": [],
+                                "elementType": "[Bash] =",
+                                "startOffset": 1,
+                                "text": "=",
+                                "textLength": 1
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "elementType": "[Bash] int literal",
+                                        "startOffset": 2,
+                                        "text": "1",
+                                        "textLength": 1
+                                    }
+                                ],
+                                "elementType": "[Bash] combined word",
+                                "startOffset": 2,
+                                "text": "1",
+                                "textLength": 1
+                            }
+                        ],
+                        "elementType": "var-def-element",
+                        "startOffset": 0,
+                        "text": "a=1",
+                        "textLength": 3
+                    }
+                ],
+                "elementType": "simple-command",
+                "startOffset": 0,
+                "text": "a=1",
+                "textLength": 3
+            },
+            {
+                "children": [],
+                "elementType": "[Bash] linefeed",
+                "startOffset": 3,
+                "text": "\n",
+                "textLength": 1
             }
-         ],
-         "text" : "a=1"
-      },
-      {
-         "textLength" : 1,
-         "elementType" : "[Bash] linefeed",
-         "children" : [],
-         "text" : "\n",
-         "startOffset" : 3
-      }
-   ],
-   "text" : "a=1\n",
-   "startOffset" : 0,
-   "textLength" : 4,
-   "elementType" : "this is not a file"
+        ],
+        "elementType": "handcrafted buggy element type",
+        "startOffset": 0,
+        "text": "a=1\n",
+        "textLength": 4
+    },
+    "errors": [],
+    "status": "ok"
 }
