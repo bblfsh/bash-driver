@@ -16,4 +16,6 @@ var (
 	NamedSymbol        = HasInternalType("[Bash] named symbol")
 	GroupElement       = HasInternalType("group element")
 	IfShellCommand     = HasInternalType("if shellcommand")
+	ForShellCommand    = HasInternalType("for shellcommand")
+	WhileLoop          = HasInternalType("while loop")
 )
