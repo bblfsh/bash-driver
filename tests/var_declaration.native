@@ -1,4 +1,6 @@
 {
+    "status": "ok",
+    "errors": [],
     "ast": {
         "children": [
             {
@@ -58,7 +60,5 @@
         "startOffset": 0,
         "text": "a=1\n",
         "textLength": 4
-    },
-    "errors": [],
-    "status": "ok"
+    }
 }

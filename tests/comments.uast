@@ -9,11 +9,29 @@ a="# not a comment"
 
 b="foo bar" # comment 2
 "
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 0
+.  .  Col: 0
+.  }
 .  Properties: {
 .  .  textLength: 58
 .  }
 .  Children: {
-.  .  0: [Bash] linefeed {
+.  .  0: [Bash] Comment {
+.  .  .  Roles: Comment
+.  .  .  TOKEN "# comment 1"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  .  textLength: 11
+.  .  .  }
+.  .  }
+.  .  1: [Bash] linefeed {
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -26,7 +44,7 @@ b="foo bar" # comment 2
 .  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
-.  .  1: [Bash] linefeed {
+.  .  2: [Bash] linefeed {
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -39,7 +57,7 @@ b="foo bar" # comment 2
 .  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
-.  .  2: simple-command {
+.  .  3: simple-command {
 .  .  .  TOKEN "a="# not a comment""
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 13
@@ -142,7 +160,7 @@ b="foo bar" # comment 2
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  3: [Bash] linefeed {
+.  .  4: [Bash] linefeed {
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -155,7 +173,7 @@ b="foo bar" # comment 2
 .  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
-.  .  4: [Bash] linefeed {
+.  .  5: [Bash] linefeed {
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -168,7 +186,7 @@ b="foo bar" # comment 2
 .  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
-.  .  5: simple-command {
+.  .  6: simple-command {
 .  .  .  TOKEN "b="foo bar""
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 34
@@ -271,7 +289,7 @@ b="foo bar" # comment 2
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  6: WHITE_SPACE {
+.  .  7: WHITE_SPACE {
 .  .  .  TOKEN " "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 45
@@ -283,7 +301,7 @@ b="foo bar" # comment 2
 .  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
-.  .  7: [Bash] Comment {
+.  .  8: [Bash] Comment {
 .  .  .  Roles: Comment
 .  .  .  TOKEN "# comment 2"
 .  .  .  StartPosition: {
@@ -296,7 +314,7 @@ b="foo bar" # comment 2
 .  .  .  .  textLength: 11
 .  .  .  }
 .  .  }
-.  .  8: [Bash] linefeed {
+.  .  9: [Bash] linefeed {
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -307,14 +325,6 @@ b="foo bar" # comment 2
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
 .  .  .  .  textLength: 1
-.  .  .  }
-.  .  }
-.  .  9: [Bash] Comment {
-.  .  .  Roles: Comment
-.  .  .  TOKEN "# comment 1"
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  .  textLength: 11
 .  .  .  }
 .  .  }
 .  }
