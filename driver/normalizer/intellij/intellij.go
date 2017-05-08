@@ -18,4 +18,5 @@ var (
 	IfShellCommand     = HasInternalType("if shellcommand")
 	ForShellCommand    = HasInternalType("for shellcommand")
 	WhileLoop          = HasInternalType("while loop")
+	UntilLoop          = HasInternalType("until loop")
 )
