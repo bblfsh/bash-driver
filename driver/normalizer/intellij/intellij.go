@@ -15,4 +15,5 @@ var (
 	Function           = HasInternalType("[Bash] function")
 	NamedSymbol        = HasInternalType("[Bash] named symbol")
 	GroupElement       = HasInternalType("group element")
+	IfShellCommand     = HasInternalType("if shellcommand")
 )

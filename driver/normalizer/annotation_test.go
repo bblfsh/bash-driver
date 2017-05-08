@@ -200,3 +200,25 @@ func TestAnnotationsFunctionDeclaration(t *testing.T) {
 	blocks := find(n, uast.Block)
 	require.Equal(t, 1, len(blocks))
 }
+
+func TestAnnotationsConditionals(t *testing.T) {
+	n, err := annotateFixture(integration, "if.native")
+	require.NoError(t, err)
+
+	// see readme.md, in the future we would like to check for IfBody,
+	// IfConditional, but right now, this is the best we can do.
+	var expected = []string{
+		"if a1; then a2; fi",
+		"if b1; then b2; else b3; fi",
+		"if c1; then c2; elif c3; then c4; fi",
+		"if d1; then d2; elif d3; then d4; else d5; fi",
+		"if e1\nthen e2\nelif e3\nthen e4\nelse e5\nfi",
+		"if [ -a file ]; then /bin/true; fi",
+		"if [ \"a\" == \"b\" ]; then /bin/true; fi",
+		"if [ \"c\" == \"d\" ]\n    then\n        /bin/true\nfi",
+	}
+	obtained := tokens(find(n, uast.If)...)
+	mustBeTheSame(t, expected, obtained)
+	obtained = tokens(find(n, uast.Statement)...)
+	mustBeTheSame(t, expected, obtained)
+}
