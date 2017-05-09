@@ -27,5 +27,7 @@ var AnnotationRules = On(Any).Self(
 			On(intellij.NamedSymbol).Roles(FunctionDeclarationName),
 			On(intellij.GroupElement).Roles(FunctionDeclarationBody, Block),
 		),
+		// if statement
+		On(intellij.IfShellCommand).Roles(If, Statement),
 	),
 )
