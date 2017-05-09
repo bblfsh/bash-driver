@@ -222,3 +222,31 @@ func TestAnnotationsConditionals(t *testing.T) {
 	obtained = tokens(find(n, uast.Statement)...)
 	mustBeTheSame(t, expected, obtained)
 }
+
+func TestAnnotationsForLoop(t *testing.T) {
+	n, err := annotateFixture(integration, "for.native")
+	require.NoError(t, err)
+
+	// same problem as TestAnnotationsConditionals.
+	var expected = []string{
+		"for a; do b; done",
+		"for c in d; do e; done",
+		"for f in g; do\n    h\ndone",
+	}
+	obtained := tokens(find(n, uast.ForEach)...)
+	mustBeTheSame(t, expected, obtained)
+}
+
+func TestAnnotationsWhileLoop(t *testing.T) {
+	n, err := annotateFixture(integration, "while.native")
+	require.NoError(t, err)
+
+	// same problem as TestAnnotationsConditionals.
+	var expected = []string{
+		"while a; do b; c; done",
+		"while d\ndo e\nf\ndone",
+		"while g; do\n  h\n  i\ndone",
+	}
+	obtained := tokens(find(n, uast.While)...)
+	mustBeTheSame(t, expected, obtained)
+}

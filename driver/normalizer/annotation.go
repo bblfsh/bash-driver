@@ -29,5 +29,9 @@ var AnnotationRules = On(Any).Self(
 		),
 		// if statement
 		On(intellij.IfShellCommand).Roles(If, Statement),
+		// for statement
+		On(intellij.ForShellCommand).Roles(ForEach, Statement),
+		// while statement
+		On(intellij.WhileLoop).Roles(While, Statement),
 	),
 )
