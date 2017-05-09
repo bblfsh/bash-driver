@@ -250,3 +250,19 @@ func TestAnnotationsWhileLoop(t *testing.T) {
 	obtained := tokens(find(n, uast.While)...)
 	mustBeTheSame(t, expected, obtained)
 }
+
+func TestAnnotationsUntilLoop(t *testing.T) {
+	n, err := annotateFixture(integration, "until.native")
+	require.NoError(t, err)
+
+	// same problem as TestAnnotationsConditionals.  This is the same as
+	// the while tests, but we should check for the inverted condition
+	// here, when the sdk is allows for it.
+	var expected = []string{
+		"until a; do b; c; done",
+		"until d\ndo e\nf\ndone",
+		"until g; do\n  h\n  i\ndone",
+	}
+	obtained := tokens(find(n, uast.While)...)
+	mustBeTheSame(t, expected, obtained)
+}
