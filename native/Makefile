@@ -13,8 +13,8 @@
 
 # Configure these to point to the desired IntelliJ Idea version,
 # tar.gz file and the URL to download it:
-IDEA_VERSION := idea-IC-171.3780.107
-IDEA_TAR_FILE := ideaIC-2017.1-no-jdk.tar.gz
+IDEA_VERSION := idea-IC-171.4694.23
+IDEA_TAR_FILE := ideaIC-2017.1.4-no-jdk.tar.gz
 IDEA_URL=https://download.jetbrains.com/idea/${IDEA_TAR_FILE}
 
 # Configure IDEA_JARS to include the jars you need from the IntelliJ Idea

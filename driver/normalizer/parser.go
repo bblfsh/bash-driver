@@ -14,9 +14,7 @@ var ToNoder = &native.ObjectToNoder{
 
 // ASTParserBuilder creates a parser that transform source code files
 // into *uast.Node.
-func ASTParserBuilder(opts driver.ASTParserOptions) (
-	driver.ASTParser, error) {
-
+func UASTParserBuilder(opts driver.UASTParserOptions) (driver.UASTParser, error) {
 	parser, err := native.ExecParser(ToNoder, opts.NativeBin)
 	if err != nil {
 		return nil, err
