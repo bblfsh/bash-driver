@@ -12,9 +12,8 @@ var ToNoder = &native.ObjectToNoder{
 	TokenKeys:          map[string]bool{"text": true},
 }
 
-// ASTParserBuilder creates a parser that transform source code files
-// into *uast.Node.
-func UASTParserBuilder(opts driver.UASTParserOptions) (driver.UASTParser, error) {
+// Creates a parser that transform source code files into *uast.Node.
+func ParserBuilder(opts driver.ParserOptions) (driver.Parser, error) {
 	parser, err := native.ExecParser(ToNoder, opts.NativeBin)
 	if err != nil {
 		return nil, err
