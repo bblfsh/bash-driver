@@ -1,10 +1,10 @@
 package normalizer
 
 import (
-	. "github.com/bblfsh/sdk/uast"
-	. "github.com/bblfsh/sdk/uast/ann"
-
 	"github.com/bblfsh/bash-driver/driver/normalizer/intellij"
+
+	. "gopkg.in/bblfsh/sdk.v0/uast"
+	. "gopkg.in/bblfsh/sdk.v0/uast/ann"
 	"gopkg.in/src-d/go-errors.v0"
 )
 

@@ -8,10 +8,10 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/bblfsh/sdk/protocol/native"
-	"github.com/bblfsh/sdk/uast"
-	"github.com/bblfsh/sdk/uast/ann"
 	"github.com/stretchr/testify/require"
+	"gopkg.in/bblfsh/sdk.v0/protocol/native"
+	"gopkg.in/bblfsh/sdk.v0/uast"
+	"gopkg.in/bblfsh/sdk.v0/uast/ann"
 )
 
 // the directories with the fixtures for the integration and the unit
