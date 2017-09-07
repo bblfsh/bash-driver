@@ -3,7 +3,7 @@
 // on constants defined in that library.
 package intellij
 
-import . "github.com/bblfsh/sdk/uast/ann"
+import . "gopkg.in/bblfsh/sdk.v0/uast/ann"
 
 var (
 	File               = HasInternalType("FILE")

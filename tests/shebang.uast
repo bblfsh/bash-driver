@@ -29,6 +29,7 @@ FILE {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] Shebang {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  TOKEN "#!/bin/bash
 "
 .  .  .  .  .  StartPosition: {
