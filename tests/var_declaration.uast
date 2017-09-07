@@ -15,6 +15,7 @@ FILE {
 .  }
 .  Children: {
 .  .  0: simple-command {
+.  .  .  Roles: Unannotated
 .  .  .  TOKEN "a=1"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
@@ -27,6 +28,7 @@ FILE {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: var-def-element {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  TOKEN "a=1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
@@ -52,6 +54,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] = {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  TOKEN "="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 1
@@ -64,6 +67,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: [Bash] combined word {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 2
@@ -76,6 +80,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] int literal {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 2
@@ -94,6 +99,7 @@ FILE {
 .  .  .  }
 .  .  }
 .  .  1: [Bash] linefeed {
+.  .  .  Roles: Unannotated
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {

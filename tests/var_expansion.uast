@@ -18,6 +18,7 @@ ${B}
 .  }
 .  Children: {
 .  .  0: simple-command {
+.  .  .  Roles: Unannotated
 .  .  .  TOKEN "$A"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
@@ -30,6 +31,7 @@ ${B}
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] generic bash command {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  TOKEN "$A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
@@ -42,6 +44,7 @@ ${B}
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  TOKEN "$A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
@@ -54,6 +57,7 @@ ${B}
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: var-use-element {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  TOKEN "$A"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 0
@@ -66,6 +70,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] variable {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "$A"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
@@ -86,6 +91,7 @@ ${B}
 .  .  .  }
 .  .  }
 .  .  1: [Bash] linefeed {
+.  .  .  Roles: Unannotated
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -99,6 +105,7 @@ ${B}
 .  .  .  }
 .  .  }
 .  .  2: simple-command {
+.  .  .  Roles: Unannotated
 .  .  .  TOKEN "${B}"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 3
@@ -111,6 +118,7 @@ ${B}
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] generic bash command {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  TOKEN "${B}"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 3
@@ -123,6 +131,7 @@ ${B}
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  TOKEN "${B}"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 3
@@ -135,6 +144,7 @@ ${B}
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] composed variable, like subshell {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  TOKEN "${B}"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 3
@@ -147,6 +157,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] $ {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "$"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 3
@@ -159,6 +170,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: [Bash] var substitution {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "{B}"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 4
@@ -171,6 +183,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] { {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "{"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 4
@@ -183,6 +196,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: var-use-element {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 5
@@ -195,6 +209,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 5
@@ -209,6 +224,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  2: [Bash] } {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "}"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 6
@@ -231,6 +247,7 @@ ${B}
 .  .  .  }
 .  .  }
 .  .  3: [Bash] linefeed {
+.  .  .  Roles: Unannotated
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -244,6 +261,7 @@ ${B}
 .  .  .  }
 .  .  }
 .  .  4: simple-command {
+.  .  .  Roles: Unannotated
 .  .  .  TOKEN ""$C""
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 8
@@ -256,6 +274,7 @@ ${B}
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] generic bash command {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  TOKEN ""$C""
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 8
@@ -268,6 +287,7 @@ ${B}
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] string {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  TOKEN ""$C""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 8
@@ -280,6 +300,7 @@ ${B}
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 8
@@ -292,6 +313,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: var-use-element {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  TOKEN "$C"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 9
@@ -304,6 +326,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] variable {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "$C"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 9
@@ -318,6 +341,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 11
@@ -336,6 +360,7 @@ ${B}
 .  .  .  }
 .  .  }
 .  .  5: [Bash] linefeed {
+.  .  .  Roles: Unannotated
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -349,6 +374,7 @@ ${B}
 .  .  .  }
 .  .  }
 .  .  6: simple-command {
+.  .  .  Roles: Unannotated
 .  .  .  TOKEN ""${D}""
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 13
@@ -361,6 +387,7 @@ ${B}
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] generic bash command {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  TOKEN ""${D}""
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 13
@@ -373,6 +400,7 @@ ${B}
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] string {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  TOKEN ""${D}""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 13
@@ -385,6 +413,7 @@ ${B}
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 13
@@ -397,6 +426,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] composed variable, like subshell {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  TOKEN "${D}"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 14
@@ -409,6 +439,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] $ {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "$"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 14
@@ -421,6 +452,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: [Bash] var substitution {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "{D}"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 15
@@ -433,6 +465,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] { {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "{"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 15
@@ -445,6 +478,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: var-use-element {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "D"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 16
@@ -457,6 +491,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "D"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 16
@@ -471,6 +506,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  2: [Bash] } {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "}"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 17
@@ -487,6 +523,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 18
@@ -505,6 +542,7 @@ ${B}
 .  .  .  }
 .  .  }
 .  .  7: [Bash] linefeed {
+.  .  .  Roles: Unannotated
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
