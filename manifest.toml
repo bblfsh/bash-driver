@@ -3,10 +3,10 @@ status = "planning"
 
 [documentation]
 description  = """
-bash driver for [babelfish](https://github.com/bblfsh/server).
+bash driver for [babelfish](https://github.com/bblfsh/bblfshd).
 """
 
 [runtime]
 os = "alpine"
 go_version = "1.8"
-native_version = ["8.121.13-r0"]
+native_version = ["8.131.11-r2"]
