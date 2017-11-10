@@ -1,0 +1,186 @@
+{
+    "status": "ok",
+    "errors": [],
+    "ast": {
+        "children": [
+            {
+                "children": [],
+                "elementType": "[Bash] Comment",
+                "startOffset": 0,
+                "text": "# comment 1",
+                "textLength": 11
+            },
+            {
+                "children": [],
+                "elementType": "[Bash] linefeed",
+                "startOffset": 11,
+                "text": "\n",
+                "textLength": 1
+            },
+            {
+                "children": [],
+                "elementType": "[Bash] linefeed",
+                "startOffset": 12,
+                "text": "\n",
+                "textLength": 1
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "elementType": "[Bash] assignment_word",
+                                "startOffset": 13,
+                                "text": "a",
+                                "textLength": 1
+                            },
+                            {
+                                "children": [],
+                                "elementType": "[Bash] =",
+                                "startOffset": 14,
+                                "text": "=",
+                                "textLength": 1
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "elementType": "[Bash] string begin",
+                                        "startOffset": 15,
+                                        "text": "\"",
+                                        "textLength": 1
+                                    },
+                                    {
+                                        "children": [],
+                                        "elementType": "[Bash] string content",
+                                        "startOffset": 16,
+                                        "text": "# not a comment",
+                                        "textLength": 15
+                                    },
+                                    {
+                                        "children": [],
+                                        "elementType": "[Bash] string end",
+                                        "startOffset": 31,
+                                        "text": "\"",
+                                        "textLength": 1
+                                    }
+                                ],
+                                "elementType": "[Bash] string",
+                                "startOffset": 15,
+                                "text": "\"# not a comment\"",
+                                "textLength": 17
+                            }
+                        ],
+                        "elementType": "var-def-element",
+                        "startOffset": 13,
+                        "text": "a=\"# not a comment\"",
+                        "textLength": 19
+                    }
+                ],
+                "elementType": "simple-command",
+                "startOffset": 13,
+                "text": "a=\"# not a comment\"",
+                "textLength": 19
+            },
+            {
+                "children": [],
+                "elementType": "[Bash] linefeed",
+                "startOffset": 32,
+                "text": "\n",
+                "textLength": 1
+            },
+            {
+                "children": [],
+                "elementType": "[Bash] linefeed",
+                "startOffset": 33,
+                "text": "\n",
+                "textLength": 1
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "elementType": "[Bash] assignment_word",
+                                "startOffset": 34,
+                                "text": "b",
+                                "textLength": 1
+                            },
+                            {
+                                "children": [],
+                                "elementType": "[Bash] =",
+                                "startOffset": 35,
+                                "text": "=",
+                                "textLength": 1
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "elementType": "[Bash] string begin",
+                                        "startOffset": 36,
+                                        "text": "\"",
+                                        "textLength": 1
+                                    },
+                                    {
+                                        "children": [],
+                                        "elementType": "[Bash] string content",
+                                        "startOffset": 37,
+                                        "text": "foo bar",
+                                        "textLength": 7
+                                    },
+                                    {
+                                        "children": [],
+                                        "elementType": "[Bash] string end",
+                                        "startOffset": 44,
+                                        "text": "\"",
+                                        "textLength": 1
+                                    }
+                                ],
+                                "elementType": "[Bash] string",
+                                "startOffset": 36,
+                                "text": "\"foo bar\"",
+                                "textLength": 9
+                            }
+                        ],
+                        "elementType": "var-def-element",
+                        "startOffset": 34,
+                        "text": "b=\"foo bar\"",
+                        "textLength": 11
+                    }
+                ],
+                "elementType": "simple-command",
+                "startOffset": 34,
+                "text": "b=\"foo bar\"",
+                "textLength": 11
+            },
+            {
+                "children": [],
+                "elementType": "WHITE_SPACE",
+                "startOffset": 45,
+                "text": " ",
+                "textLength": 1
+            },
+            {
+                "children": [],
+                "elementType": "[Bash] Comment",
+                "startOffset": 46,
+                "text": "# comment 2",
+                "textLength": 11
+            },
+            {
+                "children": [],
+                "elementType": "[Bash] linefeed",
+                "startOffset": 57,
+                "text": "\n",
+                "textLength": 1
+            }
+        ],
+        "elementType": "FILE",
+        "startOffset": 0,
+        "text": "# comment 1\n\na=\"# not a comment\"\n\nb=\"foo bar\" # comment 2\n",
+        "textLength": 58
+    }
+}

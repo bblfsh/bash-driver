@@ -9,18 +9,39 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"gopkg.in/bblfsh/sdk.v0/protocol/native"
-	"gopkg.in/bblfsh/sdk.v0/uast"
-	"gopkg.in/bblfsh/sdk.v0/uast/ann"
+	"gopkg.in/bblfsh/sdk.v1/uast"
+	"gopkg.in/bblfsh/sdk.v1/uast/ann"
 )
 
 // the directories with the fixtures for the integration and the unit
 // tests (we will be reusing some fixtures from the integration tests
 // in this unit tests).
 const (
-	integration = "../../tests"
+	integration = "../../fixtures"
 	unit        = "fixtures"
 )
+
+// containRoles checks if a node contains the roles in andRoles while not containing
+// any of the roles in notRoles
+func containsRoles(n *uast.Node, andRoles []uast.Role, notRoles []uast.Role) bool {
+	roleMap := make(map[uast.Role]bool)
+	for _, r := range n.Roles {
+		roleMap[r] = true
+	}
+	for _, r := range andRoles {
+		if !roleMap[r] {
+			return false
+		}
+	}
+	if notRoles != nil {
+		for _, r := range notRoles {
+			if roleMap[r] {
+				return false
+			}
+		}
+	}
+	return true
+}
 
 // Reads a native AST encoded in JSON from a file in the fixture directory.
 func getFixture(dir, file string) (data map[string]interface{}, err error) {
@@ -54,28 +75,19 @@ func getFixture(dir, file string) (data map[string]interface{}, err error) {
 }
 
 // Reads a native AST encoded in JSON from a file in the fixture directory, runs
-// NativeToNoder on it and annotate it with AnnotationsRules.
+// ToNode on it and annotates it with AnnotationsRules.
 func annotateFixture(dir, file string) (*uast.Node, error) {
-	return annotateFixtureWith(dir, file, ToNoder, AnnotationRules)
-}
-
-// The same as annotateFixture above but using the ToNoder and the
-// Annotation rules provided as argguments.
-func annotateFixtureWith(
-	dir, file string, toNoder *native.ObjectToNoder, rules *ann.Rule) (
-	*uast.Node, error) {
-
 	f, err := getFixture(dir, file)
 	if err != nil {
 		return nil, err
 	}
 
-	n, err := toNoder.ToNode(f)
+	n, err := ToNode.ToNode(f)
 	if err != nil {
 		return nil, err
 	}
 
-	err = rules.Apply(n)
+	err = AnnotationRules.Apply(n)
 	if err != nil {
 		return nil, err
 	}
@@ -83,23 +95,20 @@ func annotateFixtureWith(
 	return n, err
 }
 
-// return an slice with all the nodes in the tree that contains the role
-// at least once.
-func find(tree *uast.Node, role uast.Role) []*uast.Node {
+// find returns an slice with all the nodes in the tree that contains a set of roles
+// while not container another set of them.
+func find(tree *uast.Node, andRoles []uast.Role, notRoles []uast.Role) []*uast.Node {
 	var found []*uast.Node
-	_find(tree, role, &found)
+	_find(tree, andRoles, notRoles, &found)
 	return found
 }
 
-func _find(n *uast.Node, r uast.Role, ret *[]*uast.Node) {
-	for _, e := range n.Roles {
-		if e == r {
-			*ret = append(*ret, n)
-			break
-		}
+func _find(n *uast.Node, andRoles []uast.Role, notRoles []uast.Role, ret *[]*uast.Node) {
+	if containsRoles(n, andRoles, notRoles) {
+		*ret = append(*ret, n)
 	}
 	for _, child := range n.Children {
-		_find(child, r, ret)
+		_find(child, andRoles, notRoles, ret)
 	}
 }
 
@@ -130,79 +139,79 @@ func TestAnnotationsErrorIfRootIsNotFile(t *testing.T) {
 
 func TestAnnotationsRootIsFile(t *testing.T) {
 	require := require.New(t)
-	n, err := annotateFixture(integration, "var_declaration.native")
+	n, err := annotateFixture(integration, "var_declaration.bash.native")
 	require.NoError(err)
 	require.Contains(n.Roles, uast.File)
 }
 
 func TestAnnotationsCommentAreComments(t *testing.T) {
-	n, err := annotateFixture(integration, "comments.native")
+	n, err := annotateFixture(integration, "comments.bash.native")
 	require.NoError(t, err)
 
 	expected := []string{
 		"# comment 1",
 		"# comment 2",
 	}
-	obtained := tokens(find(n, uast.Comment)...)
+	obtained := tokens(find(n, []uast.Role{uast.Comment}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
 }
 func TestAnnotationsShebangIsComment(t *testing.T) {
-	n, err := annotateFixture(integration, "shebang.native")
+	n, err := annotateFixture(integration, "shebang.bash.native")
 	require.NoError(t, err)
 
 	expected := []string{"#!/bin/bash\n"}
-	obtained := tokens(find(n, uast.Comment)...)
+	obtained := tokens(find(n, []uast.Role{uast.Comment}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
 }
 
 func TestAnnotationsShebangIsDocumentation(t *testing.T) {
-	n, err := annotateFixture(integration, "shebang.native")
+	n, err := annotateFixture(integration, "shebang.bash.native")
 	require.NoError(t, err)
 
 	expected := []string{"#!/bin/bash\n"}
-	obtained := tokens(find(n, uast.Documentation)...)
+	obtained := tokens(find(n, []uast.Role{uast.Documentation}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
 }
 
 func TestAnnotationsOrdinatyCommentsAreNotDocumentation(t *testing.T) {
-	n, err := annotateFixture(integration, "comments.native")
+	n, err := annotateFixture(integration, "comments.bash.native")
 	require.NoError(t, err)
 
 	var expected []string // we don't expect to find any documentation in the file
-	obtained := tokens(find(n, uast.Documentation)...)
+	obtained := tokens(find(n, []uast.Role{uast.Documentation}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
 }
 
 func TestAnnotationsVariableDeclaration(t *testing.T) {
-	n, err := annotateFixture(integration, "var_declaration.native")
+	n, err := annotateFixture(integration, "var_declaration.bash.native")
 	require.NoError(t, err)
 
 	var expected = []string{"a"}
-	obtained := tokens(find(n, uast.SimpleIdentifier)...)
+	obtained := tokens(find(n, []uast.Role{uast.Identifier}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
 }
 
 func TestAnnotationsFunctionDeclaration(t *testing.T) {
-	n, err := annotateFixture(integration, "function_declaration.native")
+	n, err := annotateFixture(integration, "function_declaration.bash.native")
 	require.NoError(t, err)
 
 	var expected = []string{"function"}
-	obtained := tokens(find(n, uast.FunctionDeclaration)...)
+	obtained := tokens(find(n, []uast.Role{uast.Function, uast.Declaration}, []uast.Role{uast.Name, uast.Body})...)
 	mustBeTheSame(t, expected, obtained)
 
 	expected = []string{"foo"}
-	obtained = tokens(find(n, uast.FunctionDeclarationName)...)
+	obtained = tokens(find(n, []uast.Role{uast.Function, uast.Declaration, uast.Name}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
 
-	bodies := find(n, uast.FunctionDeclarationBody)
+	bodies := find(n, []uast.Role{uast.Body}, []uast.Role{})
 	require.Equal(t, 1, len(bodies))
 
-	blocks := find(n, uast.Block)
+	blocks := find(n, []uast.Role{uast.Block}, []uast.Role{})
 	require.Equal(t, 1, len(blocks))
 }
 
 func TestAnnotationsConditionals(t *testing.T) {
-	n, err := annotateFixture(integration, "if.native")
+	n, err := annotateFixture(integration, "if.bash.native")
 	require.NoError(t, err)
 
 	// see readme.md, in the future we would like to check for IfBody,
@@ -217,14 +226,14 @@ func TestAnnotationsConditionals(t *testing.T) {
 		"if [ \"a\" == \"b\" ]; then /bin/true; fi",
 		"if [ \"c\" == \"d\" ]\n    then\n        /bin/true\nfi",
 	}
-	obtained := tokens(find(n, uast.If)...)
+	obtained := tokens(find(n, []uast.Role{uast.If}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
-	obtained = tokens(find(n, uast.Statement)...)
+	obtained = tokens(find(n, []uast.Role{uast.Statement}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
 }
 
 func TestAnnotationsForLoop(t *testing.T) {
-	n, err := annotateFixture(integration, "for.native")
+	n, err := annotateFixture(integration, "for.bash.native")
 	require.NoError(t, err)
 
 	// same problem as TestAnnotationsConditionals.
@@ -233,12 +242,12 @@ func TestAnnotationsForLoop(t *testing.T) {
 		"for c in d; do e; done",
 		"for f in g; do\n    h\ndone",
 	}
-	obtained := tokens(find(n, uast.ForEach)...)
+	obtained := tokens(find(n, []uast.Role{uast.For}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
 }
 
 func TestAnnotationsWhileLoop(t *testing.T) {
-	n, err := annotateFixture(integration, "while.native")
+	n, err := annotateFixture(integration, "while.bash.native")
 	require.NoError(t, err)
 
 	// same problem as TestAnnotationsConditionals.
@@ -247,12 +256,12 @@ func TestAnnotationsWhileLoop(t *testing.T) {
 		"while d\ndo e\nf\ndone",
 		"while g; do\n  h\n  i\ndone",
 	}
-	obtained := tokens(find(n, uast.While)...)
+	obtained := tokens(find(n, []uast.Role{uast.While}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
 }
 
 func TestAnnotationsUntilLoop(t *testing.T) {
-	n, err := annotateFixture(integration, "until.native")
+	n, err := annotateFixture(integration, "until.bash.native")
 	require.NoError(t, err)
 
 	// same problem as TestAnnotationsConditionals.  This is the same as
@@ -263,6 +272,6 @@ func TestAnnotationsUntilLoop(t *testing.T) {
 		"until d\ndo e\nf\ndone",
 		"until g; do\n  h\n  i\ndone",
 	}
-	obtained := tokens(find(n, uast.While)...)
+	obtained := tokens(find(n, []uast.Role{uast.While}, []uast.Role{})...)
 	mustBeTheSame(t, expected, obtained)
 }

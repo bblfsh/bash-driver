@@ -16,6 +16,6 @@ build-native-internal:
 	cd native; \
 		$(DOWNLOAD_VENDOR); \
 		$(BUILD) shadowJar;
-	cp $(JAR) $(BUILD_PATH);
-	cp $(NATIVE_SCRIPT) $(BUILD_PATH)/native;
-	chmod +x $(BUILD_PATH)/native
+	cp $(JAR) $(BUILD_PATH)/bin;
+	cp $(NATIVE_SCRIPT) $(BUILD_PATH)/bin/native;
+	chmod +x $(BUILD_PATH)/bin/native

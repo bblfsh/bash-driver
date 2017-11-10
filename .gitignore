@@ -1,2 +1,6 @@
-native/vendor
+.gradle
 .sdk
+build
+native/.gradle
+native/build
+native/vendor
