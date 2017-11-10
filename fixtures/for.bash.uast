@@ -21,7 +21,7 @@ done
 .  }
 .  Children: {
 .  .  0: for shellcommand {
-.  .  .  Roles: ForEach,Statement
+.  .  .  Roles: For,Statement
 .  .  .  TOKEN "for a; do b; done"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
@@ -282,7 +282,7 @@ done
 .  .  .  }
 .  .  }
 .  .  3: for shellcommand {
-.  .  .  Roles: ForEach,Statement
+.  .  .  Roles: For,Statement
 .  .  .  TOKEN "for c in d; do e; done"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 19
@@ -610,7 +610,7 @@ done
 .  .  .  }
 .  .  }
 .  .  6: for shellcommand {
-.  .  .  Roles: ForEach,Statement
+.  .  .  Roles: For,Statement
 .  .  .  TOKEN "for f in g; do
     h
 done"

@@ -32,7 +32,7 @@ FILE {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] function {
-.  .  .  .  .  Roles: FunctionDeclaration
+.  .  .  .  .  Roles: Function,Declaration
 .  .  .  .  .  TOKEN "function"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
@@ -58,7 +58,7 @@ FILE {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] named symbol {
-.  .  .  .  .  Roles: FunctionDeclarationName
+.  .  .  .  .  Roles: Function,Declaration,Name
 .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 9
@@ -99,7 +99,7 @@ FILE {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: group element {
-.  .  .  .  .  Roles: FunctionDeclarationBody,Block
+.  .  .  .  .  Roles: Function,Declaration,Body,Block
 .  .  .  .  .  TOKEN "{
     echo "bla"
 }"
