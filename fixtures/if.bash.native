@@ -1,6 +1,6 @@
 {
     "status": "ok",
-    "language": "",
+    "language": "bash",
     "errors": [],
     "ast": {
         "children": [
