@@ -12,13 +12,13 @@ b="foo bar" # comment 2
 "
 .  StartPosition: {
 .  .  Offset: 0
-.  .  Line: 0
-.  .  Col: 0
+.  .  Line: 1
+.  .  Col: 1
 .  }
 .  EndPosition: {
 .  .  Offset: 58
-.  .  Line: 0
-.  .  Col: 0
+.  .  Line: 6
+.  .  Col: 1
 .  }
 .  Children: {
 .  .  0: [Bash] Comment {
@@ -26,13 +26,13 @@ b="foo bar" # comment 2
 .  .  .  TOKEN "# comment 1"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 11
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 12
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -44,13 +44,13 @@ b="foo bar" # comment 2
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 11
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 12
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 12
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -62,13 +62,13 @@ b="foo bar" # comment 2
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 12
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 13
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -79,13 +79,13 @@ b="foo bar" # comment 2
 .  .  .  TOKEN "a="# not a comment""
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 13
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 32
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 20
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -96,13 +96,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  TOKEN "a="# not a comment""
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 13
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 20
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
@@ -113,13 +113,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 13
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 14
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
@@ -130,13 +130,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  TOKEN "="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 14
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 15
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
@@ -147,13 +147,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  TOKEN ""# not a comment""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 15
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 20
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
@@ -164,13 +164,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 15
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
@@ -181,13 +181,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  TOKEN "# not a comment"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 19
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
@@ -198,13 +198,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 19
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 20
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
@@ -222,13 +222,13 @@ b="foo bar" # comment 2
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 32
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 20
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 33
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -240,13 +240,13 @@ b="foo bar" # comment 2
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 33
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 34
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -257,13 +257,13 @@ b="foo bar" # comment 2
 .  .  .  TOKEN "b="foo bar""
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 34
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 45
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 12
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -274,13 +274,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  TOKEN "b="foo bar""
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 45
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 12
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
@@ -291,13 +291,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
@@ -308,13 +308,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  TOKEN "="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 36
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
@@ -325,13 +325,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  TOKEN ""foo bar""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 36
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 45
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 12
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
@@ -342,13 +342,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 36
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 37
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
@@ -359,13 +359,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  TOKEN "foo bar"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 37
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 44
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
@@ -376,13 +376,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 44
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 45
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 12
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
@@ -399,13 +399,13 @@ b="foo bar" # comment 2
 .  .  .  TOKEN " "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 45
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 12
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 46
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 13
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -416,13 +416,13 @@ b="foo bar" # comment 2
 .  .  .  TOKEN "# comment 2"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 46
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 13
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 57
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 24
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -434,13 +434,13 @@ b="foo bar" # comment 2
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 57
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 24
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 58
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 6
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children

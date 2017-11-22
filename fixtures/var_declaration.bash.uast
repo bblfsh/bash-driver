@@ -8,13 +8,13 @@ FILE {
 "
 .  StartPosition: {
 .  .  Offset: 0
-.  .  Line: 0
-.  .  Col: 0
+.  .  Line: 1
+.  .  Col: 1
 .  }
 .  EndPosition: {
 .  .  Offset: 4
-.  .  Line: 0
-.  .  Col: 0
+.  .  Line: 2
+.  .  Col: 1
 .  }
 .  Children: {
 .  .  0: simple-command {
@@ -22,13 +22,13 @@ FILE {
 .  .  .  TOKEN "a=1"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 3
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 4
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -39,13 +39,13 @@ FILE {
 .  .  .  .  .  TOKEN "a=1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 3
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
@@ -56,13 +56,13 @@ FILE {
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 1
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
@@ -73,13 +73,13 @@ FILE {
 .  .  .  .  .  .  .  TOKEN "="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 1
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 2
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
@@ -90,13 +90,13 @@ FILE {
 .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 2
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 3
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
@@ -107,13 +107,13 @@ FILE {
 .  .  .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 2
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 3
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
@@ -131,13 +131,13 @@ FILE {
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 3
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 4
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 4
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children

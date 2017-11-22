@@ -7,6 +7,7 @@ import (
 	. "gopkg.in/bblfsh/sdk.v1/uast/ann"
 	"gopkg.in/bblfsh/sdk.v1/uast/transformer"
 	"gopkg.in/bblfsh/sdk.v1/uast/transformer/annotatter"
+	"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
 	"gopkg.in/src-d/go-errors.v0"
 )
 
@@ -15,6 +16,7 @@ import (
 // https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/transformers
 var Transformers = []transformer.Tranformer{
 	annotatter.NewAnnotatter(AnnotationRules),
+	positioner.NewFillLineColFromOffset(),
 }
 
 var ErrRootMustBeFile = errors.NewKind("root must have internal type FILE")

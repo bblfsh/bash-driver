@@ -8,13 +8,13 @@ FILE {
 "
 .  StartPosition: {
 .  .  Offset: 0
-.  .  Line: 0
-.  .  Col: 0
+.  .  Line: 1
+.  .  Col: 1
 .  }
 .  EndPosition: {
 .  .  Offset: 12
-.  .  Line: 0
-.  .  Col: 0
+.  .  Line: 2
+.  .  Col: 1
 .  }
 .  Children: {
 .  .  0: [Bash] shebang element {
@@ -23,13 +23,13 @@ FILE {
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 12
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
@@ -41,13 +41,13 @@ FILE {
 "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
