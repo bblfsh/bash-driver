@@ -9,6 +9,16 @@ import "gopkg.in/bblfsh/sdk.v1/uast"
 var ToNode = &uast.ObjectToNode{
 	InternalTypeKey:    "elementType",
 	OffsetKey:          "startOffset",
+	EndOffsetKey:       "endOffset",
 	TopLevelIsRootNode: true,
 	TokenKeys:          map[string]bool{"text": true},
+	Modifier: func(n map[string]interface{}) error {
+		// Create endOffset as startOffset + textLength
+		if textEndPos, ok := n["textLength"].(float64); ok {
+			n["endOffset"] = textEndPos + n["startOffset"].(float64)
+			delete(n, "textLength")
+		}
+
+		return nil
+	},
 }

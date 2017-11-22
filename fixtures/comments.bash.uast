@@ -15,8 +15,10 @@ b="foo bar" # comment 2
 .  .  Line: 0
 .  .  Col: 0
 .  }
-.  Properties: {
-.  .  textLength: 58
+.  EndPosition: {
+.  .  Offset: 58
+.  .  Line: 0
+.  .  Col: 0
 .  }
 .  Children: {
 .  .  0: [Bash] Comment {
@@ -27,9 +29,13 @@ b="foo bar" # comment 2
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 11
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 11
 .  .  .  }
 .  .  }
 .  .  1: [Bash] linefeed {
@@ -41,9 +47,13 @@ b="foo bar" # comment 2
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 12
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  2: [Bash] linefeed {
@@ -55,9 +65,13 @@ b="foo bar" # comment 2
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 13
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  3: simple-command {
@@ -68,9 +82,13 @@ b="foo bar" # comment 2
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 32
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 19
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: var-def-element {
@@ -81,9 +99,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  Col: 0
 .  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 32
+.  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  Col: 0
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 19
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] assignment_word {
@@ -94,9 +116,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] = {
@@ -107,9 +133,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 15
+.  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: [Bash] string {
@@ -120,9 +150,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 32
+.  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 17
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
@@ -133,9 +167,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 16
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
@@ -146,9 +184,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 31
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 15
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
@@ -159,9 +201,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 32
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -179,9 +225,13 @@ b="foo bar" # comment 2
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 33
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  5: [Bash] linefeed {
@@ -193,9 +243,13 @@ b="foo bar" # comment 2
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 34
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  6: simple-command {
@@ -206,9 +260,13 @@ b="foo bar" # comment 2
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 45
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 11
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: var-def-element {
@@ -219,9 +277,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  Col: 0
 .  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 45
+.  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  Col: 0
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 11
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] assignment_word {
@@ -232,9 +294,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 35
+.  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] = {
@@ -245,9 +311,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 36
+.  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: [Bash] string {
@@ -258,9 +328,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 45
+.  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
@@ -271,9 +345,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 37
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
@@ -284,9 +362,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 44
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 7
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
@@ -297,9 +379,13 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  .  Line: 0
 .  .  .  .  .  .  .  .  .  .  Col: 0
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 45
+.  .  .  .  .  .  .  .  .  .  Line: 0
+.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -316,9 +402,13 @@ b="foo bar" # comment 2
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 46
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  8: [Bash] Comment {
@@ -329,9 +419,13 @@ b="foo bar" # comment 2
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 57
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 11
 .  .  .  }
 .  .  }
 .  .  9: [Bash] linefeed {
@@ -343,9 +437,13 @@ b="foo bar" # comment 2
 .  .  .  .  Line: 0
 .  .  .  .  Col: 0
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 58
+.  .  .  .  Line: 0
+.  .  .  .  Col: 0
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  }
