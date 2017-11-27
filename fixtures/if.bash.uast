@@ -30,11 +30,13 @@ fi
 "
 .  StartPosition: {
 .  .  Offset: 0
-.  .  Line: 0
-.  .  Col: 0
+.  .  Line: 1
+.  .  Col: 1
 .  }
-.  Properties: {
-.  .  textLength: 299
+.  EndPosition: {
+.  .  Offset: 299
+.  .  Line: 24
+.  .  Col: 1
 .  }
 .  Children: {
 .  .  0: if shellcommand {
@@ -42,12 +44,16 @@ fi
 .  .  .  TOKEN "if a1; then a2; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 18
+.  .  .  .  Line: 1
+.  .  .  .  Col: 19
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 18
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
@@ -55,12 +61,16 @@ fi
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 2
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
@@ -68,12 +78,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 2
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 3
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: simple-command {
@@ -81,12 +95,16 @@ fi
 .  .  .  .  .  TOKEN "a1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 3
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 4
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 5
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -94,12 +112,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "a1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 3
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 5
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -107,12 +129,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "a1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 3
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 5
+.  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -120,12 +146,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "a1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 3
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 5
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
@@ -139,12 +169,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 5
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 6
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 7
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
@@ -152,12 +186,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 6
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 7
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
@@ -165,12 +203,16 @@ fi
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 11
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 12
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
@@ -178,12 +220,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 11
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 12
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 12
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 13
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
@@ -191,12 +237,16 @@ fi
 .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 13
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 15
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -204,12 +254,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -217,12 +271,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -230,12 +288,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -243,12 +305,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -264,12 +330,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 14
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 15
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 15
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
@@ -277,12 +347,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 15
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 16
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 17
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] fi {
@@ -290,12 +364,16 @@ fi
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 17
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 18
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 19
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -306,12 +384,16 @@ fi
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 18
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 19
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 19
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  2: [Bash] linefeed {
@@ -320,12 +402,16 @@ fi
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 19
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 20
+.  .  .  .  Line: 3
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  3: if shellcommand {
@@ -333,12 +419,16 @@ fi
 .  .  .  TOKEN "if b1; then b2; else b3; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 20
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 47
+.  .  .  .  Line: 3
+.  .  .  .  Col: 28
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 27
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
@@ -346,12 +436,16 @@ fi
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 20
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
@@ -359,12 +453,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 23
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: simple-command {
@@ -372,12 +470,16 @@ fi
 .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 4
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 25
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -385,12 +487,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 25
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -398,12 +504,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 25
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -411,12 +521,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 25
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
@@ -430,12 +544,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 25
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 26
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 7
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
@@ -443,12 +561,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 26
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 27
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
@@ -456,12 +578,16 @@ fi
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 27
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 31
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 12
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
@@ -469,12 +595,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 12
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 32
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 13
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
@@ -482,12 +612,16 @@ fi
 .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 13
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 34
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 15
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -495,12 +629,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 34
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -508,12 +646,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 34
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -521,12 +663,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 34
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -534,12 +680,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 34
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -555,12 +705,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 15
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 35
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
@@ -568,12 +722,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 36
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 17
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] else {
@@ -581,12 +739,16 @@ fi
 .  .  .  .  .  TOKEN "else"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 36
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 17
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 40
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 21
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: WHITE_SPACE {
@@ -594,12 +756,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 40
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 21
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 41
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 22
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: logical block {
@@ -607,12 +773,16 @@ fi
 .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 41
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 22
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 24
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -620,12 +790,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 41
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -633,12 +807,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 41
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -646,12 +824,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 41
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -659,12 +841,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 41
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -680,12 +866,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 24
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 44
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 25
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: WHITE_SPACE {
@@ -693,12 +883,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 44
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 25
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 45
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 26
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  15: [Bash] fi {
@@ -706,12 +900,16 @@ fi
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 45
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 26
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 47
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 28
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -722,12 +920,16 @@ fi
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 47
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 28
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 48
+.  .  .  .  Line: 4
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  5: [Bash] linefeed {
@@ -736,12 +938,16 @@ fi
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 48
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 49
+.  .  .  .  Line: 5
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  6: if shellcommand {
@@ -749,12 +955,16 @@ fi
 .  .  .  TOKEN "if c1; then c2; elif c3; then c4; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 49
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 85
+.  .  .  .  Line: 5
+.  .  .  .  Col: 37
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 36
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
@@ -762,12 +972,16 @@ fi
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 51
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
@@ -775,12 +989,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 51
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 52
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: simple-command {
@@ -788,12 +1006,16 @@ fi
 .  .  .  .  .  TOKEN "c1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 52
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 4
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 54
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -801,12 +1023,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "c1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 52
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 54
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -814,12 +1040,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "c1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 52
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 54
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -827,12 +1057,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 52
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 54
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
@@ -846,12 +1080,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 54
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 55
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 7
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
@@ -859,12 +1097,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 55
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 56
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
@@ -872,12 +1114,16 @@ fi
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 56
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 60
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 12
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
@@ -885,12 +1131,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 60
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 12
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 61
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 13
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
@@ -898,12 +1148,16 @@ fi
 .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 61
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 13
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 15
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -911,12 +1165,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 61
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -924,12 +1182,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 61
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -937,12 +1199,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 61
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -950,12 +1216,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 61
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -971,12 +1241,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 63
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 15
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 64
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
@@ -984,12 +1258,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 64
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 65
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 17
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] elif {
@@ -997,12 +1275,16 @@ fi
 .  .  .  .  .  TOKEN "elif"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 65
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 17
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 69
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 21
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: WHITE_SPACE {
@@ -1010,12 +1292,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 69
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 21
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 70
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 22
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: simple-command {
@@ -1023,12 +1309,16 @@ fi
 .  .  .  .  .  TOKEN "c3"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 70
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 22
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 72
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 24
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -1036,12 +1326,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "c3"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 70
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 72
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -1049,12 +1343,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "c3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 70
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 72
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -1062,12 +1360,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 70
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 72
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
@@ -1081,12 +1383,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 72
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 24
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 73
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 25
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: WHITE_SPACE {
@@ -1094,12 +1400,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 73
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 25
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 74
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 26
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  15: [Bash] then {
@@ -1107,12 +1417,16 @@ fi
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 74
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 26
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 78
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 30
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  16: WHITE_SPACE {
@@ -1120,12 +1434,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 78
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 30
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 79
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 31
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  17: logical block {
@@ -1133,12 +1451,16 @@ fi
 .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 79
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 31
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 81
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 33
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -1146,12 +1468,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 79
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 81
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 33
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -1159,12 +1485,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 79
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 81
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 33
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -1172,12 +1502,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 79
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 81
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 33
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -1185,12 +1519,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 79
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 81
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 33
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -1206,12 +1544,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 81
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 33
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 82
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 34
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  19: WHITE_SPACE {
@@ -1219,12 +1561,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 82
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 34
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 83
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 35
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  20: [Bash] fi {
@@ -1232,12 +1578,16 @@ fi
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 83
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 35
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 85
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 37
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -1248,12 +1598,16 @@ fi
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 85
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 37
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 86
+.  .  .  .  Line: 6
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  8: [Bash] linefeed {
@@ -1262,12 +1616,16 @@ fi
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 86
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 6
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 87
+.  .  .  .  Line: 7
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  9: if shellcommand {
@@ -1275,12 +1633,16 @@ fi
 .  .  .  TOKEN "if d1; then d2; elif d3; then d4; else d5; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 87
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 132
+.  .  .  .  Line: 7
+.  .  .  .  Col: 46
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 45
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
@@ -1288,12 +1650,16 @@ fi
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 87
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 89
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
@@ -1301,12 +1667,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 89
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 90
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: simple-command {
@@ -1314,12 +1684,16 @@ fi
 .  .  .  .  .  TOKEN "d1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 90
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 4
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 92
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -1327,12 +1701,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "d1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 90
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 92
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -1340,12 +1718,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "d1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 90
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 92
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -1353,12 +1735,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 90
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 92
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
@@ -1372,12 +1758,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 92
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 93
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 7
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
@@ -1385,12 +1775,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 93
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 94
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
@@ -1398,12 +1792,16 @@ fi
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 94
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 98
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 12
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
@@ -1411,12 +1809,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 98
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 12
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 99
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 13
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
@@ -1424,12 +1826,16 @@ fi
 .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 99
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 13
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 101
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 15
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -1437,12 +1843,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 99
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 101
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -1450,12 +1860,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 99
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 101
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -1463,12 +1877,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 99
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 101
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -1476,12 +1894,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 99
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 101
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -1497,12 +1919,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 101
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 15
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 102
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
@@ -1510,12 +1936,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 102
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 103
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 17
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] elif {
@@ -1523,12 +1953,16 @@ fi
 .  .  .  .  .  TOKEN "elif"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 103
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 17
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 107
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 21
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: WHITE_SPACE {
@@ -1536,12 +1970,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 107
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 21
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 108
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 22
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: simple-command {
@@ -1549,12 +1987,16 @@ fi
 .  .  .  .  .  TOKEN "d3"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 108
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 22
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 110
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 24
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -1562,12 +2004,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "d3"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 108
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 110
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -1575,12 +2021,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "d3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 108
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 110
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -1588,12 +2038,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 108
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 110
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
@@ -1607,12 +2061,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 110
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 24
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 111
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 25
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: WHITE_SPACE {
@@ -1620,12 +2078,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 111
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 25
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 112
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 26
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  15: [Bash] then {
@@ -1633,12 +2095,16 @@ fi
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 112
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 26
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 116
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 30
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  16: WHITE_SPACE {
@@ -1646,12 +2112,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 116
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 30
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 117
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 31
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  17: logical block {
@@ -1659,12 +2129,16 @@ fi
 .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 117
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 31
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 119
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 33
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -1672,12 +2146,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 117
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 119
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 33
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -1685,12 +2163,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 117
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 119
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 33
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -1698,12 +2180,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 117
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 119
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 33
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -1711,12 +2197,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 117
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 119
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 33
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -1732,12 +2222,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 119
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 33
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 120
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 34
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  19: WHITE_SPACE {
@@ -1745,12 +2239,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 120
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 34
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 121
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 35
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  20: [Bash] else {
@@ -1758,12 +2256,16 @@ fi
 .  .  .  .  .  TOKEN "else"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 121
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 35
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 125
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 39
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  21: WHITE_SPACE {
@@ -1771,12 +2273,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 125
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 39
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 126
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 40
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  22: logical block {
@@ -1784,12 +2290,16 @@ fi
 .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 126
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 40
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 128
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 42
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -1797,12 +2307,16 @@ fi
 .  .  .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 126
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 40
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 128
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 42
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -1810,12 +2324,16 @@ fi
 .  .  .  .  .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 126
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 40
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 128
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 42
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -1823,12 +2341,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 126
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 40
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 128
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 42
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -1836,12 +2358,16 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 126
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 40
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 128
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 42
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -1857,12 +2383,16 @@ fi
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 128
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 42
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 129
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 43
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  24: WHITE_SPACE {
@@ -1870,12 +2400,16 @@ fi
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 129
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 43
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 130
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 44
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  25: [Bash] fi {
@@ -1883,12 +2417,16 @@ fi
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 130
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 44
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 132
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 46
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -1899,12 +2437,16 @@ fi
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 132
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 46
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 133
+.  .  .  .  Line: 8
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  11: [Bash] linefeed {
@@ -1913,12 +2455,16 @@ fi
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 133
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 8
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 134
+.  .  .  .  Line: 9
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  12: if shellcommand {
@@ -1931,12 +2477,16 @@ else e5
 fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 134
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 9
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 174
+.  .  .  .  Line: 14
+.  .  .  .  Col: 3
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 40
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
@@ -1944,12 +2494,16 @@ fi"
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 134
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 136
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
@@ -1957,12 +2511,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 136
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 137
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: simple-command {
@@ -1970,12 +2528,16 @@ fi"
 .  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 137
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 4
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 139
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -1983,12 +2545,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 137
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 139
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -1996,12 +2562,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 137
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 139
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -2009,12 +2579,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 137
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 139
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
@@ -2029,12 +2603,16 @@ fi"
 "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 139
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 140
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: [Bash] then {
@@ -2042,12 +2620,16 @@ fi"
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 140
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 144
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: WHITE_SPACE {
@@ -2055,12 +2637,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 144
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 145
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: logical block {
@@ -2068,12 +2654,16 @@ fi"
 .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 145
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 147
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -2081,12 +2671,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 145
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 147
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -2094,12 +2688,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 145
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 147
+.  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -2107,12 +2705,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 145
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 147
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -2120,12 +2722,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 145
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 147
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -2142,12 +2748,16 @@ fi"
 "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 147
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 148
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] elif {
@@ -2155,12 +2765,16 @@ fi"
 .  .  .  .  .  TOKEN "elif"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 148
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 152
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
@@ -2168,12 +2782,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 152
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 153
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: simple-command {
@@ -2181,12 +2799,16 @@ fi"
 .  .  .  .  .  TOKEN "e3"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 153
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 155
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -2194,12 +2816,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "e3"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 153
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 155
+.  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -2207,12 +2833,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "e3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 153
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 155
+.  .  .  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -2220,12 +2850,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 153
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 155
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
@@ -2240,12 +2874,16 @@ fi"
 "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 155
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 156
+.  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: [Bash] then {
@@ -2253,12 +2891,16 @@ fi"
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 156
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 160
+.  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  13: WHITE_SPACE {
@@ -2266,12 +2908,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 160
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 161
+.  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: logical block {
@@ -2279,12 +2925,16 @@ fi"
 .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 161
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 163
+.  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -2292,12 +2942,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 161
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 163
+.  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -2305,12 +2959,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 161
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 163
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -2318,12 +2976,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 161
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 163
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -2331,12 +2993,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 161
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 163
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -2353,12 +3019,16 @@ fi"
 "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 163
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 164
+.  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  16: [Bash] else {
@@ -2366,12 +3036,16 @@ fi"
 .  .  .  .  .  TOKEN "else"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 164
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 168
+.  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  17: WHITE_SPACE {
@@ -2379,12 +3053,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 168
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 169
+.  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  18: logical block {
@@ -2392,12 +3070,16 @@ fi"
 .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 169
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 171
+.  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -2405,12 +3087,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 169
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 171
+.  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -2418,12 +3104,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 169
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 171
+.  .  .  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -2431,12 +3121,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 169
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 171
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -2444,12 +3138,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 169
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 171
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -2466,12 +3164,16 @@ fi"
 "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 171
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 172
+.  .  .  .  .  .  Line: 14
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  20: [Bash] fi {
@@ -2479,12 +3181,16 @@ fi"
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 172
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 14
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 174
+.  .  .  .  .  .  Line: 14
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -2495,12 +3201,16 @@ fi"
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 174
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 14
+.  .  .  .  Col: 3
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 175
+.  .  .  .  Line: 15
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  14: [Bash] linefeed {
@@ -2509,12 +3219,16 @@ fi"
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 175
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 15
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 176
+.  .  .  .  Line: 16
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  15: if shellcommand {
@@ -2522,12 +3236,16 @@ fi"
 .  .  .  TOKEN "if [ -a file ]; then /bin/true; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 176
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 16
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 210
+.  .  .  .  Line: 16
+.  .  .  .  Col: 35
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 34
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
@@ -2535,12 +3253,16 @@ fi"
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 176
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 178
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
@@ -2548,12 +3270,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 178
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 179
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: conditional shellcommand {
@@ -2561,12 +3287,16 @@ fi"
 .  .  .  .  .  TOKEN "[ -a file ]"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 179
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 4
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 190
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 15
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 11
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] [ (left conditional) {
@@ -2574,12 +3304,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "[ "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 179
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 181
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] cond_op {
@@ -2587,12 +3321,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "-a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 181
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 183
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: WHITE_SPACE {
@@ -2600,12 +3338,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 183
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 8
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 184
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 9
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: [Bash] combined word {
@@ -2613,12 +3355,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "file"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 184
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 188
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 13
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 4
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -2626,12 +3372,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "file"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 184
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 188
+.  .  .  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  .  .  Col: 13
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -2641,12 +3391,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " ]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 188
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 190
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -2656,12 +3410,16 @@ fi"
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 190
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 15
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 191
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
@@ -2669,12 +3427,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 191
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 192
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 17
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
@@ -2682,12 +3444,16 @@ fi"
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 192
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 17
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 196
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 21
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
@@ -2695,12 +3461,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 196
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 21
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 197
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 22
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
@@ -2708,12 +3478,16 @@ fi"
 .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 197
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 22
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 206
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 31
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 9
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -2721,12 +3495,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 197
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 206
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 31
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -2734,12 +3512,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 197
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 206
+.  .  .  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  .  .  Col: 31
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -2747,12 +3529,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 197
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 206
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 31
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -2760,12 +3546,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 197
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 206
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 31
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -2781,12 +3571,16 @@ fi"
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 206
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 31
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 207
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 32
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
@@ -2794,12 +3588,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 207
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 32
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 208
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 33
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] fi {
@@ -2807,12 +3605,16 @@ fi"
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 208
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 33
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 210
+.  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  Col: 35
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -2823,12 +3625,16 @@ fi"
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 210
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 16
+.  .  .  .  Col: 35
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 211
+.  .  .  .  Line: 17
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  17: [Bash] linefeed {
@@ -2837,12 +3643,16 @@ fi"
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 211
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 17
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 212
+.  .  .  .  Line: 18
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  18: if shellcommand {
@@ -2850,12 +3660,16 @@ fi"
 .  .  .  TOKEN "if [ "a" == "b" ]; then /bin/true; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 212
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 18
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 249
+.  .  .  .  Line: 18
+.  .  .  .  Col: 38
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 37
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
@@ -2863,12 +3677,16 @@ fi"
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 212
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 214
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
@@ -2876,12 +3694,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 214
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 215
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: conditional shellcommand {
@@ -2889,12 +3711,16 @@ fi"
 .  .  .  .  .  TOKEN "[ "a" == "b" ]"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 215
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 4
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 229
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 18
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 14
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] [ (left conditional) {
@@ -2902,12 +3728,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "[ "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 215
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 217
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] string {
@@ -2915,12 +3745,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN ""a""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 217
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 220
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 9
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
@@ -2928,12 +3762,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 217
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 218
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 7
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
@@ -2941,12 +3779,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 218
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 219
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
@@ -2954,12 +3796,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 219
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 8
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 220
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 9
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -2969,12 +3815,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 220
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 221
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 10
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: [Bash] cond_op == {
@@ -2982,12 +3832,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "=="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 221
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 223
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 12
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  4: WHITE_SPACE {
@@ -2995,12 +3849,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 223
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 224
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 13
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  5: [Bash] string {
@@ -3008,12 +3866,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN ""b""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 224
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 227
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 16
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
@@ -3021,12 +3883,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 224
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 225
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 14
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
@@ -3034,12 +3900,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 225
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 226
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
@@ -3047,12 +3917,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 226
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 227
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 16
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -3062,12 +3936,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " ]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 227
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 229
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 18
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -3077,12 +3955,16 @@ fi"
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 229
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 18
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 230
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 19
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
@@ -3090,12 +3972,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 230
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 19
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 231
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 20
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
@@ -3103,12 +3989,16 @@ fi"
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 231
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 20
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 235
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 24
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
@@ -3116,12 +4006,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 235
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 24
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 236
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 25
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
@@ -3129,12 +4023,16 @@ fi"
 .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 236
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 25
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 245
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 34
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 9
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
@@ -3142,12 +4040,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 236
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 245
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 34
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -3155,12 +4057,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 236
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 245
+.  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  Col: 34
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -3168,12 +4074,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 236
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 245
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 34
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -3181,12 +4091,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 236
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 245
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 34
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -3202,12 +4116,16 @@ fi"
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 245
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 34
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 246
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 35
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
@@ -3215,12 +4133,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 246
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 35
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 247
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 36
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] fi {
@@ -3228,12 +4150,16 @@ fi"
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 247
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 36
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 249
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 38
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -3244,12 +4170,16 @@ fi"
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 249
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 18
+.  .  .  .  Col: 38
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 250
+.  .  .  .  Line: 19
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  20: [Bash] linefeed {
@@ -3258,12 +4188,16 @@ fi"
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 250
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 19
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 251
+.  .  .  .  Line: 20
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  .  21: if shellcommand {
@@ -3274,12 +4208,16 @@ fi"
 fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 251
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 20
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 298
+.  .  .  .  Line: 23
+.  .  .  .  Col: 3
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 47
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
@@ -3287,12 +4225,16 @@ fi"
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 251
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 253
+.  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
@@ -3300,12 +4242,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 253
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 254
+.  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: conditional shellcommand {
@@ -3313,12 +4259,16 @@ fi"
 .  .  .  .  .  TOKEN "[ "c" == "d" ]"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 254
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  Col: 4
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 268
+.  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  Col: 18
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 14
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] [ (left conditional) {
@@ -3326,12 +4276,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "[ "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 254
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 256
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] string {
@@ -3339,12 +4293,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN ""c""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 256
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 259
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 9
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
@@ -3352,12 +4310,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 256
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 257
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 7
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
@@ -3365,12 +4327,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 257
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 258
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
@@ -3378,12 +4344,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 258
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 8
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 259
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 9
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -3393,12 +4363,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 259
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 260
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 10
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: [Bash] cond_op == {
@@ -3406,12 +4380,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "=="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 260
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 262
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 12
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  4: WHITE_SPACE {
@@ -3419,12 +4397,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 262
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 263
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 13
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  5: [Bash] string {
@@ -3432,12 +4414,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN ""d""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 263
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 266
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 16
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
@@ -3445,12 +4431,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 263
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 264
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 14
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
@@ -3458,12 +4448,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 264
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 265
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
@@ -3471,12 +4465,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 265
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 266
+.  .  .  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  .  .  Col: 16
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -3486,12 +4484,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " ]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 266
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 268
+.  .  .  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  .  .  Col: 18
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -3502,12 +4504,16 @@ fi"
 "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 268
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 20
+.  .  .  .  .  .  Col: 18
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 269
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
@@ -3515,12 +4521,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 269
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 270
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 2
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: WHITE_SPACE {
@@ -3528,12 +4538,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 270
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 271
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
@@ -3541,12 +4555,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 271
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 272
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: WHITE_SPACE {
@@ -3554,12 +4572,16 @@ fi"
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 272
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 4
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 273
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] then {
@@ -3567,12 +4589,16 @@ fi"
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 273
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 277
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 9
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: logical block {
@@ -3581,12 +4607,16 @@ fi"
         /bin/true"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 277
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 295
+.  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  Col: 18
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 18
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] linefeed {
@@ -3595,12 +4625,16 @@ fi"
 "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 277
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 278
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: WHITE_SPACE {
@@ -3608,12 +4642,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 278
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 279
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: WHITE_SPACE {
@@ -3621,12 +4659,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 279
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 280
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: WHITE_SPACE {
@@ -3634,12 +4676,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 280
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 281
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  4: WHITE_SPACE {
@@ -3647,12 +4693,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 281
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 282
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  5: WHITE_SPACE {
@@ -3660,12 +4710,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 282
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 283
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  6: WHITE_SPACE {
@@ -3673,12 +4727,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 283
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 284
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 7
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  7: WHITE_SPACE {
@@ -3686,12 +4744,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 284
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 285
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  8: WHITE_SPACE {
@@ -3699,12 +4761,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 285
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 8
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 286
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 9
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  9: simple-command {
@@ -3712,12 +4778,16 @@ fi"
 .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 286
-.  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 295
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 18
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
@@ -3725,12 +4795,16 @@ fi"
 .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 286
-.  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 295
+.  .  .  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  .  .  Col: 18
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
@@ -3738,12 +4812,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 286
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 295
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 18
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
@@ -3751,12 +4829,16 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 286
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 295
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 18
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  textLength: 9
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -3773,12 +4855,16 @@ fi"
 "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 295
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  Col: 18
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 296
+.  .  .  .  .  .  Line: 23
+.  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: [Bash] fi {
@@ -3786,12 +4872,16 @@ fi"
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 296
-.  .  .  .  .  .  Line: 0
-.  .  .  .  .  .  Col: 0
+.  .  .  .  .  .  Line: 23
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 298
+.  .  .  .  .  .  Line: 23
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: children
-.  .  .  .  .  .  textLength: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -3802,12 +4892,16 @@ fi"
 "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 298
-.  .  .  .  Line: 0
-.  .  .  .  Col: 0
+.  .  .  .  Line: 23
+.  .  .  .  Col: 3
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 299
+.  .  .  .  Line: 24
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  textLength: 1
 .  .  .  }
 .  .  }
 .  }
