@@ -20,7 +20,7 @@ FILE {
 .  }
 .  Children: {
 .  .  0: function-def-element {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration,Block
 .  .  .  TOKEN "function foo {
     echo "bla"
 }"
@@ -56,7 +56,7 @@ FILE {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 8
@@ -90,7 +90,7 @@ FILE {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 9
@@ -109,7 +109,7 @@ FILE {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
@@ -145,7 +145,7 @@ FILE {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] { {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "{"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 13
@@ -162,7 +162,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] linefeed {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN "
 "
 .  .  .  .  .  .  .  StartPosition: {
@@ -180,7 +180,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 15
@@ -197,7 +197,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 16
@@ -214,7 +214,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 17
@@ -231,7 +231,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  5: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 18
@@ -248,7 +248,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  6: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "echo "bla""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 19
@@ -265,7 +265,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "echo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 19
@@ -282,7 +282,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "echo"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 19
@@ -299,7 +299,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "echo"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 19
@@ -320,7 +320,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 23
@@ -337,7 +337,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: String,Literal,Block
 .  .  .  .  .  .  .  .  .  TOKEN ""bla""
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 24
@@ -354,7 +354,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: String,Block
 .  .  .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 24
@@ -371,7 +371,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: String,Literal
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "bla"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 25
@@ -388,7 +388,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: String,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 28
@@ -409,7 +409,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  7: [Bash] linefeed {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN "
 "
 .  .  .  .  .  .  .  StartPosition: {
@@ -427,7 +427,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  8: [Bash] } {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "}"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 30
@@ -448,7 +448,7 @@ FILE {
 .  .  .  }
 .  .  }
 .  .  1: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {

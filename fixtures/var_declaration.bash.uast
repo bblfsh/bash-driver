@@ -5,6 +5,9 @@ UAST:
 FILE {
 .  Roles: File
 .  TOKEN "a=1
+octal=032
+hex=0x64
+base4=4#123123
 "
 .  StartPosition: {
 .  .  Offset: 0
@@ -12,13 +15,13 @@ FILE {
 .  .  Col: 1
 .  }
 .  EndPosition: {
-.  .  Offset: 4
-.  .  Line: 2
+.  .  Offset: 38
+.  .  Line: 5
 .  .  Col: 1
 .  }
 .  Children: {
 .  .  0: simple-command {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression
 .  .  .  TOKEN "a=1"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
@@ -35,7 +38,7 @@ FILE {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: var-def-element {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Assignment,Binary
 .  .  .  .  .  TOKEN "a=1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
@@ -52,7 +55,7 @@ FILE {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] assignment_word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Identifier,Left
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
@@ -69,7 +72,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] = {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Operator,Assignment
 .  .  .  .  .  .  .  TOKEN "="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 1
@@ -86,7 +89,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Right,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 2
@@ -103,7 +106,7 @@ FILE {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] int literal {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Number,Literal,Primitive
 .  .  .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 2
@@ -126,7 +129,7 @@ FILE {
 .  .  .  }
 .  .  }
 .  .  1: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -137,6 +140,384 @@ FILE {
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 4
 .  .  .  .  Line: 2
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  }
+.  .  }
+.  .  2: simple-command {
+.  .  .  Roles: Expression
+.  .  .  TOKEN "octal=032"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 4
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 13
+.  .  .  .  Line: 2
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: var-def-element {
+.  .  .  .  .  Roles: Expression,Assignment,Binary
+.  .  .  .  .  TOKEN "octal=032"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 4
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 13
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 10
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: children
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: [Bash] assignment_word {
+.  .  .  .  .  .  .  Roles: Identifier,Left
+.  .  .  .  .  .  .  TOKEN "octal"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 4
+.  .  .  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 9
+.  .  .  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: [Bash] = {
+.  .  .  .  .  .  .  Roles: Operator,Assignment
+.  .  .  .  .  .  .  TOKEN "="
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 9
+.  .  .  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 10
+.  .  .  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: [Bash] combined word {
+.  .  .  .  .  .  .  Roles: Right,String,Identifier,Incomplete
+.  .  .  .  .  .  .  TOKEN "032"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 10
+.  .  .  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 13
+.  .  .  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: [Bash] word {
+.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "032"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 10
+.  .  .  .  .  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 13
+.  .  .  .  .  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: [Bash] linefeed {
+.  .  .  Roles: Whitespace,Noop
+.  .  .  TOKEN "
+"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 13
+.  .  .  .  Line: 2
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 14
+.  .  .  .  Line: 3
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  }
+.  .  }
+.  .  4: simple-command {
+.  .  .  Roles: Expression
+.  .  .  TOKEN "hex=0x64"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 14
+.  .  .  .  Line: 3
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 22
+.  .  .  .  Line: 3
+.  .  .  .  Col: 9
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: var-def-element {
+.  .  .  .  .  Roles: Expression,Assignment,Binary
+.  .  .  .  .  TOKEN "hex=0x64"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: children
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: [Bash] assignment_word {
+.  .  .  .  .  .  .  Roles: Identifier,Left
+.  .  .  .  .  .  .  TOKEN "hex"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 17
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: [Bash] = {
+.  .  .  .  .  .  .  Roles: Operator,Assignment
+.  .  .  .  .  .  .  TOKEN "="
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 17
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 18
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: [Bash] combined word {
+.  .  .  .  .  .  .  Roles: Right,String,Identifier,Incomplete
+.  .  .  .  .  .  .  TOKEN "0x64"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 18
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: [Bash] word {
+.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "0x64"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 18
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  5: [Bash] linefeed {
+.  .  .  Roles: Whitespace,Noop
+.  .  .  TOKEN "
+"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 22
+.  .  .  .  Line: 3
+.  .  .  .  Col: 9
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 23
+.  .  .  .  Line: 4
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  }
+.  .  }
+.  .  6: simple-command {
+.  .  .  Roles: Expression
+.  .  .  TOKEN "base4=4#123123"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 23
+.  .  .  .  Line: 4
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 37
+.  .  .  .  Line: 4
+.  .  .  .  Col: 15
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: children
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: var-def-element {
+.  .  .  .  .  Roles: Expression,Assignment,Binary
+.  .  .  .  .  TOKEN "base4=4#123123"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 23
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 37
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 15
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: children
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: [Bash] assignment_word {
+.  .  .  .  .  .  .  Roles: Identifier,Left
+.  .  .  .  .  .  .  TOKEN "base4"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 23
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 28
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: [Bash] = {
+.  .  .  .  .  .  .  Roles: Operator,Assignment
+.  .  .  .  .  .  .  TOKEN "="
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 28
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 29
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: [Bash] combined word {
+.  .  .  .  .  .  .  Roles: Right,String,Identifier,Incomplete
+.  .  .  .  .  .  .  TOKEN "4#123123"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 29
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 37
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: [Bash] word {
+.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "4#123123"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 29
+.  .  .  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 37
+.  .  .  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: children
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  7: [Bash] linefeed {
+.  .  .  Roles: Whitespace,Noop
+.  .  .  TOKEN "
+"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 37
+.  .  .  .  Line: 4
+.  .  .  .  Col: 15
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 38
+.  .  .  .  Line: 5
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
