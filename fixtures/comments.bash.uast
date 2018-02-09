@@ -143,7 +143,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block,Right
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block,Right
 .  .  .  .  .  .  .  TOKEN ""# not a comment""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 15
@@ -160,7 +160,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 15
@@ -177,7 +177,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "# not a comment"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 16
@@ -194,7 +194,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 31
@@ -321,7 +321,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block,Right
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block,Right
 .  .  .  .  .  .  .  TOKEN ""foo bar""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 36
@@ -338,7 +338,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 36
@@ -355,7 +355,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "foo bar"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 37
@@ -372,7 +372,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 44

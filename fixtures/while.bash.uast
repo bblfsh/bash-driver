@@ -28,7 +28,7 @@ done
 .  }
 .  Children: {
 .  .  0: while loop {
-.  .  .  Roles: While,Statement
+.  .  .  Roles: Statement,While
 .  .  .  TOKEN "while a; do b; c; done"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
@@ -45,7 +45,7 @@ done
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] while {
-.  .  .  .  .  Roles: While,Statement
+.  .  .  .  .  Roles: Statement,While
 .  .  .  .  .  TOKEN "while"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
@@ -113,7 +113,7 @@ done
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 6
@@ -130,7 +130,7 @@ done
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 6
@@ -221,7 +221,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: If,Then,While,Body
+.  .  .  .  .  Roles: Expression,If,Then,While,Body
 .  .  .  .  .  TOKEN "b; c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
@@ -272,7 +272,7 @@ done
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 12
@@ -289,7 +289,7 @@ done
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 12
@@ -380,7 +380,7 @@ done
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 15
@@ -397,7 +397,7 @@ done
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 15
@@ -456,7 +456,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] done {
-.  .  .  .  .  Roles: Statement
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "done"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 18
@@ -511,7 +511,7 @@ done
 .  .  .  }
 .  .  }
 .  .  3: while loop {
-.  .  .  Roles: While,Statement
+.  .  .  Roles: Statement,While
 .  .  .  TOKEN "while d
 do e
 f
@@ -531,7 +531,7 @@ done"
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] while {
-.  .  .  .  .  Roles: While,Statement
+.  .  .  .  .  Roles: Statement,While
 .  .  .  .  .  TOKEN "while"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 24
@@ -599,7 +599,7 @@ done"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 30
@@ -616,7 +616,7 @@ done"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 30
@@ -691,7 +691,7 @@ done"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: logical block {
-.  .  .  .  .  Roles: If,Then,While,Body
+.  .  .  .  .  Roles: Expression,If,Then,While,Body
 .  .  .  .  .  TOKEN "e
 f"
 .  .  .  .  .  StartPosition: {
@@ -743,7 +743,7 @@ f"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 35
@@ -760,7 +760,7 @@ f"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 35
@@ -835,7 +835,7 @@ f"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 37
@@ -852,7 +852,7 @@ f"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 37
@@ -895,7 +895,7 @@ f"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] done {
-.  .  .  .  .  Roles: Statement
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "done"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 39
@@ -950,7 +950,7 @@ f"
 .  .  .  }
 .  .  }
 .  .  6: while loop {
-.  .  .  Roles: While,Statement
+.  .  .  Roles: Statement,While
 .  .  .  TOKEN "while g; do
   h
   i
@@ -970,7 +970,7 @@ done"
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] while {
-.  .  .  .  .  Roles: While,Statement
+.  .  .  .  .  Roles: Statement,While
 .  .  .  .  .  TOKEN "while"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 45
@@ -1038,7 +1038,7 @@ done"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "g"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 51
@@ -1055,7 +1055,7 @@ done"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "g"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 51
@@ -1129,7 +1129,7 @@ done"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: logical block {
-.  .  .  .  .  Roles: If,Then,While,Body
+.  .  .  .  .  Roles: Expression,If,Then,While,Body
 .  .  .  .  .  TOKEN "
   h
   i"
@@ -1234,7 +1234,7 @@ done"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "h"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 59
@@ -1251,7 +1251,7 @@ done"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "h"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 59
@@ -1360,7 +1360,7 @@ done"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "i"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 63
@@ -1377,7 +1377,7 @@ done"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "i"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 63
@@ -1420,7 +1420,7 @@ done"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] done {
-.  .  .  .  .  Roles: Statement
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "done"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 65

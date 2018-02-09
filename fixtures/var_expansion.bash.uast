@@ -55,7 +55,7 @@ ${B}
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "$A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 0
@@ -72,7 +72,7 @@ ${B}
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: var-use-element {
-.  .  .  .  .  .  .  .  .  Roles: Variable,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Variable,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "$A"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 0
@@ -89,7 +89,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] variable {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Variable,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Variable,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "$A"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
@@ -166,7 +166,7 @@ ${B}
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "${B}"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 3
@@ -183,7 +183,7 @@ ${B}
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] composed variable, like subshell {
-.  .  .  .  .  .  .  .  .  Roles: Variable,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Variable,Expression,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "${B}"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 3
@@ -217,7 +217,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: [Bash] var substitution {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Variable,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Variable,Expression,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "{B}"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 4
@@ -251,7 +251,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: var-use-element {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Variable,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Variable,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 5
@@ -268,7 +268,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 5
@@ -366,7 +366,7 @@ ${B}
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""$C""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 8
@@ -383,7 +383,7 @@ ${B}
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 8
@@ -400,7 +400,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: var-use-element {
-.  .  .  .  .  .  .  .  .  Roles: Variable,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Variable,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "$C"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 9
@@ -417,7 +417,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] variable {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Variable,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Variable,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "$C"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 9
@@ -436,7 +436,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 11
@@ -511,7 +511,7 @@ ${B}
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""${D}""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 13
@@ -528,7 +528,7 @@ ${B}
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 13
@@ -545,7 +545,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] composed variable, like subshell {
-.  .  .  .  .  .  .  .  .  Roles: Variable,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Variable,Expression,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "${D}"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 14
@@ -579,7 +579,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: [Bash] var substitution {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Variable,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Variable,Expression,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "{D}"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 15
@@ -613,7 +613,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: var-use-element {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Variable,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Variable,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "D"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 16
@@ -630,7 +630,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "D"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 16
@@ -670,7 +670,7 @@ ${B}
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 18

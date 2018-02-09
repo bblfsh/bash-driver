@@ -108,7 +108,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: [Bash] word {
-.  .  .  .  .  Roles: Identifier
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 5
@@ -176,7 +176,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "b]"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 11
@@ -193,7 +193,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "b]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 11
@@ -298,7 +298,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 15
@@ -315,7 +315,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 15
@@ -353,7 +353,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 20
@@ -370,7 +370,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 20
@@ -459,7 +459,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 23
@@ -476,7 +476,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 23
@@ -551,7 +551,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 26
@@ -568,7 +568,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 26
@@ -606,7 +606,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 29
@@ -623,7 +623,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 29
@@ -714,7 +714,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  14: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b]"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 36
@@ -815,7 +815,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 40
@@ -832,7 +832,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 40
@@ -870,7 +870,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 45
@@ -887,7 +887,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 45
@@ -976,7 +976,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 48
@@ -993,7 +993,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 48
@@ -1068,7 +1068,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 51
@@ -1085,7 +1085,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 51
@@ -1123,7 +1123,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 54
@@ -1140,7 +1140,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 54
@@ -1231,7 +1231,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  27: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b]"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 61
@@ -1332,7 +1332,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 65
@@ -1349,7 +1349,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 65
@@ -1387,7 +1387,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 70
@@ -1404,7 +1404,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 70
@@ -1493,7 +1493,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 73
@@ -1510,7 +1510,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 73
@@ -1585,7 +1585,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 76
@@ -1602,7 +1602,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 76
@@ -1640,7 +1640,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 79
@@ -1657,7 +1657,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 79
@@ -1748,7 +1748,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  40: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b]"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 86
@@ -1849,7 +1849,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 90
@@ -1866,7 +1866,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 90
@@ -1904,7 +1904,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 95
@@ -1921,7 +1921,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 95
@@ -2010,7 +2010,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 98
@@ -2027,7 +2027,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 98
@@ -2102,7 +2102,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 101
@@ -2119,7 +2119,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 101
@@ -2157,7 +2157,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 104
@@ -2174,7 +2174,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 104
@@ -2265,7 +2265,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  53: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b]"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 111
@@ -2366,7 +2366,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 115
@@ -2383,7 +2383,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 115
@@ -2421,7 +2421,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 120
@@ -2438,7 +2438,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 120
@@ -2527,7 +2527,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 123
@@ -2544,7 +2544,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 123
@@ -2619,7 +2619,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 126
@@ -2636,7 +2636,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 126
@@ -2674,7 +2674,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 129
@@ -2691,7 +2691,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 129
@@ -2782,7 +2782,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  66: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b]"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 136
@@ -2883,7 +2883,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 140
@@ -2900,7 +2900,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 140
@@ -2938,7 +2938,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 145
@@ -2955,7 +2955,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 145
@@ -3044,7 +3044,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 148
@@ -3061,7 +3061,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 148
@@ -3136,7 +3136,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 151
@@ -3153,7 +3153,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 151
@@ -3229,7 +3229,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  78: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "a"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 156
@@ -3347,7 +3347,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 160
@@ -3364,7 +3364,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 160
@@ -3491,7 +3491,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 165
@@ -3508,7 +3508,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 165
@@ -3546,7 +3546,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 170
@@ -3563,7 +3563,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 170
@@ -3652,7 +3652,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 173
@@ -3669,7 +3669,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 173
@@ -3744,7 +3744,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 176
@@ -3761,7 +3761,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 176
@@ -3837,7 +3837,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  95: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "a"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 181
@@ -3955,7 +3955,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 186
@@ -3972,7 +3972,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 186
@@ -4099,7 +4099,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 191
@@ -4116,7 +4116,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 191
@@ -4154,7 +4154,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 196
@@ -4171,7 +4171,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 196
@@ -4260,7 +4260,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 199
@@ -4277,7 +4277,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 199
@@ -4352,7 +4352,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 202
@@ -4369,7 +4369,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 202
@@ -4445,7 +4445,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  112: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "a"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 207
@@ -4563,7 +4563,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 211
@@ -4580,7 +4580,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 211
@@ -4707,7 +4707,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 216
@@ -4724,7 +4724,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 216
@@ -4762,7 +4762,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 221
@@ -4779,7 +4779,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 221
@@ -4868,7 +4868,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 224
@@ -4885,7 +4885,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 224
@@ -4960,7 +4960,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 227
@@ -4977,7 +4977,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 227
@@ -5053,7 +5053,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  129: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "a"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 232
@@ -5171,7 +5171,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 237
@@ -5188,7 +5188,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 237
@@ -5315,7 +5315,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 242
@@ -5332,7 +5332,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 242
@@ -5370,7 +5370,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 247
@@ -5387,7 +5387,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 247
@@ -5476,7 +5476,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 250
@@ -5493,7 +5493,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 250
@@ -5568,7 +5568,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 253
@@ -5585,7 +5585,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 253
@@ -5661,7 +5661,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  146: [Bash] string begin {
-.  .  .  Roles: String,Block
+.  .  .  Roles: Expression,String,Block
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 257
@@ -5694,7 +5694,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  148: [Bash] string content {
-.  .  .  Roles: String,Literal
+.  .  .  Roles: Expression,String,Literal
 .  .  .  TOKEN "a"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 258
@@ -5727,7 +5727,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  150: [Bash] string end {
-.  .  .  Roles: String,Incomplete
+.  .  .  Roles: Expression,String,Incomplete
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 259
@@ -5845,7 +5845,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""b""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 263
@@ -5862,7 +5862,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 263
@@ -5879,7 +5879,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 264
@@ -5896,7 +5896,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 265
@@ -6023,7 +6023,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 269
@@ -6040,7 +6040,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 269
@@ -6078,7 +6078,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 274
@@ -6095,7 +6095,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 274
@@ -6184,7 +6184,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 277
@@ -6201,7 +6201,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 277
@@ -6276,7 +6276,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 280
@@ -6293,7 +6293,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 280
@@ -6331,7 +6331,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[["a""
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 283
@@ -6348,7 +6348,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[["
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 283
@@ -6365,7 +6365,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""a""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 285
@@ -6382,7 +6382,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 285
@@ -6399,7 +6399,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 286
@@ -6416,7 +6416,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 287
@@ -6509,7 +6509,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  168: [Bash] string begin {
-.  .  .  Roles: String,Block
+.  .  .  Roles: Expression,String,Block
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 291
@@ -6542,7 +6542,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  170: [Bash] string content {
-.  .  .  Roles: String,Literal
+.  .  .  Roles: Expression,String,Literal
 .  .  .  TOKEN "b"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 292
@@ -6575,7 +6575,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  172: [Bash] string end {
-.  .  .  Roles: String,Incomplete
+.  .  .  Roles: Expression,String,Incomplete
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 293
@@ -6626,7 +6626,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "]]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 294
@@ -6643,7 +6643,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "]]"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 294
@@ -6734,7 +6734,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 298
@@ -6751,7 +6751,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 298
@@ -6789,7 +6789,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 303
@@ -6806,7 +6806,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 303
@@ -6895,7 +6895,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 306
@@ -6912,7 +6912,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 306
@@ -6987,7 +6987,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 309
@@ -7004,7 +7004,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 309
@@ -7080,7 +7080,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  184: [Bash] string begin {
-.  .  .  Roles: String,Block
+.  .  .  Roles: Expression,String,Block
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 313
@@ -7113,7 +7113,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  186: [Bash] string content {
-.  .  .  Roles: String,Literal
+.  .  .  Roles: Expression,String,Literal
 .  .  .  TOKEN "a"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 314
@@ -7146,7 +7146,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  188: [Bash] string end {
-.  .  .  Roles: String,Incomplete
+.  .  .  Roles: Expression,String,Incomplete
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 315
@@ -7264,7 +7264,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""b""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 320
@@ -7281,7 +7281,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 320
@@ -7298,7 +7298,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 321
@@ -7315,7 +7315,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 322
@@ -7442,7 +7442,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 326
@@ -7459,7 +7459,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 326
@@ -7497,7 +7497,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 331
@@ -7514,7 +7514,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 331
@@ -7603,7 +7603,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 334
@@ -7620,7 +7620,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 334
@@ -7695,7 +7695,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 337
@@ -7712,7 +7712,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 337
@@ -7788,7 +7788,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  205: [Bash] string begin {
-.  .  .  Roles: String,Block
+.  .  .  Roles: Expression,String,Block
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 341
@@ -7821,7 +7821,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  207: [Bash] string content {
-.  .  .  Roles: String,Literal
+.  .  .  Roles: Expression,String,Literal
 .  .  .  TOKEN "a"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 342
@@ -7854,7 +7854,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  209: [Bash] string end {
-.  .  .  Roles: String,Incomplete
+.  .  .  Roles: Expression,String,Incomplete
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 343
@@ -7972,7 +7972,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""b*""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 348
@@ -7989,7 +7989,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 348
@@ -8006,7 +8006,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "b*"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 349
@@ -8023,7 +8023,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 351
@@ -8150,7 +8150,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 355
@@ -8167,7 +8167,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 355
@@ -8205,7 +8205,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 360
@@ -8222,7 +8222,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 360
@@ -8311,7 +8311,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 363
@@ -8328,7 +8328,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 363
@@ -8403,7 +8403,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 366
@@ -8420,7 +8420,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 366
@@ -8496,7 +8496,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  226: [Bash] string begin {
-.  .  .  Roles: String,Block
+.  .  .  Roles: Expression,String,Block
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 370
@@ -8529,7 +8529,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  228: [Bash] string content {
-.  .  .  Roles: String,Literal
+.  .  .  Roles: Expression,String,Literal
 .  .  .  TOKEN "a"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 371
@@ -8562,7 +8562,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  230: [Bash] string end {
-.  .  .  Roles: String,Incomplete
+.  .  .  Roles: Expression,String,Incomplete
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 372
@@ -8680,7 +8680,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""b""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 377
@@ -8697,7 +8697,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 377
@@ -8714,7 +8714,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 378
@@ -8731,7 +8731,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 379
@@ -8858,7 +8858,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 383
@@ -8875,7 +8875,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 383
@@ -8913,7 +8913,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 388
@@ -8930,7 +8930,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 388
@@ -9019,7 +9019,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 391
@@ -9036,7 +9036,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 391
@@ -9111,7 +9111,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 394
@@ -9128,7 +9128,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 394
@@ -9166,7 +9166,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[["a""
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 397
@@ -9183,7 +9183,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[["
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 397
@@ -9200,7 +9200,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""a""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 399
@@ -9217,7 +9217,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 399
@@ -9234,7 +9234,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 400
@@ -9251,7 +9251,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 401
@@ -9344,7 +9344,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  248: [Bash] string begin {
-.  .  .  Roles: String,Block
+.  .  .  Roles: Expression,String,Block
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 405
@@ -9377,7 +9377,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  250: [Bash] string content {
-.  .  .  Roles: String,Literal
+.  .  .  Roles: Expression,String,Literal
 .  .  .  TOKEN "b"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 406
@@ -9410,7 +9410,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  252: [Bash] string end {
-.  .  .  Roles: String,Incomplete
+.  .  .  Roles: Expression,String,Incomplete
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 407
@@ -9461,7 +9461,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "]]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 408
@@ -9478,7 +9478,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "]]"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 408
@@ -9569,7 +9569,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 412
@@ -9586,7 +9586,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 412
@@ -9624,7 +9624,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 417
@@ -9641,7 +9641,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 417
@@ -9730,7 +9730,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 420
@@ -9747,7 +9747,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 420
@@ -9822,7 +9822,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 423
@@ -9839,7 +9839,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 423
@@ -9877,7 +9877,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[["a""
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 426
@@ -9894,7 +9894,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[["
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 426
@@ -9911,7 +9911,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""a""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 428
@@ -9928,7 +9928,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 428
@@ -9945,7 +9945,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 429
@@ -9962,7 +9962,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 430
@@ -10055,7 +10055,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  265: [Bash] string begin {
-.  .  .  Roles: String,Block
+.  .  .  Roles: Expression,String,Block
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 434
@@ -10088,7 +10088,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  267: [Bash] string content {
-.  .  .  Roles: String,Literal
+.  .  .  Roles: Expression,String,Literal
 .  .  .  TOKEN "b"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 435
@@ -10121,7 +10121,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  269: [Bash] string end {
-.  .  .  Roles: String,Incomplete
+.  .  .  Roles: Expression,String,Incomplete
 .  .  .  TOKEN """
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 436
@@ -10172,7 +10172,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "]]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 437
@@ -10189,7 +10189,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "]]"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 437
@@ -10280,7 +10280,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 441
@@ -10297,7 +10297,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 441
@@ -10335,7 +10335,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 446
@@ -10352,7 +10352,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 446
@@ -10441,7 +10441,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 449
@@ -10458,7 +10458,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 449
@@ -10533,7 +10533,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 452
@@ -10550,7 +10550,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 452
@@ -10588,7 +10588,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[-Z"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 455
@@ -10605,7 +10605,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[-Z"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 455
@@ -10641,7 +10641,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN ""a"]"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 459
@@ -10658,7 +10658,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""a""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 459
@@ -10675,7 +10675,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 459
@@ -10692,7 +10692,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 460
@@ -10709,7 +10709,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 461
@@ -10728,7 +10728,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 462
@@ -10817,7 +10817,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 465
@@ -10834,7 +10834,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 465
@@ -10872,7 +10872,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 470
@@ -10889,7 +10889,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 470
@@ -10978,7 +10978,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 473
@@ -10995,7 +10995,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 473
@@ -11070,7 +11070,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 476
@@ -11087,7 +11087,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 476
@@ -11125,7 +11125,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[-n"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 479
@@ -11142,7 +11142,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[-n"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 479
@@ -11178,7 +11178,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN ""a"]"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 483
@@ -11195,7 +11195,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""a""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 483
@@ -11212,7 +11212,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 483
@@ -11229,7 +11229,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 484
@@ -11246,7 +11246,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 485
@@ -11265,7 +11265,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 486
@@ -11354,7 +11354,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 489
@@ -11371,7 +11371,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 489
@@ -11409,7 +11409,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 494
@@ -11426,7 +11426,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 494
@@ -11515,7 +11515,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 497
@@ -11532,7 +11532,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 497
@@ -11607,7 +11607,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 500
@@ -11624,7 +11624,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 500
@@ -11662,7 +11662,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 503
@@ -11679,7 +11679,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 503
@@ -11770,7 +11770,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  298: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b]"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 509
@@ -11871,7 +11871,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 513
@@ -11888,7 +11888,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 513
@@ -11926,7 +11926,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 518
@@ -11943,7 +11943,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 518
@@ -12032,7 +12032,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 521
@@ -12049,7 +12049,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 521
@@ -12124,7 +12124,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 524
@@ -12141,7 +12141,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 524
@@ -12179,7 +12179,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[[a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 527
@@ -12196,7 +12196,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[[a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 527
@@ -12232,7 +12232,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "&&"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 531
@@ -12249,7 +12249,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "&&"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 531
@@ -12285,7 +12285,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "b]]"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 534
@@ -12302,7 +12302,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "b]]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 534
@@ -12391,7 +12391,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 539
@@ -12408,7 +12408,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 539
@@ -12446,7 +12446,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 544
@@ -12463,7 +12463,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 544
@@ -12552,7 +12552,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 547
@@ -12569,7 +12569,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 547
@@ -12644,7 +12644,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 550
@@ -12661,7 +12661,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 550
@@ -12699,7 +12699,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 553
@@ -12716,7 +12716,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 553
@@ -12807,7 +12807,7 @@ if [[a || b]]; then c; fi
 .  .  .  }
 .  .  }
 .  .  319: [Bash] word {
-.  .  .  Roles: Identifier
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b]"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 559
@@ -12908,7 +12908,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 563
@@ -12925,7 +12925,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 563
@@ -12963,7 +12963,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 568
@@ -12980,7 +12980,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 568
@@ -13069,7 +13069,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 571
@@ -13086,7 +13086,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 571
@@ -13161,7 +13161,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 574
@@ -13178,7 +13178,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 574
@@ -13216,7 +13216,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "[[a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 577
@@ -13233,7 +13233,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "[[a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 577
@@ -13372,7 +13372,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "b]]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 584
@@ -13389,7 +13389,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "b]]"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 584
@@ -13480,7 +13480,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 589
@@ -13497,7 +13497,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 589
@@ -13535,7 +13535,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 594
@@ -13552,7 +13552,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 594
@@ -13641,7 +13641,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 597
@@ -13658,7 +13658,7 @@ if [[a || b]]; then c; fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 597

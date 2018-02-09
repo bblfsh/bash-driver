@@ -90,7 +90,7 @@ FILE {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 9
@@ -282,7 +282,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "echo"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 19
@@ -299,7 +299,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "echo"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 19
@@ -337,7 +337,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  .  .  TOKEN ""bla""
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 24
@@ -354,7 +354,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 24
@@ -371,7 +371,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "bla"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 25
@@ -388,7 +388,7 @@ FILE {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 28

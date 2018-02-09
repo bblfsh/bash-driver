@@ -40,7 +40,7 @@ fi
 .  }
 .  Children: {
 .  .  0: if shellcommand {
-.  .  .  Roles: If,Statement,Block
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if a1; then a2; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
@@ -125,7 +125,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "a1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 3
@@ -142,7 +142,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "a1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 3
@@ -233,7 +233,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
@@ -284,7 +284,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 12
@@ -301,7 +301,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 12
@@ -360,7 +360,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] fi {
-.  .  .  .  .  Roles: If,Incomplete
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 16
@@ -415,7 +415,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  3: if shellcommand {
-.  .  .  Roles: If,Statement,Block
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if b1; then b2; else b3; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 20
@@ -500,7 +500,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 23
@@ -517,7 +517,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 23
@@ -608,7 +608,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 32
@@ -659,7 +659,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 32
@@ -676,7 +676,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 32
@@ -769,7 +769,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 41
@@ -820,7 +820,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 41
@@ -837,7 +837,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 41
@@ -896,7 +896,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  15: [Bash] fi {
-.  .  .  .  .  Roles: If,Incomplete
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 45
@@ -951,7 +951,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  6: if shellcommand {
-.  .  .  Roles: If,Statement,Block
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if c1; then c2; elif c3; then c4; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 49
@@ -1036,7 +1036,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "c1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 52
@@ -1053,7 +1053,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 52
@@ -1144,7 +1144,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 61
@@ -1195,7 +1195,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 61
@@ -1212,7 +1212,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 61
@@ -1339,7 +1339,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "c3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 70
@@ -1356,7 +1356,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 70
@@ -1447,7 +1447,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  17: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 79
@@ -1498,7 +1498,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 79
@@ -1515,7 +1515,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 79
@@ -1574,7 +1574,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  20: [Bash] fi {
-.  .  .  .  .  Roles: If,Incomplete
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 83
@@ -1629,7 +1629,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  9: if shellcommand {
-.  .  .  Roles: If,Statement,Block
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if d1; then d2; elif d3; then d4; else d5; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 87
@@ -1714,7 +1714,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "d1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 90
@@ -1731,7 +1731,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 90
@@ -1822,7 +1822,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 99
@@ -1873,7 +1873,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 99
@@ -1890,7 +1890,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 99
@@ -2017,7 +2017,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "d3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 108
@@ -2034,7 +2034,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 108
@@ -2125,7 +2125,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  17: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 117
@@ -2176,7 +2176,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 117
@@ -2193,7 +2193,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 117
@@ -2286,7 +2286,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  22: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 126
@@ -2337,7 +2337,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 126
@@ -2354,7 +2354,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 126
@@ -2413,7 +2413,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  25: [Bash] fi {
-.  .  .  .  .  Roles: If,Incomplete
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 130
@@ -2468,7 +2468,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  12: if shellcommand {
-.  .  .  Roles: If,Statement,Block
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if e1
 then e2
 elif e3
@@ -2558,7 +2558,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 137
@@ -2575,7 +2575,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 137
@@ -2650,7 +2650,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 145
@@ -2701,7 +2701,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 145
@@ -2718,7 +2718,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 145
@@ -2829,7 +2829,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "e3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 153
@@ -2846,7 +2846,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 153
@@ -2921,7 +2921,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 161
@@ -2972,7 +2972,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 161
@@ -2989,7 +2989,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 161
@@ -3066,7 +3066,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  18: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 169
@@ -3117,7 +3117,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 169
@@ -3134,7 +3134,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 169
@@ -3177,7 +3177,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  20: [Bash] fi {
-.  .  .  .  .  Roles: If,Incomplete
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 172
@@ -3232,7 +3232,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  15: if shellcommand {
-.  .  .  Roles: If,Statement,Block
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if [ -a file ]; then /bin/true; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 176
@@ -3351,7 +3351,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "file"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 184
@@ -3368,7 +3368,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "file"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 184
@@ -3474,7 +3474,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 197
@@ -3525,7 +3525,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 197
@@ -3542,7 +3542,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 197
@@ -3601,7 +3601,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] fi {
-.  .  .  .  .  Roles: If,Incomplete
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 208
@@ -3656,7 +3656,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  18: if shellcommand {
-.  .  .  Roles: If,Statement,Block
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if [ "a" == "b" ]; then /bin/true; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 212
@@ -3741,7 +3741,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""a""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 217
@@ -3758,7 +3758,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 217
@@ -3775,7 +3775,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 218
@@ -3792,7 +3792,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 219
@@ -3828,7 +3828,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: [Bash] cond_op == {
-.  .  .  .  .  .  .  Roles: Relational,Operator,Equal
+.  .  .  .  .  .  .  Roles: Expression,Relational,Operator,Equal
 .  .  .  .  .  .  .  TOKEN "=="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 221
@@ -3862,7 +3862,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  5: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""b""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 224
@@ -3879,7 +3879,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 224
@@ -3896,7 +3896,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 225
@@ -3913,7 +3913,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 226
@@ -4019,7 +4019,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 236
@@ -4070,7 +4070,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 236
@@ -4087,7 +4087,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 236
@@ -4146,7 +4146,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] fi {
-.  .  .  .  .  Roles: If,Incomplete
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 247
@@ -4201,7 +4201,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  21: if shellcommand {
-.  .  .  Roles: If,Statement,Block
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if [ "c" == "d" ]
     then
         /bin/true
@@ -4289,7 +4289,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""c""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 256
@@ -4306,7 +4306,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 256
@@ -4323,7 +4323,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 257
@@ -4340,7 +4340,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 258
@@ -4376,7 +4376,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: [Bash] cond_op == {
-.  .  .  .  .  .  .  Roles: Relational,Operator,Equal
+.  .  .  .  .  .  .  Roles: Expression,Relational,Operator,Equal
 .  .  .  .  .  .  .  TOKEN "=="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 260
@@ -4410,7 +4410,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  5: [Bash] string {
-.  .  .  .  .  .  .  Roles: String,Literal,Block
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""d""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 263
@@ -4427,7 +4427,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: String,Block
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 263
@@ -4444,7 +4444,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: String,Literal
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 264
@@ -4461,7 +4461,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: String,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 265
@@ -4602,7 +4602,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: logical block {
-.  .  .  .  .  Roles: If,Then
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "
         /bin/true"
 .  .  .  .  .  StartPosition: {
@@ -4808,7 +4808,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 286
@@ -4825,7 +4825,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 286
@@ -4868,7 +4868,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: [Bash] fi {
-.  .  .  .  .  Roles: If,Incomplete
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 296

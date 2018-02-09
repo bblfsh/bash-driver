@@ -75,7 +75,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: var-def-element {
-.  .  .  .  .  Roles: For,Iterator
+.  .  .  .  .  Roles: Expression,For,Iterator
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 4
@@ -92,7 +92,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 4
@@ -179,7 +179,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: If,Then,For,Body
+.  .  .  .  .  Roles: Expression,If,Then,For,Body
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 10
@@ -230,7 +230,7 @@ done
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 10
@@ -247,7 +247,7 @@ done
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 10
@@ -306,7 +306,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] done {
-.  .  .  .  .  Roles: Statement
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "done"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 13
@@ -412,7 +412,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: var-def-element {
-.  .  .  .  .  Roles: For,Iterator
+.  .  .  .  .  Roles: Expression,For,Iterator
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 23
@@ -429,7 +429,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 23
@@ -465,7 +465,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: [Bash] in {
-.  .  .  .  .  Roles: Binary,Operator,Relational,Contains
+.  .  .  .  .  Roles: Expression,Binary,Operator,Relational,Contains
 .  .  .  .  .  TOKEN "in"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 25
@@ -499,7 +499,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete,For,Update
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete,For,Update
 .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 28
@@ -516,7 +516,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 28
@@ -603,7 +603,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: logical block {
-.  .  .  .  .  Roles: If,Then,For,Body
+.  .  .  .  .  Roles: Expression,If,Then,For,Body
 .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 34
@@ -654,7 +654,7 @@ done
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 34
@@ -671,7 +671,7 @@ done
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 34
@@ -730,7 +730,7 @@ done
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: [Bash] done {
-.  .  .  .  .  Roles: Statement
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "done"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 37
@@ -838,7 +838,7 @@ done"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: var-def-element {
-.  .  .  .  .  Roles: For,Iterator
+.  .  .  .  .  Roles: Expression,For,Iterator
 .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 47
@@ -855,7 +855,7 @@ done"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 47
@@ -891,7 +891,7 @@ done"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: [Bash] in {
-.  .  .  .  .  Roles: Binary,Operator,Relational,Contains
+.  .  .  .  .  Roles: Expression,Binary,Operator,Relational,Contains
 .  .  .  .  .  TOKEN "in"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 49
@@ -925,7 +925,7 @@ done"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: [Bash] combined word {
-.  .  .  .  .  Roles: String,Identifier,Incomplete,For,Update
+.  .  .  .  .  Roles: Expression,String,Identifier,Incomplete,For,Update
 .  .  .  .  .  TOKEN "g"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 52
@@ -942,7 +942,7 @@ done"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "g"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 52
@@ -1012,7 +1012,7 @@ done"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: logical block {
-.  .  .  .  .  Roles: If,Then,For,Body
+.  .  .  .  .  Roles: Expression,If,Then,For,Body
 .  .  .  .  .  TOKEN "
     h"
 .  .  .  .  .  StartPosition: {
@@ -1150,7 +1150,7 @@ done"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: String,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "h"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 62
@@ -1167,7 +1167,7 @@ done"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "h"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 62
@@ -1210,7 +1210,7 @@ done"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: [Bash] done {
-.  .  .  .  .  Roles: Statement
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "done"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 64
