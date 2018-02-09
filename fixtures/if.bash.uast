@@ -40,7 +40,7 @@ fi
 .  }
 .  Children: {
 .  .  0: if shellcommand {
-.  .  .  Roles: If,Statement
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if a1; then a2; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
@@ -57,7 +57,7 @@ fi
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 0
@@ -74,7 +74,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 2
@@ -91,7 +91,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: simple-command {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Condition
 .  .  .  .  .  TOKEN "a1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 3
@@ -108,7 +108,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "a1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 3
@@ -125,7 +125,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "a1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 3
@@ -142,7 +142,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "a1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 3
@@ -165,7 +165,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 5
@@ -182,7 +182,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 6
@@ -199,7 +199,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 7
@@ -216,7 +216,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 11
@@ -233,7 +233,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
@@ -250,7 +250,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 12
@@ -267,7 +267,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 12
@@ -284,7 +284,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 12
@@ -301,7 +301,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 12
@@ -326,7 +326,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 14
@@ -343,7 +343,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 15
@@ -360,7 +360,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] fi {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 16
@@ -379,7 +379,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  1: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -397,7 +397,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  2: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -415,7 +415,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  3: if shellcommand {
-.  .  .  Roles: If,Statement
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if b1; then b2; else b3; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 20
@@ -432,7 +432,7 @@ fi
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 20
@@ -449,7 +449,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 22
@@ -466,7 +466,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: simple-command {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Condition
 .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 23
@@ -483,7 +483,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 23
@@ -500,7 +500,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 23
@@ -517,7 +517,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 23
@@ -540,7 +540,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 25
@@ -557,7 +557,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 26
@@ -574,7 +574,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 27
@@ -591,7 +591,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 31
@@ -608,7 +608,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 32
@@ -625,7 +625,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 32
@@ -642,7 +642,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 32
@@ -659,7 +659,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 32
@@ -676,7 +676,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 32
@@ -701,7 +701,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 34
@@ -718,7 +718,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 35
@@ -735,7 +735,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] else {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Else,Incomplete
 .  .  .  .  .  TOKEN "else"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 36
@@ -752,7 +752,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 40
@@ -769,7 +769,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 41
@@ -786,7 +786,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 41
@@ -803,7 +803,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 41
@@ -820,7 +820,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 41
@@ -837,7 +837,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b3"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 41
@@ -862,7 +862,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  13: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 43
@@ -879,7 +879,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 44
@@ -896,7 +896,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  15: [Bash] fi {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 45
@@ -915,7 +915,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  4: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -933,7 +933,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  5: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -951,7 +951,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  6: if shellcommand {
-.  .  .  Roles: If,Statement
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if c1; then c2; elif c3; then c4; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 49
@@ -968,7 +968,7 @@ fi
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 49
@@ -985,7 +985,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 51
@@ -1002,7 +1002,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: simple-command {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Condition
 .  .  .  .  .  TOKEN "c1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 52
@@ -1019,7 +1019,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "c1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 52
@@ -1036,7 +1036,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "c1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 52
@@ -1053,7 +1053,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 52
@@ -1076,7 +1076,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 54
@@ -1093,7 +1093,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 55
@@ -1110,7 +1110,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 56
@@ -1127,7 +1127,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 60
@@ -1144,7 +1144,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 61
@@ -1161,7 +1161,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 61
@@ -1178,7 +1178,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 61
@@ -1195,7 +1195,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 61
@@ -1212,7 +1212,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "c2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 61
@@ -1237,7 +1237,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 63
@@ -1254,7 +1254,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 64
@@ -1271,7 +1271,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] elif {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If,Else,Incomplete
 .  .  .  .  .  TOKEN "elif"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 65
@@ -1288,7 +1288,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 69
@@ -1305,7 +1305,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: simple-command {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Condition
 .  .  .  .  .  TOKEN "c3"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 70
@@ -1322,7 +1322,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "c3"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 70
@@ -1339,7 +1339,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "c3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 70
@@ -1356,7 +1356,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 70
@@ -1379,7 +1379,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  13: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 72
@@ -1396,7 +1396,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 73
@@ -1413,7 +1413,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  15: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 74
@@ -1430,7 +1430,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  16: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 78
@@ -1447,7 +1447,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  17: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 79
@@ -1464,7 +1464,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 79
@@ -1481,7 +1481,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 79
@@ -1498,7 +1498,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 79
@@ -1515,7 +1515,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "c4"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 79
@@ -1540,7 +1540,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  18: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 81
@@ -1557,7 +1557,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  19: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 82
@@ -1574,7 +1574,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  20: [Bash] fi {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 83
@@ -1593,7 +1593,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  7: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -1611,7 +1611,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  8: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -1629,7 +1629,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  9: if shellcommand {
-.  .  .  Roles: If,Statement
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if d1; then d2; elif d3; then d4; else d5; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 87
@@ -1646,7 +1646,7 @@ fi
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 87
@@ -1663,7 +1663,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 89
@@ -1680,7 +1680,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: simple-command {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Condition
 .  .  .  .  .  TOKEN "d1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 90
@@ -1697,7 +1697,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "d1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 90
@@ -1714,7 +1714,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "d1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 90
@@ -1731,7 +1731,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 90
@@ -1754,7 +1754,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 92
@@ -1771,7 +1771,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 93
@@ -1788,7 +1788,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 94
@@ -1805,7 +1805,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 98
@@ -1822,7 +1822,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 99
@@ -1839,7 +1839,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 99
@@ -1856,7 +1856,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 99
@@ -1873,7 +1873,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 99
@@ -1890,7 +1890,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "d2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 99
@@ -1915,7 +1915,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 101
@@ -1932,7 +1932,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 102
@@ -1949,7 +1949,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] elif {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If,Else,Incomplete
 .  .  .  .  .  TOKEN "elif"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 103
@@ -1966,7 +1966,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 107
@@ -1983,7 +1983,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: simple-command {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Condition
 .  .  .  .  .  TOKEN "d3"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 108
@@ -2000,7 +2000,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "d3"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 108
@@ -2017,7 +2017,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "d3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 108
@@ -2034,7 +2034,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 108
@@ -2057,7 +2057,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  13: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 110
@@ -2074,7 +2074,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 111
@@ -2091,7 +2091,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  15: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 112
@@ -2108,7 +2108,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  16: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 116
@@ -2125,7 +2125,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  17: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 117
@@ -2142,7 +2142,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 117
@@ -2159,7 +2159,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 117
@@ -2176,7 +2176,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 117
@@ -2193,7 +2193,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "d4"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 117
@@ -2218,7 +2218,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  18: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 119
@@ -2235,7 +2235,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  19: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 120
@@ -2252,7 +2252,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  20: [Bash] else {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Else,Incomplete
 .  .  .  .  .  TOKEN "else"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 121
@@ -2269,7 +2269,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  21: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 125
@@ -2286,7 +2286,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  22: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 126
@@ -2303,7 +2303,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 126
@@ -2320,7 +2320,7 @@ fi
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 126
@@ -2337,7 +2337,7 @@ fi
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 126
@@ -2354,7 +2354,7 @@ fi
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "d5"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 126
@@ -2379,7 +2379,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  23: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 128
@@ -2396,7 +2396,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  24: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 129
@@ -2413,7 +2413,7 @@ fi
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  25: [Bash] fi {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 130
@@ -2432,7 +2432,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  10: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -2450,7 +2450,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  11: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -2468,7 +2468,7 @@ fi
 .  .  .  }
 .  .  }
 .  .  12: if shellcommand {
-.  .  .  Roles: If,Statement
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if e1
 then e2
 elif e3
@@ -2490,7 +2490,7 @@ fi"
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 134
@@ -2507,7 +2507,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 136
@@ -2524,7 +2524,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: simple-command {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Condition
 .  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 137
@@ -2541,7 +2541,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 137
@@ -2558,7 +2558,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 137
@@ -2575,7 +2575,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 137
@@ -2598,7 +2598,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: [Bash] linefeed {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN "
 "
 .  .  .  .  .  StartPosition: {
@@ -2616,7 +2616,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 140
@@ -2633,7 +2633,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 144
@@ -2650,7 +2650,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 145
@@ -2667,7 +2667,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 145
@@ -2684,7 +2684,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 145
@@ -2701,7 +2701,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 145
@@ -2718,7 +2718,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 145
@@ -2743,7 +2743,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: [Bash] linefeed {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN "
 "
 .  .  .  .  .  StartPosition: {
@@ -2761,7 +2761,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] elif {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If,Else,Incomplete
 .  .  .  .  .  TOKEN "elif"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 148
@@ -2778,7 +2778,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 152
@@ -2795,7 +2795,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: simple-command {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Condition
 .  .  .  .  .  TOKEN "e3"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 153
@@ -2812,7 +2812,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "e3"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 153
@@ -2829,7 +2829,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "e3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 153
@@ -2846,7 +2846,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 153
@@ -2869,7 +2869,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: [Bash] linefeed {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN "
 "
 .  .  .  .  .  StartPosition: {
@@ -2887,7 +2887,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 156
@@ -2904,7 +2904,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  13: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 160
@@ -2921,7 +2921,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 161
@@ -2938,7 +2938,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 161
@@ -2955,7 +2955,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 161
@@ -2972,7 +2972,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 161
@@ -2989,7 +2989,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e4"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 161
@@ -3014,7 +3014,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  15: [Bash] linefeed {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN "
 "
 .  .  .  .  .  StartPosition: {
@@ -3032,7 +3032,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  16: [Bash] else {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Else,Incomplete
 .  .  .  .  .  TOKEN "else"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 164
@@ -3049,7 +3049,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  17: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 168
@@ -3066,7 +3066,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  18: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 169
@@ -3083,7 +3083,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 169
@@ -3100,7 +3100,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 169
@@ -3117,7 +3117,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 169
@@ -3134,7 +3134,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e5"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 169
@@ -3159,7 +3159,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  19: [Bash] linefeed {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN "
 "
 .  .  .  .  .  StartPosition: {
@@ -3177,7 +3177,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  20: [Bash] fi {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 172
@@ -3196,7 +3196,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  13: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -3214,7 +3214,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  14: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -3232,7 +3232,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  15: if shellcommand {
-.  .  .  Roles: If,Statement
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if [ -a file ]; then /bin/true; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 176
@@ -3249,7 +3249,7 @@ fi"
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 176
@@ -3266,7 +3266,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 178
@@ -3283,7 +3283,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: conditional shellcommand {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Condition
 .  .  .  .  .  TOKEN "[ -a file ]"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 179
@@ -3300,7 +3300,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] [ (left conditional) {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "[ "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 179
@@ -3317,7 +3317,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] cond_op {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Operator
 .  .  .  .  .  .  .  TOKEN "-a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 181
@@ -3334,7 +3334,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 183
@@ -3351,7 +3351,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: [Bash] combined word {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  TOKEN "file"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 184
@@ -3368,7 +3368,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "file"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 184
@@ -3387,7 +3387,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  4: [Bash]  ] (right conditional) {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN " ]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 188
@@ -3406,7 +3406,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 190
@@ -3423,7 +3423,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 191
@@ -3440,7 +3440,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 192
@@ -3457,7 +3457,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 196
@@ -3474,7 +3474,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 197
@@ -3491,7 +3491,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 197
@@ -3508,7 +3508,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 197
@@ -3525,7 +3525,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 197
@@ -3542,7 +3542,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 197
@@ -3567,7 +3567,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 206
@@ -3584,7 +3584,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 207
@@ -3601,7 +3601,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] fi {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 208
@@ -3620,7 +3620,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  16: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -3638,7 +3638,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  17: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -3656,7 +3656,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  18: if shellcommand {
-.  .  .  Roles: If,Statement
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if [ "a" == "b" ]; then /bin/true; fi"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 212
@@ -3673,7 +3673,7 @@ fi"
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 212
@@ -3690,7 +3690,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 214
@@ -3707,7 +3707,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: conditional shellcommand {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Condition
 .  .  .  .  .  TOKEN "[ "a" == "b" ]"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 215
@@ -3724,7 +3724,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] [ (left conditional) {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "[ "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 215
@@ -3741,7 +3741,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] string {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""a""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 217
@@ -3758,7 +3758,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 217
@@ -3775,7 +3775,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 218
@@ -3792,7 +3792,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 219
@@ -3811,7 +3811,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 220
@@ -3828,7 +3828,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: [Bash] cond_op == {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Relational,Operator,Equal
 .  .  .  .  .  .  .  TOKEN "=="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 221
@@ -3845,7 +3845,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 223
@@ -3862,7 +3862,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  5: [Bash] string {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""b""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 224
@@ -3879,7 +3879,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 224
@@ -3896,7 +3896,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 225
@@ -3913,7 +3913,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 226
@@ -3932,7 +3932,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  6: [Bash]  ] (right conditional) {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN " ]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 227
@@ -3951,7 +3951,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 229
@@ -3968,7 +3968,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 230
@@ -3985,7 +3985,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 231
@@ -4002,7 +4002,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 235
@@ -4019,7 +4019,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 236
@@ -4036,7 +4036,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 236
@@ -4053,7 +4053,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 236
@@ -4070,7 +4070,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 236
@@ -4087,7 +4087,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 236
@@ -4112,7 +4112,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] ; {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  TOKEN ";"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 245
@@ -4129,7 +4129,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 246
@@ -4146,7 +4146,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] fi {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 247
@@ -4165,7 +4165,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  19: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -4183,7 +4183,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  20: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -4201,7 +4201,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  21: if shellcommand {
-.  .  .  Roles: If,Statement
+.  .  .  Roles: If,Expression,Block
 .  .  .  TOKEN "if [ "c" == "d" ]
     then
         /bin/true
@@ -4221,7 +4221,7 @@ fi"
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] if {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If
 .  .  .  .  .  TOKEN "if"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 251
@@ -4238,7 +4238,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 253
@@ -4255,7 +4255,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: conditional shellcommand {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Condition
 .  .  .  .  .  TOKEN "[ "c" == "d" ]"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 254
@@ -4272,7 +4272,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] [ (left conditional) {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN "[ "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 254
@@ -4289,7 +4289,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] string {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""c""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 256
@@ -4306,7 +4306,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 256
@@ -4323,7 +4323,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 257
@@ -4340,7 +4340,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 258
@@ -4359,7 +4359,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 259
@@ -4376,7 +4376,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: [Bash] cond_op == {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Relational,Operator,Equal
 .  .  .  .  .  .  .  TOKEN "=="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 260
@@ -4393,7 +4393,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 262
@@ -4410,7 +4410,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  5: [Bash] string {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block
 .  .  .  .  .  .  .  TOKEN ""d""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 263
@@ -4427,7 +4427,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 263
@@ -4444,7 +4444,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 264
@@ -4461,7 +4461,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 265
@@ -4480,7 +4480,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  6: [Bash]  ] (right conditional) {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  TOKEN " ]"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 266
@@ -4499,7 +4499,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: [Bash] linefeed {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN "
 "
 .  .  .  .  .  StartPosition: {
@@ -4517,7 +4517,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 269
@@ -4534,7 +4534,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 270
@@ -4551,7 +4551,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 271
@@ -4568,7 +4568,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: WHITE_SPACE {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN " "
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 272
@@ -4585,7 +4585,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: [Bash] then {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "then"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 273
@@ -4602,7 +4602,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: logical block {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If,Then
 .  .  .  .  .  TOKEN "
         /bin/true"
 .  .  .  .  .  StartPosition: {
@@ -4620,7 +4620,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] linefeed {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN "
 "
 .  .  .  .  .  .  .  StartPosition: {
@@ -4638,7 +4638,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 278
@@ -4655,7 +4655,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 279
@@ -4672,7 +4672,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 280
@@ -4689,7 +4689,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  4: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 281
@@ -4706,7 +4706,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  5: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 282
@@ -4723,7 +4723,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  6: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 283
@@ -4740,7 +4740,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  7: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 284
@@ -4757,7 +4757,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  8: WHITE_SPACE {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  .  .  TOKEN " "
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 285
@@ -4774,7 +4774,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  9: simple-command {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 286
@@ -4791,7 +4791,7 @@ fi"
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] generic bash command {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 286
@@ -4808,7 +4808,7 @@ fi"
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: [Bash] combined word {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,String,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 286
@@ -4825,7 +4825,7 @@ fi"
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: [Bash] word {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "/bin/true"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 286
@@ -4850,7 +4850,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: [Bash] linefeed {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Whitespace,Noop
 .  .  .  .  .  TOKEN "
 "
 .  .  .  .  .  StartPosition: {
@@ -4868,7 +4868,7 @@ fi"
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: [Bash] fi {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Incomplete
 .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 296
@@ -4887,7 +4887,7 @@ fi"
 .  .  .  }
 .  .  }
 .  .  22: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {

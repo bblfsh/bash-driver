@@ -18,7 +18,7 @@ FILE {
 .  }
 .  Children: {
 .  .  0: [Bash] shebang element {
-.  .  .  Roles: Comment,Documentation
+.  .  .  Roles: Comment,Pathname,Incomplete
 .  .  .  TOKEN "#!/bin/bash
 "
 .  .  .  StartPosition: {
@@ -36,7 +36,7 @@ FILE {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: [Bash] Shebang {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Comment,Pathname,Incomplete
 .  .  .  .  .  TOKEN "#!/bin/bash
 "
 .  .  .  .  .  StartPosition: {

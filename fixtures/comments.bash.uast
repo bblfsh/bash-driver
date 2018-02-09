@@ -22,7 +22,7 @@ b="foo bar" # comment 2
 .  }
 .  Children: {
 .  .  0: [Bash] Comment {
-.  .  .  Roles: Comment
+.  .  .  Roles: Comment,Noop
 .  .  .  TOKEN "# comment 1"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
@@ -39,7 +39,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  }
 .  .  1: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -57,7 +57,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  }
 .  .  2: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -75,7 +75,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  }
 .  .  3: simple-command {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression
 .  .  .  TOKEN "a="# not a comment""
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 13
@@ -92,7 +92,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: var-def-element {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Assignment,Binary
 .  .  .  .  .  TOKEN "a="# not a comment""
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 13
@@ -109,7 +109,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] assignment_word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Identifier,Left
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 13
@@ -126,7 +126,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] = {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Operator,Assignment
 .  .  .  .  .  .  .  TOKEN "="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 14
@@ -143,7 +143,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: [Bash] string {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block,Right
 .  .  .  .  .  .  .  TOKEN ""# not a comment""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 15
@@ -160,7 +160,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 15
@@ -177,7 +177,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "# not a comment"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 16
@@ -194,7 +194,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 31
@@ -217,7 +217,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  }
 .  .  4: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -235,7 +235,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  }
 .  .  5: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {
@@ -253,7 +253,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  }
 .  .  6: simple-command {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression
 .  .  .  TOKEN "b="foo bar""
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 34
@@ -270,7 +270,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: var-def-element {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Assignment,Binary
 .  .  .  .  .  TOKEN "b="foo bar""
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 34
@@ -287,7 +287,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: [Bash] assignment_word {
-.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  Roles: Identifier,Left
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 34
@@ -304,7 +304,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: [Bash] = {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Operator,Assignment
 .  .  .  .  .  .  .  TOKEN "="
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 35
@@ -321,7 +321,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: [Bash] string {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,String,Literal,Block,Right
 .  .  .  .  .  .  .  TOKEN ""foo bar""
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 36
@@ -338,7 +338,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: [Bash] string begin {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Block
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 36
@@ -355,7 +355,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: [Bash] string content {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Literal
 .  .  .  .  .  .  .  .  .  TOKEN "foo bar"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 37
@@ -372,7 +372,7 @@ b="foo bar" # comment 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: [Bash] string end {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,String,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN """
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 44
@@ -395,7 +395,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  }
 .  .  7: WHITE_SPACE {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN " "
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 45
@@ -412,7 +412,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  }
 .  .  8: [Bash] Comment {
-.  .  .  Roles: Comment
+.  .  .  Roles: Comment,Noop
 .  .  .  TOKEN "# comment 2"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 46
@@ -429,7 +429,7 @@ b="foo bar" # comment 2
 .  .  .  }
 .  .  }
 .  .  9: [Bash] linefeed {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Whitespace,Noop
 .  .  .  TOKEN "
 "
 .  .  .  StartPosition: {

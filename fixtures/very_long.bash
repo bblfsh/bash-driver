@@ -440,6 +440,7 @@ elif [ "$IES" -eq 1 ]; then
 	  txt=${IESmapfileArray[$index]/buildIDactual/$buildIDactual}; txt=${txt/webPath/$webPath};
 	  echo $txt >> $outfile.tmp;
 	  let "index = $index + 1";
+	  let index = index + 1;
 	done
 
 	## adds optional cvs add command
