@@ -1,5 +1,7 @@
+name = "Bash"
 language = "bash"
 status = "alpha"
+features = ["ast","uast","roles"]
 
 [documentation]
 description  = """
