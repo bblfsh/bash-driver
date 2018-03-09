@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # comment 1
 
 a="# not a comment"
