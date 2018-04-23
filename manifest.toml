@@ -1,6 +1,6 @@
 name = "Bash"
 language = "bash"
-status = "alpha"
+status = "beta"
 features = ["ast","uast","roles"]
 
 [documentation]
