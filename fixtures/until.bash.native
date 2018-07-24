@@ -4,22 +4,13 @@
       { '@type': "until loop",
          '@role': [Unannotated],
          children: [
-            { '@type': "[Bash] until",
-               '@token': "until",
-               '@role': [Unannotated],
-               children: [],
-               endOffset: 5,
-               startOffset: 0,
-            },
             { '@type': "simple-command",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] generic bash command",
-                     '@token': "a",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "a",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] word",
@@ -48,11 +39,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "b",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "b",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",
@@ -78,11 +67,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "c",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "c",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",
@@ -115,22 +102,13 @@
       { '@type': "until loop",
          '@role': [Unannotated],
          children: [
-            { '@type': "[Bash] until",
-               '@token': "until",
-               '@role': [Unannotated],
-               children: [],
-               endOffset: 29,
-               startOffset: 24,
-            },
             { '@type': "simple-command",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] generic bash command",
-                     '@token': "d",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "d",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] word",
@@ -159,11 +137,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "e",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "e",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",
@@ -189,11 +165,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "f",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "f",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",
@@ -226,22 +200,13 @@
       { '@type': "until loop",
          '@role': [Unannotated],
          children: [
-            { '@type': "[Bash] until",
-               '@token': "until",
-               '@role': [Unannotated],
-               children: [],
-               endOffset: 50,
-               startOffset: 45,
-            },
             { '@type': "simple-command",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] generic bash command",
-                     '@token': "g",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "g",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] word",
@@ -270,11 +235,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "h",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "h",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",
@@ -300,11 +263,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "i",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "i",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",

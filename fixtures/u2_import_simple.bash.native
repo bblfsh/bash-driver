@@ -9,7 +9,6 @@
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] combined word",
-                     '@token': "a",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] word",
@@ -39,7 +38,6 @@
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] combined word",
-                     '@token': "b",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] word",

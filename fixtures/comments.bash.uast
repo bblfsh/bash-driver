@@ -46,7 +46,7 @@
          },
          children: [
             { '@type': "var-def-element",
-               '@role': [Assignment, Declaration, Expression],
+               '@role': [Assignment, Declaration, Expression, Variable],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
                      offset: 26,
@@ -149,7 +149,7 @@
          },
          children: [
             { '@type': "var-def-element",
-               '@role': [Assignment, Declaration, Expression],
+               '@role': [Assignment, Declaration, Expression, Variable],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
                      offset: 47,

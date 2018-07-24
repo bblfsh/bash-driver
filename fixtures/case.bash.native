@@ -2,15 +2,12 @@
    '@role': [Unannotated],
    children: [
       { '@type': "case pattern",
-         '@token': "case $casevar in \n    'somestr') $action1='value1'\n        ;;\n    $othervar) $action2='value2'; $action3=4\n        ;;\n    [1-6]) echo 'foo'\n        ;;\n    100) echo 'bar'\n        ;;\n    *)  echo 'default'\n        ;;\nesac",
          '@role': [Unannotated],
          children: [
             { '@type': "[Bash] combined word",
-               '@token': "$casevar",
                '@role': [Unannotated],
                children: [
                   { '@type': "var-use-element",
-                     '@token': "$casevar",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] variable",
@@ -29,14 +26,12 @@
                startOffset: 18,
             },
             { '@type': "[Bash] case pattern list",
-               '@token': "'somestr') $action1='value1'\n        ;;",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] case pattern",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "'somestr'",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] unevaluated string (STRING2)",
@@ -61,15 +56,12 @@
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] generic bash command",
-                                 '@token': "$action1='value1'",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] combined word",
-                                       '@token': "$action1='value1'",
                                        '@role': [Unannotated],
                                        children: [
                                           { '@type': "var-use-element",
-                                             '@token': "$action1",
                                              '@role': [Unannotated],
                                              children: [
                                                 { '@type': "[Bash] variable",
@@ -125,18 +117,15 @@
                startOffset: 35,
             },
             { '@type': "[Bash] case pattern list",
-               '@token': "$othervar) $action2='value2'; $action3=4\n        ;;",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] case pattern",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "$othervar",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "var-use-element",
-                                 '@token': "$othervar",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] variable",
@@ -165,15 +154,12 @@
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] generic bash command",
-                                 '@token': "$action2='value2'",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] combined word",
-                                       '@token': "$action2='value2'",
                                        '@role': [Unannotated],
                                        children: [
                                           { '@type': "var-use-element",
-                                             '@token': "$action2",
                                              '@role': [Unannotated],
                                              children: [
                                                 { '@type': "[Bash] variable",
@@ -217,15 +203,12 @@
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] generic bash command",
-                                 '@token': "$action3=4",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] combined word",
-                                       '@token': "$action3=4",
                                        '@role': [Unannotated],
                                        children: [
                                           { '@type': "var-use-element",
-                                             '@token': "$action3",
                                              '@role': [Unannotated],
                                              children: [
                                                 { '@type': "[Bash] variable",
@@ -281,14 +264,12 @@
                startOffset: 79,
             },
             { '@type': "[Bash] case pattern list",
-               '@token': "[1-6]) echo 'foo'\n        ;;",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] case pattern",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "[1-6]",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] word",
@@ -313,11 +294,9 @@
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] generic bash command",
-                                 '@token': "echo",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] combined word",
-                                       '@token': "echo",
                                        '@role': [Unannotated],
                                        children: [
                                           { '@type': "[Bash] word",
@@ -336,7 +315,6 @@
                                  startOffset: 142,
                               },
                               { '@type': "[Bash] combined word",
-                                 '@token': "'foo'",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] unevaluated string (STRING2)",
@@ -370,14 +348,12 @@
                startOffset: 135,
             },
             { '@type': "[Bash] case pattern list",
-               '@token': "100) echo 'bar'\n        ;;",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] case pattern",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "100",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] word",
@@ -402,11 +378,9 @@
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] generic bash command",
-                                 '@token': "echo",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] combined word",
-                                       '@token': "echo",
                                        '@role': [Unannotated],
                                        children: [
                                           { '@type': "[Bash] word",
@@ -425,7 +399,6 @@
                                  startOffset: 173,
                               },
                               { '@type': "[Bash] combined word",
-                                 '@token': "'bar'",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] unevaluated string (STRING2)",
@@ -459,14 +432,12 @@
                startOffset: 168,
             },
             { '@type': "[Bash] case pattern list",
-               '@token': "*)  echo 'default'\n        ;;",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] case pattern",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "*",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] word",
@@ -491,11 +462,9 @@
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] generic bash command",
-                                 '@token': "echo",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] combined word",
-                                       '@token': "echo",
                                        '@role': [Unannotated],
                                        children: [
                                           { '@type': "[Bash] word",
@@ -514,7 +483,6 @@
                                  startOffset: 203,
                               },
                               { '@type': "[Bash] combined word",
-                                 '@token': "'default'",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] unevaluated string (STRING2)",

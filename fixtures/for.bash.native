@@ -25,11 +25,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "b",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "b",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",
@@ -77,7 +75,6 @@
                startOffset: 23,
             },
             { '@type': "[Bash] combined word",
-               '@token': "d",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] word",
@@ -98,11 +95,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "e",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "e",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",
@@ -150,7 +145,6 @@
                startOffset: 47,
             },
             { '@type': "[Bash] combined word",
-               '@token': "g",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] word",
@@ -171,11 +165,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "h",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "h",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",

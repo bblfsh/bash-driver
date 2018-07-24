@@ -22,7 +22,6 @@
                      startOffset: 1,
                   },
                   { '@type': "[Bash] combined word",
-                     '@token': "1",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] int literal",
@@ -65,7 +64,6 @@
                      startOffset: 9,
                   },
                   { '@type': "[Bash] combined word",
-                     '@token': "032",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] word",
@@ -108,7 +106,6 @@
                      startOffset: 17,
                   },
                   { '@type': "[Bash] combined word",
-                     '@token': "0x64",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] word",
@@ -151,7 +148,6 @@
                      startOffset: 28,
                   },
                   { '@type': "[Bash] combined word",
-                     '@token': "4#123123",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] word",

@@ -44,7 +44,6 @@
                },
                children: [
                   { '@type': "[Bash] generic bash command",
-                     '@token': "a",
                      '@role': [Expression, Incomplete],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
@@ -60,8 +59,7 @@
                      },
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "a",
-                           '@role': [Expression, Identifier, Incomplete, String],
+                           '@role': [Expression, Identifier, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
                                  offset: 6,
@@ -129,7 +127,6 @@
                      },
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "b",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -145,8 +142,7 @@
                            },
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "b",
-                                 '@role': [Expression, Identifier, Incomplete, String],
+                                 '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 12,
@@ -199,7 +195,6 @@
                      },
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "c",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -215,8 +210,7 @@
                            },
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "c",
-                                 '@role': [Expression, Identifier, Incomplete, String],
+                                 '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 15,
@@ -288,7 +282,6 @@
                },
                children: [
                   { '@type': "[Bash] generic bash command",
-                     '@token': "d",
                      '@role': [Expression, Incomplete],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
@@ -304,8 +297,7 @@
                      },
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "d",
-                           '@role': [Expression, Identifier, Incomplete, String],
+                           '@role': [Expression, Identifier, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
                                  offset: 30,
@@ -373,7 +365,6 @@
                      },
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "e",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -389,8 +380,7 @@
                            },
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "e",
-                                 '@role': [Expression, Identifier, Incomplete, String],
+                                 '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 35,
@@ -443,7 +433,6 @@
                      },
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "f",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -459,8 +448,7 @@
                            },
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "f",
-                                 '@role': [Expression, Identifier, Incomplete, String],
+                                 '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 37,
@@ -532,7 +520,6 @@
                },
                children: [
                   { '@type': "[Bash] generic bash command",
-                     '@token': "g",
                      '@role': [Expression, Incomplete],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
@@ -548,8 +535,7 @@
                      },
                      children: [
                         { '@type': "[Bash] combined word",
-                           '@token': "g",
-                           '@role': [Expression, Identifier, Incomplete, String],
+                           '@role': [Expression, Identifier, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
                                  offset: 51,
@@ -617,7 +603,6 @@
                      },
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "h",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -633,8 +618,7 @@
                            },
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "h",
-                                 '@role': [Expression, Identifier, Incomplete, String],
+                                 '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 59,
@@ -687,7 +671,6 @@
                      },
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "i",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -703,8 +686,7 @@
                            },
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "i",
-                                 '@role': [Expression, Identifier, Incomplete, String],
+                                 '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 63,

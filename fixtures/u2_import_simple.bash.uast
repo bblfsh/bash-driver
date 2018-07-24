@@ -30,7 +30,7 @@
          children: [
             { '@type': "[Bash] File reference",
                '@token': "a",
-               '@role': [Identifier, Import, Pathname, String],
+               '@role': [Identifier, Import, Pathname],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
                      offset: 7,
@@ -45,8 +45,7 @@
                },
                children: [
                   { '@type': "[Bash] combined word",
-                     '@token': "a",
-                     '@role': [Expression, Identifier, Incomplete, String],
+                     '@role': [Expression, Identifier, Incomplete],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 7,
@@ -100,7 +99,7 @@
          children: [
             { '@type': "[Bash] File reference",
                '@token': "b",
-               '@role': [Identifier, Import, Pathname, String],
+               '@role': [Identifier, Import, Pathname],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
                      offset: 16,
@@ -115,8 +114,7 @@
                },
                children: [
                   { '@type': "[Bash] combined word",
-                     '@token': "b",
-                     '@role': [Expression, Identifier, Incomplete, String],
+                     '@role': [Expression, Identifier, Incomplete],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 16,

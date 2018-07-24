@@ -5,15 +5,12 @@
          '@role': [Unannotated],
          children: [
             { '@type': "[Bash] generic bash command",
-               '@token': "$A",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] combined word",
-                     '@token': "$A",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "var-use-element",
-                           '@token': "$A",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] variable",
@@ -43,11 +40,9 @@
          '@role': [Unannotated],
          children: [
             { '@type': "[Bash] generic bash command",
-               '@token': "${B}",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] combined word",
-                     '@token': "${B}",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] composed variable, like subshell",
@@ -66,7 +61,6 @@
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "var-use-element",
-                                       '@token': "B",
                                        '@role': [Unannotated],
                                        children: [
                                           { '@type': "[Bash] word",
@@ -104,7 +98,6 @@
          '@role': [Unannotated],
          children: [
             { '@type': "[Bash] generic bash command",
-               '@token': "\"$C\"",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] string",
@@ -112,7 +105,6 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "var-use-element",
-                           '@token': "$C",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] variable",
@@ -142,7 +134,6 @@
          '@role': [Unannotated],
          children: [
             { '@type': "[Bash] generic bash command",
-               '@token': "\"${D}\"",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] string",
@@ -165,7 +156,6 @@
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "var-use-element",
-                                       '@token': "D",
                                        '@role': [Unannotated],
                                        children: [
                                           { '@type': "[Bash] word",

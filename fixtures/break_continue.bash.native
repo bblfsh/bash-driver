@@ -19,7 +19,6 @@
                startOffset: 4,
             },
             { '@type': "[Bash] combined word",
-               '@token': "b",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] word",
@@ -40,11 +39,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "continue",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "continue",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",
@@ -92,7 +89,6 @@
                startOffset: 38,
             },
             { '@type': "[Bash] combined word",
-               '@token': "d",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] word",
@@ -113,11 +109,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "break",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "break",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",

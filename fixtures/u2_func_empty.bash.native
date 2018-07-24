@@ -5,7 +5,6 @@
          '@role': [Unannotated],
          children: [
             { '@type': "[Bash] named symbol",
-               '@token': "testfnc1",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] word",
@@ -26,11 +25,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': ":",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': ":",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",
@@ -71,7 +68,6 @@
                startOffset: 23,
             },
             { '@type': "[Bash] named symbol",
-               '@token': "testfnc2",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] word",
@@ -92,11 +88,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': ":",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': ":",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",

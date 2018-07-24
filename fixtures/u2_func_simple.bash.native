@@ -5,7 +5,6 @@
          '@role': [Unannotated],
          children: [
             { '@type': "[Bash] named symbol",
-               '@token': "testfnc1",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] word",
@@ -26,15 +25,12 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "$2",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "$2",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "var-use-element",
-                                       '@token': "$2",
                                        '@role': [Unannotated],
                                        children: [
                                           { '@type': "[Bash] variable",
@@ -57,7 +53,6 @@
                            startOffset: 17,
                         },
                         { '@type': "[Bash] combined word",
-                           '@token': "=",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] word",
@@ -72,11 +67,9 @@
                            startOffset: 20,
                         },
                         { '@type': "[Bash] combined word",
-                           '@token': "$1",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "var-use-element",
-                                 '@token': "$1",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] variable",
@@ -102,11 +95,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "return",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "return",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",
@@ -125,7 +116,6 @@
                            startOffset: 29,
                         },
                         { '@type': "[Bash] combined word",
-                           '@token': "1",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] int literal",

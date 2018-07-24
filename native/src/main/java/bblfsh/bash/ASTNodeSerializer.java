@@ -19,17 +19,18 @@ import java.util.stream.Collectors;
 public class ASTNodeSerializer extends StdSerializer<ASTNode> {
 
     private final Set<String> SKIPTOKENS = Stream.of("FILE", "include-command", "for shellcommand", "logical block",
-        "[Bash] case pattern", "[Bash] casse pattern list", "var-def-element", "function-def-element",
-        "group element", "if shellcommand", "conditional shellcommand", "until loop", "simple-command",
-        "while loop").collect(Collectors.toCollection(HashSet::new));
+        "[Bash] case pattern", "case pattern", "[Bash] case pattern list", "var-def-element", "function-def-element",
+        "group element", "if shellcommand", "conditional shellcommand", "until loop", "simple-command", "[Bash] combined word",
+        "while loop", "[Bash] generic bash command", "[Bash] named symbol", "var-use-element").collect(Collectors.toCollection(HashSet::new));
 
     private final Set<String> SKIPNODES = Stream.of("WHITE_SPACE", "[Bash] linefeed", "[Bash] string begin",
         "[Bash] ;", "[Bash] (", "[Bash] {", "[Bash] )", "[Bash] }", "[Bash] fi", "fi", "[Bash] shebang element",
         "[Bash] if", "[Bash] for", "[Bash] in", "[Bash] do", "[Bash] done", "[Bash] esac", "[Bash] [ (left conditional)",
-        "[Bash] while", "[Bash] case", "[Bash] string end").collect(Collectors.toCollection(HashSet::new));
+        "[Bash]  ] (right conditional)", "[Bash] while", "[Bash] case", "[Bash] string end",
+        "[Bash] until").collect(Collectors.toCollection(HashSet::new));
 
     private final Set<String> ADOPTNEXT = Stream.of("[Bash] then", "[Bash] else", "[Bash] elif")
-                                                .collect(Collectors.toCollection(HashSet::new));
+        .collect(Collectors.toCollection(HashSet::new));
 
     public ASTNodeSerializer() {
         this(null);

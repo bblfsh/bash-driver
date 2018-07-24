@@ -29,7 +29,6 @@
          },
          children: [
             { '@type': "[Bash] named symbol",
-               '@token': "testfnc1",
                '@role': [Identifier, Name],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -94,7 +93,6 @@
                      },
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': ":",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -110,8 +108,7 @@
                            },
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': ":",
-                                 '@role': [Expression, Identifier, Incomplete, String],
+                                 '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 18,
@@ -185,7 +182,6 @@
                children: [],
             },
             { '@type': "[Bash] named symbol",
-               '@token': "testfnc2",
                '@role': [Identifier, Name],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -250,7 +246,6 @@
                      },
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': ":",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -266,8 +261,7 @@
                            },
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': ":",
-                                 '@role': [Expression, Identifier, Incomplete, String],
+                                 '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 48,

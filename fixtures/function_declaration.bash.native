@@ -12,7 +12,6 @@
                startOffset: 0,
             },
             { '@type': "[Bash] named symbol",
-               '@token': "foo",
                '@role': [Unannotated],
                children: [
                   { '@type': "[Bash] word",
@@ -33,11 +32,9 @@
                      '@role': [Unannotated],
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "echo",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "echo",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "[Bash] word",

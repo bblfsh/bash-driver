@@ -46,7 +46,6 @@
                children: [],
             },
             { '@type': "[Bash] named symbol",
-               '@token': "foo",
                '@role': [Identifier, Name],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -111,7 +110,6 @@
                      },
                      children: [
                         { '@type': "[Bash] generic bash command",
-                           '@token': "echo",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -127,8 +125,7 @@
                            },
                            children: [
                               { '@type': "[Bash] combined word",
-                                 '@token': "echo",
-                                 '@role': [Expression, Identifier, Incomplete, String],
+                                 '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 19,
