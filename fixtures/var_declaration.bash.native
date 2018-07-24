@@ -1,221 +1,179 @@
-{
-    "status": "ok",
-    "language": "bash",
-    "errors": [],
-    "ast": {
-        "children": [
-            {
-                "children": [
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "elementType": "[Bash] assignment_word",
-                                "startOffset": 0,
-                                "text": "a",
-                                "textLength": 1
-                            },
-                            {
-                                "children": [],
-                                "elementType": "[Bash] =",
-                                "startOffset": 1,
-                                "text": "=",
-                                "textLength": 1
-                            },
-                            {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "elementType": "[Bash] int literal",
-                                        "startOffset": 2,
-                                        "text": "1",
-                                        "textLength": 1
-                                    }
-                                ],
-                                "elementType": "[Bash] combined word",
-                                "startOffset": 2,
-                                "text": "1",
-                                "textLength": 1
-                            }
-                        ],
-                        "elementType": "var-def-element",
-                        "startOffset": 0,
-                        "text": "a=1",
-                        "textLength": 3
-                    }
-                ],
-                "elementType": "simple-command",
-                "startOffset": 0,
-                "text": "a=1",
-                "textLength": 3
+{ '@type': "FILE",
+   '@role': [Unannotated],
+   children: [
+      { '@type': "simple-command",
+         '@role': [Unannotated],
+         children: [
+            { '@type': "var-def-element",
+               '@role': [Unannotated],
+               children: [
+                  { '@type': "[Bash] assignment_word",
+                     '@token': "a",
+                     '@role': [Unannotated],
+                     children: [],
+                     endOffset: 1,
+                     startOffset: 0,
+                  },
+                  { '@type': "[Bash] =",
+                     '@token': "=",
+                     '@role': [Unannotated],
+                     children: [],
+                     endOffset: 2,
+                     startOffset: 1,
+                  },
+                  { '@type': "[Bash] combined word",
+                     '@token': "1",
+                     '@role': [Unannotated],
+                     children: [
+                        { '@type': "[Bash] int literal",
+                           '@token': "1",
+                           '@role': [Unannotated],
+                           children: [],
+                           endOffset: 3,
+                           startOffset: 2,
+                        },
+                     ],
+                     endOffset: 3,
+                     startOffset: 2,
+                  },
+               ],
+               endOffset: 3,
+               startOffset: 0,
             },
-            {
-                "children": [],
-                "elementType": "[Bash] linefeed",
-                "startOffset": 3,
-                "text": "\n",
-                "textLength": 1
+         ],
+         endOffset: 3,
+         startOffset: 0,
+      },
+      { '@type': "simple-command",
+         '@role': [Unannotated],
+         children: [
+            { '@type': "var-def-element",
+               '@role': [Unannotated],
+               children: [
+                  { '@type': "[Bash] assignment_word",
+                     '@token': "octal",
+                     '@role': [Unannotated],
+                     children: [],
+                     endOffset: 9,
+                     startOffset: 4,
+                  },
+                  { '@type': "[Bash] =",
+                     '@token': "=",
+                     '@role': [Unannotated],
+                     children: [],
+                     endOffset: 10,
+                     startOffset: 9,
+                  },
+                  { '@type': "[Bash] combined word",
+                     '@token': "032",
+                     '@role': [Unannotated],
+                     children: [
+                        { '@type': "[Bash] word",
+                           '@token': "032",
+                           '@role': [Unannotated],
+                           children: [],
+                           endOffset: 13,
+                           startOffset: 10,
+                        },
+                     ],
+                     endOffset: 13,
+                     startOffset: 10,
+                  },
+               ],
+               endOffset: 13,
+               startOffset: 4,
             },
-            {
-                "children": [
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "elementType": "[Bash] assignment_word",
-                                "startOffset": 4,
-                                "text": "octal",
-                                "textLength": 5
-                            },
-                            {
-                                "children": [],
-                                "elementType": "[Bash] =",
-                                "startOffset": 9,
-                                "text": "=",
-                                "textLength": 1
-                            },
-                            {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "elementType": "[Bash] word",
-                                        "startOffset": 10,
-                                        "text": "032",
-                                        "textLength": 3
-                                    }
-                                ],
-                                "elementType": "[Bash] combined word",
-                                "startOffset": 10,
-                                "text": "032",
-                                "textLength": 3
-                            }
-                        ],
-                        "elementType": "var-def-element",
-                        "startOffset": 4,
-                        "text": "octal=032",
-                        "textLength": 9
-                    }
-                ],
-                "elementType": "simple-command",
-                "startOffset": 4,
-                "text": "octal=032",
-                "textLength": 9
+         ],
+         endOffset: 13,
+         startOffset: 4,
+      },
+      { '@type': "simple-command",
+         '@role': [Unannotated],
+         children: [
+            { '@type': "var-def-element",
+               '@role': [Unannotated],
+               children: [
+                  { '@type': "[Bash] assignment_word",
+                     '@token': "hex",
+                     '@role': [Unannotated],
+                     children: [],
+                     endOffset: 17,
+                     startOffset: 14,
+                  },
+                  { '@type': "[Bash] =",
+                     '@token': "=",
+                     '@role': [Unannotated],
+                     children: [],
+                     endOffset: 18,
+                     startOffset: 17,
+                  },
+                  { '@type': "[Bash] combined word",
+                     '@token': "0x64",
+                     '@role': [Unannotated],
+                     children: [
+                        { '@type': "[Bash] word",
+                           '@token': "0x64",
+                           '@role': [Unannotated],
+                           children: [],
+                           endOffset: 22,
+                           startOffset: 18,
+                        },
+                     ],
+                     endOffset: 22,
+                     startOffset: 18,
+                  },
+               ],
+               endOffset: 22,
+               startOffset: 14,
             },
-            {
-                "children": [],
-                "elementType": "[Bash] linefeed",
-                "startOffset": 13,
-                "text": "\n",
-                "textLength": 1
+         ],
+         endOffset: 22,
+         startOffset: 14,
+      },
+      { '@type': "simple-command",
+         '@role': [Unannotated],
+         children: [
+            { '@type': "var-def-element",
+               '@role': [Unannotated],
+               children: [
+                  { '@type': "[Bash] assignment_word",
+                     '@token': "base4",
+                     '@role': [Unannotated],
+                     children: [],
+                     endOffset: 28,
+                     startOffset: 23,
+                  },
+                  { '@type': "[Bash] =",
+                     '@token': "=",
+                     '@role': [Unannotated],
+                     children: [],
+                     endOffset: 29,
+                     startOffset: 28,
+                  },
+                  { '@type': "[Bash] combined word",
+                     '@token': "4#123123",
+                     '@role': [Unannotated],
+                     children: [
+                        { '@type': "[Bash] word",
+                           '@token': "4#123123",
+                           '@role': [Unannotated],
+                           children: [],
+                           endOffset: 37,
+                           startOffset: 29,
+                        },
+                     ],
+                     endOffset: 37,
+                     startOffset: 29,
+                  },
+               ],
+               endOffset: 37,
+               startOffset: 23,
             },
-            {
-                "children": [
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "elementType": "[Bash] assignment_word",
-                                "startOffset": 14,
-                                "text": "hex",
-                                "textLength": 3
-                            },
-                            {
-                                "children": [],
-                                "elementType": "[Bash] =",
-                                "startOffset": 17,
-                                "text": "=",
-                                "textLength": 1
-                            },
-                            {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "elementType": "[Bash] word",
-                                        "startOffset": 18,
-                                        "text": "0x64",
-                                        "textLength": 4
-                                    }
-                                ],
-                                "elementType": "[Bash] combined word",
-                                "startOffset": 18,
-                                "text": "0x64",
-                                "textLength": 4
-                            }
-                        ],
-                        "elementType": "var-def-element",
-                        "startOffset": 14,
-                        "text": "hex=0x64",
-                        "textLength": 8
-                    }
-                ],
-                "elementType": "simple-command",
-                "startOffset": 14,
-                "text": "hex=0x64",
-                "textLength": 8
-            },
-            {
-                "children": [],
-                "elementType": "[Bash] linefeed",
-                "startOffset": 22,
-                "text": "\n",
-                "textLength": 1
-            },
-            {
-                "children": [
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "elementType": "[Bash] assignment_word",
-                                "startOffset": 23,
-                                "text": "base4",
-                                "textLength": 5
-                            },
-                            {
-                                "children": [],
-                                "elementType": "[Bash] =",
-                                "startOffset": 28,
-                                "text": "=",
-                                "textLength": 1
-                            },
-                            {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "elementType": "[Bash] word",
-                                        "startOffset": 29,
-                                        "text": "4#123123",
-                                        "textLength": 8
-                                    }
-                                ],
-                                "elementType": "[Bash] combined word",
-                                "startOffset": 29,
-                                "text": "4#123123",
-                                "textLength": 8
-                            }
-                        ],
-                        "elementType": "var-def-element",
-                        "startOffset": 23,
-                        "text": "base4=4#123123",
-                        "textLength": 14
-                    }
-                ],
-                "elementType": "simple-command",
-                "startOffset": 23,
-                "text": "base4=4#123123",
-                "textLength": 14
-            },
-            {
-                "children": [],
-                "elementType": "[Bash] linefeed",
-                "startOffset": 37,
-                "text": "\n",
-                "textLength": 1
-            }
-        ],
-        "elementType": "FILE",
-        "startOffset": 0,
-        "text": "a=1\noctal=032\nhex=0x64\nbase4=4#123123\n",
-        "textLength": 38
-    }
+         ],
+         endOffset: 37,
+         startOffset: 23,
+      },
+   ],
+   endOffset: 38,
+   startOffset: 0,
 }

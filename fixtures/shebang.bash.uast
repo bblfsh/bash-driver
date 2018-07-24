@@ -1,60 +1,16 @@
-Status:  ok
-Language:  bash
-Errors: 
-UAST: 
-FILE {
-.  Roles: File
-.  TOKEN "#!/bin/bash
-"
-.  StartPosition: {
-.  .  Offset: 0
-.  .  Line: 1
-.  .  Col: 1
-.  }
-.  EndPosition: {
-.  .  Offset: 12
-.  .  Line: 2
-.  .  Col: 1
-.  }
-.  Children: {
-.  .  0: [Bash] shebang element {
-.  .  .  Roles: Comment,Pathname,Incomplete
-.  .  .  TOKEN "#!/bin/bash
-"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 1
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 12
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: [Bash] Shebang {
-.  .  .  .  .  Roles: Comment,Pathname,Incomplete
-.  .  .  .  .  TOKEN "#!/bin/bash
-"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: children
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "FILE",
+   '@role': [File],
+   '@pos': { '@type': "uast:Positions",
+      start: { '@type': "uast:Position",
+         offset: 0,
+         line: 1,
+         col: 1,
+      },
+      end: { '@type': "uast:Position",
+         offset: 12,
+         line: 2,
+         col: 1,
+      },
+   },
+   children: [],
 }
-

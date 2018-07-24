@@ -1,185 +1,217 @@
 package normalizer
 
 import (
-	"github.com/bblfsh/bash-driver/driver/normalizer/intellij"
+	"gopkg.in/bblfsh/sdk.v2/uast"
+	"gopkg.in/bblfsh/sdk.v2/uast/role"
+	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
+	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
 
-	"gopkg.in/bblfsh/sdk.v1/uast"
-	. "gopkg.in/bblfsh/sdk.v1/uast/ann"
-	"gopkg.in/bblfsh/sdk.v1/uast/transformer"
-	"gopkg.in/bblfsh/sdk.v1/uast/transformer/annotatter"
-	"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
-	"gopkg.in/src-d/go-errors.v0"
+
 )
 
-// Transformers is the of list `transformer.Transfomer` to apply to a UAST, to
-// learn more about the Transformers and the available ones take a look to:
-// https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/transformers
-var Transformers = []transformer.Tranformer{
-	annotatter.NewAnnotatter(AnnotationRules),
+var Native = Transformers([][]Transformer{
+	{Mappings(Annotations...)},
+	{RolesDedup()},
+}...)
+
+var Code = []CodeTransformer{
 	positioner.NewFillLineColFromOffset(),
 }
 
-var ErrRootMustBeFile = errors.NewKind("root must have internal type FILE")
+func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
+	return AnnotateType(typ,
+		FieldRoles{
+			uast.KeyToken: {Op: String(token)},
+		}, roles...)
+}
 
-var conditionOperators = On(intellij.ConditionOperator).Roles(uast.Operator).Children(
-	On(HasToken("-eq")).Roles(uast.Relational, uast.Equal),
-	On(HasToken("-ne")).Roles(uast.Relational, uast.Not, uast.Equal),
-	On(HasToken("-gt")).Roles(uast.Relational, uast.GreaterThan),
-	On(HasToken("-ge")).Roles(uast.Relational, uast.GreaterThanOrEqual),
-	On(HasToken("-lt")).Roles(uast.Relational, uast.LessThan),
-	On(HasToken("-le")).Roles(uast.Relational, uast.LessThanOrEqual),
-)
+// FIXME XXX remove comments prefix
 
-// XXX expressions/statements
+var Annotations = []Mapping{
+	AnnotateType("FILE", nil, role.File),
+	AnnotateType("[Bash] Comment", nil, role.Comment, role.Noop),
+	AnnotateType("[Bash] linefeed", nil, role.Whitespace, role.Noop),
+	AnnotateType("WHITE_SPACE", nil, role.Whitespace, role.Noop),
+	AnnotateType("[Bash] int literal", nil, role.Number, role.Literal, role.Primitive),
+	AnnotateType("[Bash] unevaluated string (STRING2)", nil, role.Expression, role.String, role.Literal),
+	AnnotateType("[Bash] string begin", nil, role.Expression, role.String, role.Block),
+	AnnotateType("[Bash] string end", nil, role.Expression, role.String, role.Incomplete),
+	AnnotateType("[Bash] string content", nil, role.Expression, role.String, role.Literal),
+	AnnotateType("[Bash] string", nil, role.Expression, role.String, role.Literal, role.Primitive),
+	AnnotateType("[Bash] let", nil, role.Statement, role.Incomplete),
+	AnnotateType("[Bash] arithmetic command", nil, role.Expression, role.Arithmetic, role.Incomplete),
+	AnnotateType("[Bash] arithmetic simple", nil, role.Expression, role.Arithmetic, role.Incomplete),
+	AnnotateType("[Bash] arith ==", nil, role.Operator, role.Relational, role.Equal),
+	AnnotateType("[Bash] =", nil, role.Operator, role.Assignment),
+	AnnotateType("[Bash] arith !=", nil, role.Operator, role.Relational, role.Not, role.Equal),
+	AnnotateType("[Bash] !=", nil, role.Operator, role.Relational, role.Not, role.Equal),
+	AnnotateType("[Bash] <", nil, role.Operator, role.Relational, role.LessThan),
+	AnnotateType("[Bash] <=", nil, role.Operator, role.Relational, role.LessThanOrEqual),
+	AnnotateType("[Bash] >", nil, role.Operator, role.Relational, role.GreaterThan),
+	AnnotateType("[Bash] >=", nil, role.Operator, role.Relational, role.GreaterThanOrEqual),
+	AnnotateType("[Bash] ||", nil, role.Operator, role.Boolean, role.Or),
+	AnnotateType("[Bash] |", nil, role.Operator, role.Boolean, role.Or),
+	AnnotateType("[Bash] &&", nil, role.Operator, role.Boolean, role.And),
+	AnnotateType("[Bash] &", nil, role.Operator, role.Boolean, role.And),
+	AnnotateType("[Bash] cond_op !", nil, role.Operator, role.Boolean, role.Not),
+	AnnotateType("[Bash] cond_op ==", nil, role.Expression, role.Relational, role.Operator, role.Equal),
+	AnnotateType("[Bash] if", nil, role.Statement, role.If),
+	AnnotateType("conditional shellcommand", nil, role.Expression, role.Condition),
 
-// AnnotationRules describes how a UAST should be annotated with `uast.Role`.
-//
-// https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/ann
-var AnnotationRules = On(Any).Self(
-	On(Not(intellij.File)).Error(ErrRootMustBeFile.New()),
-	On(intellij.File).Roles(uast.File).Descendants(
-		On(intellij.Comment).Roles(uast.Comment, uast.Noop),
-		On(intellij.LineFeed).Roles(uast.Whitespace, uast.Noop),
-		On(intellij.Whitespace).Roles(uast.Whitespace, uast.Noop),
-		On(intellij.IntLiteral).Roles(uast.Number, uast.Literal, uast.Primitive),
+	// These are more tokens that real semantic nodes, but they're in the AST tree
+	// so we must tag them.
+	AnnotateType("[Bash] [ for arithmetic", nil, role.Incomplete),
+	AnnotateType("[Bash] ] for arithmetic", nil, role.Incomplete),
+	AnnotateType("[Bash] [ (left conditional)", nil, role.Incomplete),
+	AnnotateType("[Bash] ] (left conditional)", nil, role.Incomplete),
+	AnnotateType("[Bash] ;", nil, role.Incomplete),
+	AnnotateType("[Bash] {", nil, role.Incomplete),
+	AnnotateType("[Bash] }", nil, role.Incomplete),
+	AnnotateType("[Bash] :", nil, role.Incomplete),
+	AnnotateType("[Bash] [ (left square)", nil, role.Incomplete),
+	AnnotateType("[Bash] ] (right square)", nil, role.Incomplete),
+	AnnotateType("[Bash] ;;", nil, role.Incomplete),
+	AnnotateType("[Bash] [[ (left bracket)", nil, role.Incomplete),
+	AnnotateType("[Bash] ]] (right bracket)", nil, role.Incomplete),
+	AnnotateType("[Bash] (", nil, role.Incomplete),
+	AnnotateType("[Bash] ((", nil, role.Incomplete),
+	AnnotateType("[Bash] )", nil, role.Incomplete),
+	AnnotateType("[Bash] ))", nil, role.Incomplete),
+	AnnotateType("[Bash] backquote `", nil, role.Incomplete),
+	AnnotateType("[Bash] $", nil, role.Incomplete),
+	AnnotateType("ERROR_ELEMENT", nil, role.Incomplete),
+	AnnotateType("[Bash] redirect list", nil, role.Incomplete),
+	AnnotateType("[Bash] redirect element", nil, role.Incomplete),
+	AnnotateType("[Bash] then", nil, role.Statement, role.If, role.Then),
+	AnnotateType("logical block", nil, role.Block),
 
-		On(Or(intellij.VarUse, intellij.Variable)).Roles(uast.Expression, uast.Variable,
-			uast.Identifier),
-		On(Or(intellij.ComposedVariable, intellij.VarSubstitution)).Roles(uast.Variable,
-			uast.Expression, uast.Identifier, uast.Incomplete),
+	// FIXME: no role in the uast for "end" or "end block/scope"
+	AnnotateType("[Bash] fi", nil, role.Statement, role.Incomplete),
+	AnnotateType("[Bash] do", nil, role.Statement, role.Block),
+	AnnotateType("[Bash] in", nil, role.Expression, role.Binary, role.Operator, role.Relational, role.Contains),
+	AnnotateType("var-use-element", nil, role.Expression, role.Variable, role.Identifier),
+	AnnotateType("[Bash] variable", nil, role.Expression, role.Variable, role.Identifier),
+	AnnotateType("[Bash] composed variable, like subshell", nil, role.Variable, role.Expression, role.Identifier, role.Incomplete),
+	AnnotateType("[Bash] var substitution", nil, role.Variable, role.Expression, role.Identifier, role.Incomplete),
+	AnnotateType("backquote shellcommand", nil, role.Expression, role.String, role.Literal, role.Call, role.Incomplete),
+	AnnotateType("subshell shellcommand", nil, role.Expression, role.Call, role.Incomplete),
+	AnnotateType("[Bash] pipeline command", nil, role.Expression, role.Call, role.Incomplete),
+	AnnotateType("[Bash] generic bash command", nil, role.Expression, role.Incomplete),
+	AnnotateType("[Bash] Shebang", nil, role.Comment, role.Pathname, role.Incomplete),
+	AnnotateType("[Bash] shebang element", nil, role.Comment, role.Pathname, role.Incomplete),
+	AnnotateType("[Bash] done", nil, role.Statement, role.Incomplete),
+	AnnotateType("[Bash] &[0-9] filedescriptor", nil, role.Identifier, role.Receiver, role.Incomplete),
+	AnnotateType("[Bash] word", nil, role.Expression, role.Identifier),
+	AnnotateType("[Bash] combined word", nil, role.Expression, role.String, role.Identifier, role.Incomplete),
+	AnnotateType("while loop", nil, role.Statement, role.While),
+	AnnotateType("[Bash] while", nil, role.Statement, role.While),
+	AnnotateType("until loop", nil, role.Statement, role.While, role.Incomplete),
+	AnnotateType("[Bash] Parameter expansion operator '@@'", nil, role.Operator, role.Incomplete),
+	AnnotateType("[Bash] Parameter expansion operator '##'", nil, role.Operator, role.Incomplete),
+	AnnotateType("[Bash] Parameter expansion operator '%%'", nil, role.Operator, role.Incomplete),
+	AnnotateType("[Bash] Parameter expansion operator '::'", nil, role.Operator, role.Incomplete),
+	AnnotateType("[Bash] Parameter expansion operator '//'", nil, role.Operator, role.Incomplete),
+	AnnotateType("[Bash] >>", nil, role.Operator, role.Incomplete),
+	AnnotateType("[Bash] case", nil, role.Expression, role.Case),
+	AnnotateType("[Bash] case pattern", nil, role.Expression, role.Case, role.Condition),
+	AnnotateType("[Bash] case pattern list", nil, role.Case, role.Body, role.Block),
+	AnnotateType("case pattern", nil, role.Statement, role.Switch),
+	AnnotateType("[Bash] esac", nil, role.Statement, role.Incomplete),
+	AnnotateType("let command", nil, role.Expression, role.Assignment, role.Incomplete),
+	AnnotateType("[Bash] lazy LET expression", nil, role.Expression, role.Assignment, role.Incomplete),
 
-		On(intellij.UnEvalString).Roles(uast.Expression, uast.String, uast.Literal),
-		On(intellij.StringBegin).Roles(uast.Expression, uast.String, uast.Block),
-		On(intellij.StringEnd).Roles(uast.Expression, uast.String, uast.Incomplete),
-		On(intellij.StringContent).Roles(uast.Expression, uast.String, uast.Literal),
-		On(intellij.String).Roles(uast.Expression, uast.String, uast.Literal, uast.Block),
-		// FIXME: needs uast node "Execute" or "Shell" or similar
-		On(intellij.BackQuoteShellCommand).Roles(uast.Expression, uast.String, uast.Literal,
-			uast.Call, uast.Incomplete),
-		On(Or(intellij.SubShellCmd, intellij.PipelineCmd)).Roles(uast.Expression, uast.Call,
-			uast.Incomplete),
-		On(Or(intellij.Shebang, intellij.ShebangElement)).Roles(uast.Comment, uast.Pathname,
-			uast.Incomplete),
-		// variable declaration
-		On(intellij.SimpleCommand).Roles(uast.Expression).Children(
-			On(intellij.VarDefElement).Roles(uast.Expression, uast.Assignment, uast.Binary).Children(
-				On(intellij.AssignmentWord).Roles(uast.Identifier, uast.Left),
-				On(intellij.OperatorAssign).Roles(uast.Operator, uast.Assignment),
-				On(And(Not(intellij.AssignmentWord), Not(intellij.OperatorAssign))).Roles(uast.Right),
+	annotateTypeToken("[Bash] cond_op", "-eq", role.Operator, role.Relational, role.Equal),
+	annotateTypeToken("[Bash] cond_op", "-ne", role.Operator, role.Relational, role.Not, role.Equal),
+	annotateTypeToken("[Bash] cond_op", "-gt", role.Operator, role.Relational, role.GreaterThan),
+	annotateTypeToken("[Bash] cond_op", "-ge", role.Operator, role.Relational, role.GreaterThanOrEqual),
+	annotateTypeToken("[Bash] cond_op", "-lt", role.Operator, role.Relational, role.LessThan),
+	annotateTypeToken("[Bash] cond_op", "-le", role.Operator, role.Relational, role.LessThanOrEqual),
+
+	AnnotateType("simple-command", nil, role.Expression),
+	AnnotateType("function-def-element", nil, role.Function, role.Declaration),
+	AnnotateType("[Bash] function", nil, role.Function, role.Declaration, role.Block),
+	AnnotateType("[Bash] named symbol", nil, role.Name, role.Identifier),
+	AnnotateType("group element", nil, role.Body, role.Block),
+	annotateTypeToken("[Bash] generic bash command", "break", role.Statement, role.Break),
+	annotateTypeToken("[Bash] generic bash command", "continue", role.Statement, role.Continue),
+	AnnotateType("include-command", nil, role.Statement, role.Import),
+	AnnotateType("[Bash] File reference", nil, role.String, role.Import, role.Pathname, role.Identifier),
+	AnnotateType("[Bash] =", nil, role.Operator, role.Assignment),
+
+	AnnotateType("var-def-element", MapObj(Obj{
+		"children": Arr(
+			ObjectRoles("left"),
+			ObjectRoles("operator"),
+			ObjectRoles("right")),
+	},
+		Obj{
+			"children": Arr(
+				ObjectRoles("left", role.Assignment, role.Left),
+				ObjectRoles("operator", role.Assignment, role.Operator),
+				ObjectRoles("right", role.Right),
 			),
-		),
-		// function declaration
-		On(intellij.FunctionDefElement).Roles(uast.Function, uast.Declaration, uast.Block).Children(
-			On(intellij.Function).Roles(uast.Function, uast.Declaration),
-			On(intellij.NamedSymbol).Roles(uast.Function, uast.Declaration, uast.Name),
-			On(intellij.GroupElement).Roles(uast.Function, uast.Declaration, uast.Body, uast.Block),
-		),
-		// let statement / expression (unfortunately it doesnt produce a subtree...)
-		On(intellij.LetExpression).Roles(uast.Expression, uast.Assignment, uast.Incomplete),
-		On(intellij.LetStatement).Roles(uast.Statement, uast.Incomplete),
+		},
+	), role.Expression, role.Assignment, role.Declaration),
 
-		// if statement
-		conditionOperators,
-		On(intellij.ArithmeticCmd).Roles(uast.Expression, uast.Arithmetic, uast.Incomplete),
-		On(intellij.ArithmeticSimple).Roles(uast.Expression, uast.Arithmetic, uast.Incomplete),
-		On(Or(intellij.OperatorArithLess, intellij.OperatorLess)).Roles(uast.Operator, uast.Relational, uast.LessThan),
-		On(Or(intellij.OperatorArithMore, intellij.OperatorMore)).Roles(uast.Operator, uast.Relational, uast.GreaterThan),
-		On(intellij.OperatorArithEqual).Roles(uast.Operator, uast.Relational, uast.Equal),
-		On(intellij.OperatorArithNotEqual).Roles(uast.Operator, uast.Relational, uast.Not, uast.Equal),
-		On(intellij.OperatorNotEqual).Roles(uast.Operator, uast.Relational, uast.Not, uast.Equal),
-		On(intellij.OperatorLessEqual).Roles(uast.Operator, uast.Relational, uast.LessThanOrEqual),
-		On(intellij.OperatorMoreEqual).Roles(uast.Operator, uast.Relational, uast.GreaterThanOrEqual),
-		On(intellij.OperatorBoolOr).Roles(uast.Operator, uast.Boolean, uast.Or),
-		On(intellij.OperatorBoolAnd).Roles(uast.Operator, uast.Boolean, uast.And),
-		On(intellij.OperatorBoolNot).Roles(uast.Operator, uast.Boolean, uast.Not),
-		On(intellij.If).Roles(uast.Statement, uast.If),
-		On(intellij.ConditionalShellCommand).Roles(uast.Expression, uast.Condition),
-		On(intellij.IfShellCommand).Roles(uast.If, uast.Expression, uast.Block).Children(
-			On(intellij.ElIf).Roles(uast.Statement, uast.If, uast.Else, uast.Incomplete),
-			On(intellij.Else).Roles(uast.Statement, uast.Else, uast.Incomplete),
-			On(intellij.SimpleCommand).Roles(uast.Expression, uast.If, uast.Condition),
-		),
-		On(intellij.Then).Roles(uast.Statement, uast.Incomplete),
-		On(intellij.LogicalBlock).Roles(uast.Expression, uast.If, uast.Then),
-		// FIXME: no role in the uast for "end"
-		On(intellij.Fi).Roles(uast.Statement, uast.Incomplete),
-		// for statement
-		On(intellij.Do).Roles(uast.Statement, uast.Block),
-		On(intellij.In).Roles(uast.Expression, uast.Binary, uast.Operator, uast.Relational, uast.Contains),
-		On(intellij.GenericBash).Roles(uast.Incomplete).Children(
-			On(HasToken("break")).Roles(uast.Statement, uast.Break),
-			On(HasToken("continue")).Roles(uast.Statement, uast.Continue),
-		),
-		On(intellij.Done).Roles(uast.Statement, uast.Incomplete),
+	AnnotateType("if shellcommand", nil, role.Statement, role.If),
 
-		// These are more tokens that real semantic nodes, but they're in the AST tree
-		// so we must tag them.
-		On(intellij.BracketArithLeft).Roles(uast.Incomplete),
-		On(intellij.BracketArithRight).Roles(uast.Incomplete),
-		On(intellij.LeftConditional).Roles(uast.Incomplete),
-		On(intellij.RightConditional).Roles(uast.Incomplete),
-		On(intellij.SemiColon).Roles(uast.Incomplete),
-		On(intellij.BraceOpen).Roles(uast.Incomplete),
-		On(intellij.BraceClose).Roles(uast.Incomplete),
-		On(intellij.SemiColon).Roles(uast.Incomplete),
-		On(intellij.LeftSquare).Roles(uast.Incomplete),
-		On(intellij.RightSquare).Roles(uast.Incomplete),
-		On(intellij.DoubleSemiColon).Roles(uast.Incomplete),
-		On(intellij.LeftBracket).Roles(uast.Incomplete),
-		On(intellij.RightBracket).Roles(uast.Incomplete),
-		On(intellij.ParenOpen).Roles(uast.Incomplete),
-		On(intellij.DoubleParenOpen).Roles(uast.Incomplete),
-		On(intellij.ParenClose).Roles(uast.Incomplete),
-		On(intellij.DoubleParenClose).Roles(uast.Incomplete),
-		On(intellij.BackQuote).Roles(uast.Incomplete),
-		On(intellij.Dollar).Roles(uast.Incomplete),
-		On(intellij.ErrorElement).Roles(uast.Incomplete),
-		On(intellij.RedirectList).Roles(uast.Incomplete),
-		On(intellij.RedirectElement).Roles(uast.Incomplete),
+	AnnotateType("[Bash] if", MapObj(Obj{
+		"children": Arr(ObjectRoles("condition")),
+	}, Obj{
+		"children": Arr(ObjectRoles("condition", role.If, role.Condition)),
+	}), role.Statement, role.If),
 
-		On(intellij.FileDescriptors).Roles(uast.Identifier, uast.Receiver, uast.Incomplete),
-		On(intellij.Word).Roles(uast.Expression, uast.Identifier),
-		On(intellij.CombinedWord).Roles(uast.Expression, uast.String, uast.Identifier, uast.Incomplete),
-		On(intellij.ForShellCommand).Roles(uast.For, uast.Statement).Children(
-			On(intellij.For).Roles(uast.Statement, uast.Incomplete),
-			On(intellij.VarDefElement).Roles(uast.Expression, uast.For, uast.Iterator),
-			On(intellij.LogicalBlock).Roles(uast.Expression, uast.For, uast.Body),
-			On(intellij.CombinedWord).Roles(uast.Expression, uast.For, uast.Update),
-		),
-		// while and until statement
-		On(Or(intellij.WhileLoop, intellij.While)).Roles(uast.Statement, uast.While),
-		On(Or(intellij.UntilLoop, intellij.Until)).Roles(uast.Statement, uast.While, uast.Incomplete),
-		On(Or(intellij.WhileLoop, intellij.UntilLoop)).Children(
-			On(intellij.LogicalBlock).Roles(uast.Expression, uast.While, uast.Body),
-			On(intellij.ConditionalShellCommand).Roles(uast.Expression, uast.While, uast.Condition).Children(
-				On(intellij.LeftConditional).Roles(uast.Incomplete),
-				On(intellij.RightConditional).Roles(uast.Incomplete),
-				// "-a" and such
-				On(intellij.ConditionOperator).Roles(uast.Operator, uast.Incomplete),
-			),
-		),
-		On(intellij.OperatorEqual).Roles(uast.Expression, uast.Relational, uast.Operator, uast.Equal),
-		On(intellij.OperatorBoolOr).Roles(uast.Expression, uast.Binary, uast.Operator, uast.Boolean, uast.Or),
-		On(intellij.OperatorBoolAnd).Roles(uast.Expression, uast.Binary, uast.Operator, uast.Boolean, uast.And),
-		On(intellij.ParameterExpOperatorA).Roles(uast.Operator, uast.Incomplete),
-		On(intellij.ParameterExpOperatorH).Roles(uast.Operator, uast.Incomplete),
-		On(intellij.ParameterExpOperatorP).Roles(uast.Operator, uast.Incomplete),
-		On(intellij.ParameterExpOperatorC).Roles(uast.Operator, uast.Incomplete),
-		On(intellij.ParameterExpOperatorS).Roles(uast.Operator, uast.Incomplete),
-		On(intellij.AppendOperator).Roles(uast.Operator, uast.Incomplete),
+	AnnotateType("[Bash] elif", MapObj(Obj{
+		"children": Arr(ObjectRoles("condition")),
+	}, Obj{
+		"children": Arr(ObjectRoles("condition", role.Else, role.If, role.Condition)),
+	}), role.Statement, role.Else, role.If),
 
-		// case pattern
-		On(Or(intellij.Case, intellij.CasePattern2)).Roles(uast.Expression, uast.Case),
-		On(intellij.CasePatternList).Roles(uast.Expression, uast.Case, uast.List).Children(
-			On(intellij.LogicalBlock).Roles(uast.Expression, uast.Case, uast.Body),
-		),
-		On(intellij.CasePattern).Roles(uast.Statement, uast.Switch),
-		On(intellij.CaseEnd).Roles(uast.Statement, uast.Incomplete),
+	AnnotateType("[Bash] then", MapObj(Obj{
+		"children": Arr(ObjectRoles("body")),
+	}, Obj{
+		"children": Arr(ObjectRoles("body", role.Then, role.Body, role.Block)),
+	}), role.Then),
 
-		// source command (import-ish)
-		On(intellij.IncludeCommand).Roles(uast.Expression, uast.Import).Children(
-			On(HasToken("source")).Roles(uast.Statement, uast.Import),
-			On(intellij.SourceFileReference).Roles(uast.Expression, uast.Import, uast.Pathname, uast.Identifier),
-		),
-	),
-)
+	AnnotateType("[Bash] else", MapObj(Obj{
+		"children": Arr(ObjectRoles("body")),
+	}, Obj{
+		"children": Arr(ObjectRoles("body", role.Else, role.Body, role.Block)),
+	}), role.Statement, role.Else),
+
+	// for i; do something; done
+	AnnotateType("for shellcommand", MapObj(Obj{
+		"children": Arr(
+			ObjectRoles("itervar"),
+			ObjectRoles("body")),
+	}, Obj{
+		"children": Arr(
+			ObjectRoles("itervar", role.For, role.Iterator, role.Expression),
+			ObjectRoles("body", role.For, role.Body, role.Block)),
+	}), role.For, role.Statement),
+
+	// for i in a; do something; done
+	AnnotateType("for shellcommand", MapObj(Obj{
+		"children": Arr(
+			ObjectRoles("itervar"),
+			ObjectRoles("update"),
+			ObjectRoles("body")),
+	}, Obj{
+		"children": Arr(
+			ObjectRoles("itervar", role.For, role.Iterator, role.Expression),
+			ObjectRoles("update", role.For, role.Update, role.Expression),
+			ObjectRoles("body", role.For, role.Body, role.Block)),
+	}), role.For, role.Statement),
+
+	// for i; do something; done
+	AnnotateType("while loop", MapObj(Obj{
+		"children": Arr(
+			ObjectRoles("condition"),
+			ObjectRoles("body")),
+	}, Obj{
+		"children": Arr(
+			ObjectRoles("condition", role.While, role.Expression, role.Condition),
+			ObjectRoles("body", role.While, role.Body, role.Block)),
+	}), role.While, role.Statement),
+
+}
