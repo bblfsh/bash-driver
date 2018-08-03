@@ -4,16 +4,16 @@
       { '@type': "simple-command",
          '@role': [Unannotated],
          children: [
-            { '@type': "[Bash] generic bash command",
+            { '@type': "generic bash command",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] combined word",
+                  { '@type': "combined word",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "var-use-element",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] variable",
+                              { '@type': "variable",
                                  '@token': "$A",
                                  '@role': [Unannotated],
                                  children: [],
@@ -39,31 +39,31 @@
       { '@type': "simple-command",
          '@role': [Unannotated],
          children: [
-            { '@type': "[Bash] generic bash command",
+            { '@type': "generic bash command",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] combined word",
+                  { '@type': "combined word",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] composed variable, like subshell",
+                        { '@type': "composed variable, like subshell",
                            '@token': "${B}",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] $",
+                              { '@type': "$",
                                  '@token': "$",
                                  '@role': [Unannotated],
                                  children: [],
                                  endOffset: 4,
                                  startOffset: 3,
                               },
-                              { '@type': "[Bash] var substitution",
+                              { '@type': "var substitution",
                                  '@token': "{B}",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "var-use-element",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "B",
                                              '@role': [Unannotated],
                                              children: [],
@@ -97,17 +97,17 @@
       { '@type': "simple-command",
          '@role': [Unannotated],
          children: [
-            { '@type': "[Bash] generic bash command",
+            { '@type': "generic bash command",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] string",
+                  { '@type': "string",
                      '@token': "\"$C\"",
                      '@role': [Unannotated],
                      children: [
                         { '@type': "var-use-element",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] variable",
+                              { '@type': "variable",
                                  '@token': "$C",
                                  '@role': [Unannotated],
                                  children: [],
@@ -133,32 +133,32 @@
       { '@type': "simple-command",
          '@role': [Unannotated],
          children: [
-            { '@type': "[Bash] generic bash command",
+            { '@type': "generic bash command",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] string",
+                  { '@type': "string",
                      '@token': "\"${D}\"",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] composed variable, like subshell",
+                        { '@type': "composed variable, like subshell",
                            '@token': "${D}",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] $",
+                              { '@type': "$",
                                  '@token': "$",
                                  '@role': [Unannotated],
                                  children: [],
                                  endOffset: 15,
                                  startOffset: 14,
                               },
-                              { '@type': "[Bash] var substitution",
+                              { '@type': "var substitution",
                                  '@token': "{D}",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "var-use-element",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "D",
                                              '@role': [Unannotated],
                                              children: [],

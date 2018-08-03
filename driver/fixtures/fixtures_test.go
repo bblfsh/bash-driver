@@ -13,7 +13,7 @@ const projectRoot = "../../"
 
 var Suite = &fixtures.Suite{
 	Lang: "bash",
-	Ext:  ".bash", // TODO: specify correct file extension for source files in ./fixtures
+	Ext:  ".bash",
 	Path: filepath.Join(projectRoot, fixtures.Dir),
 	NewDriver: func() driver.BaseDriver {
 		return driver.NewExecDriverAt(filepath.Join(projectRoot, "build/bin/native"))
@@ -27,7 +27,7 @@ var Suite = &fixtures.Suite{
 	},
 	// TODO XXX: not working ("fixtures.test" not found)
 	//Docker:fixtures.DockerConfig{
-	//	Image:"bash:latest",
+		//Image:"bash:latest",
 	//},
 }
 

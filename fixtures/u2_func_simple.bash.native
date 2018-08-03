@@ -4,10 +4,10 @@
       { '@type': "function-def-element",
          '@role': [Unannotated],
          children: [
-            { '@type': "[Bash] named symbol",
+            { '@type': "named symbol",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] word",
+                  { '@type': "word",
                      '@token': "testfnc1",
                      '@role': [Unannotated],
                      children: [],
@@ -24,16 +24,16 @@
                   { '@type': "simple-command",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] generic bash command",
+                        { '@type': "generic bash command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] combined word",
+                              { '@type': "combined word",
                                  '@role': [Unannotated],
                                  children: [
                                     { '@type': "var-use-element",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] variable",
+                                          { '@type': "variable",
                                              '@token': "$2",
                                              '@role': [Unannotated],
                                              children: [],
@@ -52,10 +52,10 @@
                            endOffset: 19,
                            startOffset: 17,
                         },
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] word",
+                              { '@type': "word",
                                  '@token': "=",
                                  '@role': [Unannotated],
                                  children: [],
@@ -66,13 +66,13 @@
                            endOffset: 21,
                            startOffset: 20,
                         },
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Unannotated],
                            children: [
                               { '@type': "var-use-element",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] variable",
+                                    { '@type': "variable",
                                        '@token': "$1",
                                        '@role': [Unannotated],
                                        children: [],
@@ -94,13 +94,13 @@
                   { '@type': "simple-command",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] generic bash command",
+                        { '@type': "generic bash command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] combined word",
+                              { '@type': "combined word",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] word",
+                                    { '@type': "word",
                                        '@token': "return",
                                        '@role': [Unannotated],
                                        children: [],
@@ -115,10 +115,10 @@
                            endOffset: 35,
                            startOffset: 29,
                         },
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] int literal",
+                              { '@type': "int literal",
                                  '@token': "1",
                                  '@role': [Unannotated],
                                  children: [],

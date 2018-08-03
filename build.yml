@@ -1,0 +1,24 @@
+sdk: '2'
+go-runtime:
+  version: '1.10'
+native:
+  image: 'openjdk:8-jre-alpine'
+  build:
+    image: 'openjdk:8-slim'
+    static:
+      - path: src/main/ash/native.ash
+        dest: native
+    run:
+      - 'apt-get update'
+      - 'apt-get install -y make bash wget gradle'
+      - 'wget https://services.gradle.org/distributions/gradle-2.13-bin.zip'
+      - 'unzip gradle-2.13-bin.zip'
+      - 'rm gradle-2.13-bin.zip'
+      - 'make'
+      - 'gradle shadowJar'
+    artifacts:
+      - path: '/native/'
+        dest: 'native'
+  test:
+    run:
+      - 'echo tests'

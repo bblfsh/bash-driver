@@ -19,17 +19,17 @@ import java.util.stream.Collectors;
 public class ASTNodeSerializer extends StdSerializer<ASTNode> {
 
     private final Set<String> SKIPTOKENS = Stream.of("FILE", "include-command", "for shellcommand", "logical block",
-        "[Bash] case pattern", "case pattern", "[Bash] case pattern list", "var-def-element", "function-def-element",
-        "group element", "if shellcommand", "conditional shellcommand", "until loop", "simple-command", "[Bash] combined word",
-        "while loop", "[Bash] generic bash command", "[Bash] named symbol", "var-use-element").collect(Collectors.toCollection(HashSet::new));
+        "case pattern", "case pattern", "case pattern list", "var-def-element", "function-def-element",
+        "group element", "if shellcommand", "conditional shellcommand", "until loop", "simple-command", "combined word",
+        "while loop", "generic bash command", "named symbol", "var-use-element").collect(Collectors.toCollection(HashSet::new));
 
-    private final Set<String> SKIPNODES = Stream.of("WHITE_SPACE", "[Bash] linefeed", "[Bash] string begin",
-        "[Bash] ;", "[Bash] (", "[Bash] {", "[Bash] )", "[Bash] }", "[Bash] fi", "fi", "[Bash] shebang element",
-        "[Bash] if", "[Bash] for", "[Bash] in", "[Bash] do", "[Bash] done", "[Bash] esac", "[Bash] [ (left conditional)",
-        "[Bash]  ] (right conditional)", "[Bash] while", "[Bash] case", "[Bash] string end",
-        "[Bash] until").collect(Collectors.toCollection(HashSet::new));
+    private final Set<String> SKIPNODES = Stream.of("WHITE_SPACE", "linefeed", "string begin",
+        ";", "(", "{", ")", "}", "fi", "fi", "shebang element",
+        "if", "for", "in", "do", "done", "esac", "[ (left conditional)",
+        " ] (right conditional)", "while", "case", "string end",
+        "until").collect(Collectors.toCollection(HashSet::new));
 
-    private final Set<String> ADOPTNEXT = Stream.of("[Bash] then", "[Bash] else", "[Bash] elif")
+    private final Set<String> ADOPTNEXT = Stream.of("then", "else", "elif")
         .collect(Collectors.toCollection(HashSet::new));
 
     public ASTNodeSerializer() {
@@ -46,7 +46,7 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
     }
 
     public void serializeWithChild(ASTNode root, JsonGenerator jG, SerializerProvider provider, ASTNode addChild) throws IOException {
-        final String type = root.getElementType().toString();
+        final String type = root.getElementType().toString().replace("[Bash] ", "");
         final String text = root.getText();
 
         jG.writeStartObject();
@@ -81,7 +81,7 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
 
         // Remove some useless nodes to unpolute the AST
         for (ASTNode child: children) {
-            final String childType = child.getElementType().toString();
+            final String childType = child.getElementType().toString().replace("[Bash] ", "");
             // Skip some redundant nodes (always followed by another more significative one)
             if (SKIPNODES.contains(childType) ||
                 (childType.equals("[Bash] generic bash command") && child.getText().equals("source"))) {
@@ -98,7 +98,7 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
 
             // Bash's AST gives some block nodes not as children of the semantically significative one
             // but as "next one", this fixes it
-            if (ADOPTNEXT.contains(child.getElementType().toString()))
+            if (ADOPTNEXT.contains(child.getElementType().toString().replace("[Bash] ", "")))
             {
                 // Reparent the i+1 children to this node
                 blockChild = filteredChildren.get(i+1);

@@ -7,13 +7,13 @@
             { '@type': "simple-command",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] generic bash command",
+                  { '@type': "generic bash command",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] word",
+                              { '@type': "word",
                                  '@token': "a1",
                                  '@role': [Unannotated],
                                  children: [],
@@ -32,7 +32,7 @@
                endOffset: 5,
                startOffset: 3,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -42,13 +42,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "a2",
                                              '@role': [Unannotated],
                                              children: [],
@@ -85,13 +85,13 @@
             { '@type': "simple-command",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] generic bash command",
+                  { '@type': "generic bash command",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] word",
+                              { '@type': "word",
                                  '@token': "b1",
                                  '@role': [Unannotated],
                                  children: [],
@@ -110,7 +110,7 @@
                endOffset: 25,
                startOffset: 23,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -120,13 +120,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "b2",
                                              '@role': [Unannotated],
                                              children: [],
@@ -153,7 +153,7 @@
                endOffset: 31,
                startOffset: 27,
             },
-            { '@type': "[Bash] else",
+            { '@type': "else",
                '@token': "else",
                '@role': [Unannotated],
                children: [
@@ -163,13 +163,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "b3",
                                              '@role': [Unannotated],
                                              children: [],
@@ -206,13 +206,13 @@
             { '@type': "simple-command",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] generic bash command",
+                  { '@type': "generic bash command",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] word",
+                              { '@type': "word",
                                  '@token': "c1",
                                  '@role': [Unannotated],
                                  children: [],
@@ -231,7 +231,7 @@
                endOffset: 54,
                startOffset: 52,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -241,13 +241,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "c2",
                                              '@role': [Unannotated],
                                              children: [],
@@ -274,20 +274,20 @@
                endOffset: 60,
                startOffset: 56,
             },
-            { '@type': "[Bash] elif",
+            { '@type': "elif",
                '@token': "elif",
                '@role': [Unannotated],
                children: [
                   { '@type': "simple-command",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] generic bash command",
+                        { '@type': "generic bash command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] combined word",
+                              { '@type': "combined word",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] word",
+                                    { '@type': "word",
                                        '@token': "c3",
                                        '@role': [Unannotated],
                                        children: [],
@@ -310,7 +310,7 @@
                endOffset: 69,
                startOffset: 65,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -320,13 +320,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "c4",
                                              '@role': [Unannotated],
                                              children: [],
@@ -363,13 +363,13 @@
             { '@type': "simple-command",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] generic bash command",
+                  { '@type': "generic bash command",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] word",
+                              { '@type': "word",
                                  '@token': "d1",
                                  '@role': [Unannotated],
                                  children: [],
@@ -388,7 +388,7 @@
                endOffset: 92,
                startOffset: 90,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -398,13 +398,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "d2",
                                              '@role': [Unannotated],
                                              children: [],
@@ -431,20 +431,20 @@
                endOffset: 98,
                startOffset: 94,
             },
-            { '@type': "[Bash] elif",
+            { '@type': "elif",
                '@token': "elif",
                '@role': [Unannotated],
                children: [
                   { '@type': "simple-command",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] generic bash command",
+                        { '@type': "generic bash command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] combined word",
+                              { '@type': "combined word",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] word",
+                                    { '@type': "word",
                                        '@token': "d3",
                                        '@role': [Unannotated],
                                        children: [],
@@ -467,7 +467,7 @@
                endOffset: 107,
                startOffset: 103,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -477,13 +477,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "d4",
                                              '@role': [Unannotated],
                                              children: [],
@@ -510,7 +510,7 @@
                endOffset: 116,
                startOffset: 112,
             },
-            { '@type': "[Bash] else",
+            { '@type': "else",
                '@token': "else",
                '@role': [Unannotated],
                children: [
@@ -520,13 +520,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "d5",
                                              '@role': [Unannotated],
                                              children: [],
@@ -563,13 +563,13 @@
             { '@type': "simple-command",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] generic bash command",
+                  { '@type': "generic bash command",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] word",
+                              { '@type': "word",
                                  '@token': "e1",
                                  '@role': [Unannotated],
                                  children: [],
@@ -588,7 +588,7 @@
                endOffset: 139,
                startOffset: 137,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -598,13 +598,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "e2",
                                              '@role': [Unannotated],
                                              children: [],
@@ -631,20 +631,20 @@
                endOffset: 144,
                startOffset: 140,
             },
-            { '@type': "[Bash] elif",
+            { '@type': "elif",
                '@token': "elif",
                '@role': [Unannotated],
                children: [
                   { '@type': "simple-command",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] generic bash command",
+                        { '@type': "generic bash command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] combined word",
+                              { '@type': "combined word",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] word",
+                                    { '@type': "word",
                                        '@token': "e3",
                                        '@role': [Unannotated],
                                        children: [],
@@ -667,7 +667,7 @@
                endOffset: 152,
                startOffset: 148,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -677,13 +677,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "e4",
                                              '@role': [Unannotated],
                                              children: [],
@@ -710,7 +710,7 @@
                endOffset: 160,
                startOffset: 156,
             },
-            { '@type': "[Bash] else",
+            { '@type': "else",
                '@token': "else",
                '@role': [Unannotated],
                children: [
@@ -720,13 +720,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "e5",
                                              '@role': [Unannotated],
                                              children: [],
@@ -763,17 +763,17 @@
             { '@type': "conditional shellcommand",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] cond_op",
+                  { '@type': "cond_op",
                      '@token': "-a",
                      '@role': [Unannotated],
                      children: [],
                      endOffset: 183,
                      startOffset: 181,
                   },
-                  { '@type': "[Bash] combined word",
+                  { '@type': "combined word",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] word",
+                        { '@type': "word",
                            '@token': "file",
                            '@role': [Unannotated],
                            children: [],
@@ -788,7 +788,7 @@
                endOffset: 190,
                startOffset: 179,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -798,13 +798,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "/bin/true",
                                              '@role': [Unannotated],
                                              children: [],
@@ -841,11 +841,11 @@
             { '@type': "conditional shellcommand",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] string",
+                  { '@type': "string",
                      '@token': "\"a\"",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] string content",
+                        { '@type': "string content",
                            '@token': "a",
                            '@role': [Unannotated],
                            children: [],
@@ -856,18 +856,18 @@
                      endOffset: 220,
                      startOffset: 217,
                   },
-                  { '@type': "[Bash] cond_op ==",
+                  { '@type': "cond_op ==",
                      '@token': "==",
                      '@role': [Unannotated],
                      children: [],
                      endOffset: 223,
                      startOffset: 221,
                   },
-                  { '@type': "[Bash] string",
+                  { '@type': "string",
                      '@token': "\"b\"",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] string content",
+                        { '@type': "string content",
                            '@token': "b",
                            '@role': [Unannotated],
                            children: [],
@@ -882,7 +882,7 @@
                endOffset: 229,
                startOffset: 215,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -892,13 +892,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "/bin/true",
                                              '@role': [Unannotated],
                                              children: [],
@@ -935,11 +935,11 @@
             { '@type': "conditional shellcommand",
                '@role': [Unannotated],
                children: [
-                  { '@type': "[Bash] string",
+                  { '@type': "string",
                      '@token': "\"c\"",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] string content",
+                        { '@type': "string content",
                            '@token': "c",
                            '@role': [Unannotated],
                            children: [],
@@ -950,18 +950,18 @@
                      endOffset: 259,
                      startOffset: 256,
                   },
-                  { '@type': "[Bash] cond_op ==",
+                  { '@type': "cond_op ==",
                      '@token': "==",
                      '@role': [Unannotated],
                      children: [],
                      endOffset: 262,
                      startOffset: 260,
                   },
-                  { '@type': "[Bash] string",
+                  { '@type': "string",
                      '@token': "\"d\"",
                      '@role': [Unannotated],
                      children: [
-                        { '@type': "[Bash] string content",
+                        { '@type': "string content",
                            '@token': "d",
                            '@role': [Unannotated],
                            children: [],
@@ -976,7 +976,7 @@
                endOffset: 268,
                startOffset: 254,
             },
-            { '@type': "[Bash] then",
+            { '@type': "then",
                '@token': "then",
                '@role': [Unannotated],
                children: [
@@ -986,13 +986,13 @@
                         { '@type': "simple-command",
                            '@role': [Unannotated],
                            children: [
-                              { '@type': "[Bash] generic bash command",
+                              { '@type': "generic bash command",
                                  '@role': [Unannotated],
                                  children: [
-                                    { '@type': "[Bash] combined word",
+                                    { '@type': "combined word",
                                        '@role': [Unannotated],
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "/bin/true",
                                              '@role': [Unannotated],
                                              children: [],

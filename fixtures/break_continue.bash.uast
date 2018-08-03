@@ -43,7 +43,7 @@
                   },
                },
                children: [
-                  { '@type': "[Bash] word",
+                  { '@type': "word",
                      '@token': "a",
                      '@role': [Expression, Identifier],
                      '@pos': { '@type': "uast:Positions",
@@ -62,7 +62,7 @@
                   },
                ],
             },
-            { '@type': "[Bash] combined word",
+            { '@type': "combined word",
                '@role': [Expression, For, Identifier, Incomplete, Update],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -77,7 +77,7 @@
                   },
                },
                children: [
-                  { '@type': "[Bash] word",
+                  { '@type': "word",
                      '@token': "b",
                      '@role': [Expression, Identifier],
                      '@pos': { '@type': "uast:Positions",
@@ -126,7 +126,7 @@
                         },
                      },
                      children: [
-                        { '@type': "[Bash] generic bash command",
+                        { '@type': "generic bash command",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -141,7 +141,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] combined word",
+                              { '@type': "combined word",
                                  '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
@@ -156,7 +156,7 @@
                                     },
                                  },
                                  children: [
-                                    { '@type': "[Bash] word",
+                                    { '@type': "word",
                                        '@token': "continue",
                                        '@role': [Expression, Identifier],
                                        '@pos': { '@type': "uast:Positions",
@@ -213,7 +213,7 @@
                   },
                },
                children: [
-                  { '@type': "[Bash] word",
+                  { '@type': "word",
                      '@token': "c",
                      '@role': [Expression, Identifier],
                      '@pos': { '@type': "uast:Positions",
@@ -232,7 +232,7 @@
                   },
                ],
             },
-            { '@type': "[Bash] combined word",
+            { '@type': "combined word",
                '@role': [Expression, For, Identifier, Incomplete, Update],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -247,7 +247,7 @@
                   },
                },
                children: [
-                  { '@type': "[Bash] word",
+                  { '@type': "word",
                      '@token': "d",
                      '@role': [Expression, Identifier],
                      '@pos': { '@type': "uast:Positions",
@@ -296,7 +296,7 @@
                         },
                      },
                      children: [
-                        { '@type': "[Bash] generic bash command",
+                        { '@type': "generic bash command",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -311,7 +311,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] combined word",
+                              { '@type': "combined word",
                                  '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
@@ -326,7 +326,7 @@
                                     },
                                  },
                                  children: [
-                                    { '@type': "[Bash] word",
+                                    { '@type': "word",
                                        '@token': "break",
                                        '@role': [Expression, Identifier],
                                        '@pos': { '@type': "uast:Positions",

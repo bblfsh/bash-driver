@@ -7,9 +7,6 @@ import (
 
 var Preprocess = Transformers([][]Transformer{
 	{
-		// ResponseMetadata is a transform that trims response metadata from AST.
-		//
-		// https://godoc.org/gopkg.in/bblfsh/sdk.v2/uast#ResponseMetadata
 		ResponseMetadata{
 			TopLevelIsRootNode: false,
 		},
@@ -18,16 +15,11 @@ var Preprocess = Transformers([][]Transformer{
 }...)
 
 var Normalize = Transformers([][]Transformer{
-
 	{Mappings(Normalizers...)},
 }...)
 
 // Preprocessors is a block of AST preprocessing rules rules.
 var Preprocessors = []Mapping{
-	// ObjectToNode defines how to normalize common fields of native AST
-	// (like node type, token, positional information).
-	//
-	// https://godoc.org/gopkg.in/bblfsh/sdk.v2/uast#ObjectToNode
 	ObjectToNode{
 		OffsetKey: "startOffset",
 		EndOffsetKey: "endOffset",
@@ -50,36 +42,36 @@ func mapIdentifier(key string) Mapping {
 		Obj{"Name": Var("val")},
 	))
 }
-// Normalizers is the main block of normalization rules to convert native AST to semantic UAST.
+
 var Normalizers = []Mapping{
-	mapString("[Bash] unevaluated string (STRING2)"),
-	mapString("[Bash] string"),
-	mapString("[Bash] string content"),
-	mapString("backquote shellcommand"),
-	mapString("[Bash] File reference"),
 
-	mapIdentifier("[Bash] word"),
-	mapIdentifier("[Bash] variable"),
-	mapIdentifier("[Bash] assignment_word"),
-
-	MapSemantic("comment", uast.Comment{}, MapObj(
+	MapSemantic("function-def-element", uast.FunctionGroup{}, MapObj(
 		Obj{
-			uast.KeyToken: CommentText([2]string{}, "comm"),
-		},
-		CommentNode(false, "comm", nil),
-	)),
-
-	MapSemantic("[Bash] file reference", uast.RuntimeImport{}, MapObj(
-		Obj{
-			uast.KeyToken: Var("file"),
-		},
-		Obj{
-			"Path": Var("file"),
-		},
-	)),
-
-	MapSemantic("def", uast.FunctionGroup{}, MapObj(
-		Obj{
+			"children": Arr(
+				Obj{
+					uast.KeyType: Var("_type1"),
+					"startOffset": Var("_startOffset1"),
+					"endOffset": Var("_endOffset1"),
+					//uast.KeyPos: Var("_pos1"),
+					"children": Arr(
+						Obj{
+							uast.KeyType: Var("_type3"),
+							uast.KeyToken: Var("name"),
+							"startOffset": Var("_startOffset3"),
+							"endOffset": Var("_endOffset3"),
+							//uast.KeyPos: Var("_pos2"),
+							"children": Var("_children"),
+						},
+					),
+				},
+				Obj{
+					uast.KeyType: Var("_type2"),
+					"startOffset": Var("_startOffset2"),
+					"endOffset": Var("_endOffset2"),
+					//uast.KeyPos: Var("_pos3"),
+					"children": Var("body"),
+				},
+			),
 		},
 		Obj{
 			"Nodes": Arr(
@@ -88,20 +80,42 @@ var Normalizers = []Mapping{
 						"Name": Var("name"),
 					}),
 					"Node": UASTType(uast.Function{}, Obj{
-						"Type": UASTType(uast.FunctionType{},
-							CasesObj("case_args",
-								Obj{},
-								Objs{
-									{"Arguments": Var("args")},
-									{"Arguments": Arr()},
-								},
-							)),
+						"Type": UASTType(uast.FunctionType{}, Obj{
+							//"Arguments": Var("args"),
+							"Arguments": nil,
+						}),
 						"Body": UASTType(uast.Block{}, Obj{
 							"Statements": Var("body"),
 						}),
 					}),
 				}),
 			),
+		},
+	)),
+
+	mapString("unevaluated string (STRING2)"),
+	mapString("string"),
+	mapString("string content"),
+	mapString("backquote shellcommand"),
+	mapString("File reference"),
+
+	mapIdentifier("word"),
+	mapIdentifier("variable"),
+	mapIdentifier("assignment_word"),
+
+	MapSemantic("comment", uast.Comment{}, MapObj(
+		Obj{
+			uast.KeyToken: CommentText([2]string{}, "comm"),
+		},
+		CommentNode(false, "comm", nil),
+	)),
+
+	MapSemantic("file reference", uast.RuntimeImport{}, MapObj(
+		Obj{
+			uast.KeyToken: Var("file"),
+		},
+		Obj{
+			"Path": Var("file"),
 		},
 	)),
 

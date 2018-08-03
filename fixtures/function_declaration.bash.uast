@@ -28,7 +28,7 @@
             },
          },
          children: [
-            { '@type': "[Bash] function",
+            { '@type': "function",
                '@token': "function",
                '@role': [Block, Declaration, Function],
                '@pos': { '@type': "uast:Positions",
@@ -45,7 +45,7 @@
                },
                children: [],
             },
-            { '@type': "[Bash] named symbol",
+            { '@type': "named symbol",
                '@role': [Identifier, Name],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -60,7 +60,7 @@
                   },
                },
                children: [
-                  { '@type': "[Bash] word",
+                  { '@type': "word",
                      '@token': "foo",
                      '@role': [Expression, Identifier],
                      '@pos': { '@type': "uast:Positions",
@@ -109,7 +109,7 @@
                         },
                      },
                      children: [
-                        { '@type': "[Bash] generic bash command",
+                        { '@type': "generic bash command",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -124,7 +124,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] combined word",
+                              { '@type': "combined word",
                                  '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
@@ -139,7 +139,7 @@
                                     },
                                  },
                                  children: [
-                                    { '@type': "[Bash] word",
+                                    { '@type': "word",
                                        '@token': "echo",
                                        '@role': [Expression, Identifier],
                                        '@pos': { '@type': "uast:Positions",
@@ -160,7 +160,7 @@
                               },
                            ],
                         },
-                        { '@type': "[Bash] string",
+                        { '@type': "string",
                            '@token': "\"bla\"",
                            '@role': [Expression, Literal, Primitive, String],
                            '@pos': { '@type': "uast:Positions",
@@ -176,7 +176,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] string content",
+                              { '@type': "string content",
                                  '@token': "bla",
                                  '@role': [Expression, Literal, String],
                                  '@pos': { '@type': "uast:Positions",

@@ -28,7 +28,7 @@
             },
          },
          children: [
-            { '@type': "[Bash] generic bash command",
+            { '@type': "generic bash command",
                '@role': [Expression, Incomplete],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -43,7 +43,7 @@
                   },
                },
                children: [
-                  { '@type': "[Bash] combined word",
+                  { '@type': "combined word",
                      '@role': [Expression, Identifier, Incomplete],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
@@ -73,7 +73,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] variable",
+                              { '@type': "variable",
                                  '@token': "$A",
                                  '@role': [Expression, Identifier, Variable],
                                  '@pos': { '@type': "uast:Positions",
@@ -113,7 +113,7 @@
             },
          },
          children: [
-            { '@type': "[Bash] generic bash command",
+            { '@type': "generic bash command",
                '@role': [Expression, Incomplete],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -128,7 +128,7 @@
                   },
                },
                children: [
-                  { '@type': "[Bash] combined word",
+                  { '@type': "combined word",
                      '@role': [Expression, Identifier, Incomplete],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
@@ -143,7 +143,7 @@
                         },
                      },
                      children: [
-                        { '@type': "[Bash] composed variable, like subshell",
+                        { '@type': "composed variable, like subshell",
                            '@token': "${B}",
                            '@role': [Expression, Identifier, Incomplete, Variable],
                            '@pos': { '@type': "uast:Positions",
@@ -159,7 +159,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] $",
+                              { '@type': "$",
                                  '@token': "$",
                                  '@role': [Incomplete],
                                  '@pos': { '@type': "uast:Positions",
@@ -176,7 +176,7 @@
                                  },
                                  children: [],
                               },
-                              { '@type': "[Bash] var substitution",
+                              { '@type': "var substitution",
                                  '@token': "{B}",
                                  '@role': [Expression, Identifier, Incomplete, Variable],
                                  '@pos': { '@type': "uast:Positions",
@@ -207,7 +207,7 @@
                                           },
                                        },
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "B",
                                              '@role': [Expression, Identifier],
                                              '@pos': { '@type': "uast:Positions",
@@ -251,7 +251,7 @@
             },
          },
          children: [
-            { '@type': "[Bash] generic bash command",
+            { '@type': "generic bash command",
                '@role': [Expression, Incomplete],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -266,7 +266,7 @@
                   },
                },
                children: [
-                  { '@type': "[Bash] string",
+                  { '@type': "string",
                      '@token': "\"$C\"",
                      '@role': [Expression, Literal, Primitive, String],
                      '@pos': { '@type': "uast:Positions",
@@ -297,7 +297,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] variable",
+                              { '@type': "variable",
                                  '@token': "$C",
                                  '@role': [Expression, Identifier, Variable],
                                  '@pos': { '@type': "uast:Positions",
@@ -337,7 +337,7 @@
             },
          },
          children: [
-            { '@type': "[Bash] generic bash command",
+            { '@type': "generic bash command",
                '@role': [Expression, Incomplete],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -352,7 +352,7 @@
                   },
                },
                children: [
-                  { '@type': "[Bash] string",
+                  { '@type': "string",
                      '@token': "\"${D}\"",
                      '@role': [Expression, Literal, Primitive, String],
                      '@pos': { '@type': "uast:Positions",
@@ -368,7 +368,7 @@
                         },
                      },
                      children: [
-                        { '@type': "[Bash] composed variable, like subshell",
+                        { '@type': "composed variable, like subshell",
                            '@token': "${D}",
                            '@role': [Expression, Identifier, Incomplete, Variable],
                            '@pos': { '@type': "uast:Positions",
@@ -384,7 +384,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] $",
+                              { '@type': "$",
                                  '@token': "$",
                                  '@role': [Incomplete],
                                  '@pos': { '@type': "uast:Positions",
@@ -401,7 +401,7 @@
                                  },
                                  children: [],
                               },
-                              { '@type': "[Bash] var substitution",
+                              { '@type': "var substitution",
                                  '@token': "{D}",
                                  '@role': [Expression, Identifier, Incomplete, Variable],
                                  '@pos': { '@type': "uast:Positions",
@@ -432,7 +432,7 @@
                                           },
                                        },
                                        children: [
-                                          { '@type': "[Bash] word",
+                                          { '@type': "word",
                                              '@token': "D",
                                              '@role': [Expression, Identifier],
                                              '@pos': { '@type': "uast:Positions",

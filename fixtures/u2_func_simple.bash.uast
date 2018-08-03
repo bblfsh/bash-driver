@@ -28,7 +28,7 @@
             },
          },
          children: [
-            { '@type': "[Bash] named symbol",
+            { '@type': "named symbol",
                '@role': [Identifier, Name],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -43,7 +43,7 @@
                   },
                },
                children: [
-                  { '@type': "[Bash] word",
+                  { '@type': "word",
                      '@token': "testfnc1",
                      '@role': [Expression, Identifier],
                      '@pos': { '@type': "uast:Positions",
@@ -92,7 +92,7 @@
                         },
                      },
                      children: [
-                        { '@type': "[Bash] generic bash command",
+                        { '@type': "generic bash command",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -107,7 +107,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] combined word",
+                              { '@type': "combined word",
                                  '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
@@ -137,7 +137,7 @@
                                           },
                                        },
                                        children: [
-                                          { '@type': "[Bash] variable",
+                                          { '@type': "variable",
                                              '@token': "$2",
                                              '@role': [Expression, Identifier, Variable],
                                              '@pos': { '@type': "uast:Positions",
@@ -160,7 +160,7 @@
                               },
                            ],
                         },
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Expression, Identifier, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -175,7 +175,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] word",
+                              { '@type': "word",
                                  '@token': "=",
                                  '@role': [Expression, Identifier],
                                  '@pos': { '@type': "uast:Positions",
@@ -194,7 +194,7 @@
                               },
                            ],
                         },
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Expression, Identifier, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -224,7 +224,7 @@
                                     },
                                  },
                                  children: [
-                                    { '@type': "[Bash] variable",
+                                    { '@type': "variable",
                                        '@token': "$1",
                                        '@role': [Expression, Identifier, Variable],
                                        '@pos': { '@type': "uast:Positions",
@@ -262,7 +262,7 @@
                         },
                      },
                      children: [
-                        { '@type': "[Bash] generic bash command",
+                        { '@type': "generic bash command",
                            '@role': [Expression, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -277,7 +277,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] combined word",
+                              { '@type': "combined word",
                                  '@role': [Expression, Identifier, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
@@ -292,7 +292,7 @@
                                     },
                                  },
                                  children: [
-                                    { '@type': "[Bash] word",
+                                    { '@type': "word",
                                        '@token': "return",
                                        '@role': [Expression, Identifier],
                                        '@pos': { '@type': "uast:Positions",
@@ -313,7 +313,7 @@
                               },
                            ],
                         },
-                        { '@type': "[Bash] combined word",
+                        { '@type': "combined word",
                            '@role': [Expression, Identifier, Incomplete],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -328,7 +328,7 @@
                               },
                            },
                            children: [
-                              { '@type': "[Bash] int literal",
+                              { '@type': "int literal",
                                  '@token': "1",
                                  '@role': [Literal, Number, Primitive],
                                  '@pos': { '@type': "uast:Positions",
