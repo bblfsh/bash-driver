@@ -48,9 +48,10 @@ clean:
 	- rm -rf ${idea_dir}
 
 %.jar: | ${vendor_dir}
-	wget -O ${idea_lib_file} ${IDEA_URL}
-	tar -xzf ${idea_lib_file} -C ${vendor_dir} ${packaged_jars}
-	rm ${idea_lib_file}
+	# XXX uncomment
+	#wget -O ${idea_lib_file} ${IDEA_URL}
+	#tar -xzf ${idea_lib_file} -C ${vendor_dir} ${packaged_jars}
+	#rm ${idea_lib_file}
 
 ${vendor_dir}:
 	mkdir $@

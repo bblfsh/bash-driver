@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashSet;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Stream;
 import java.util.stream.Collectors;
 
@@ -18,19 +20,77 @@ import java.util.stream.Collectors;
  */
 public class ASTNodeSerializer extends StdSerializer<ASTNode> {
 
-    private final Set<String> SKIPTOKENS = Stream.of("FILE", "include-command", "for shellcommand", "logical block",
-        "case pattern", "case pattern", "case pattern list", "var-def-element", "function-def-element",
-        "group element", "if shellcommand", "conditional shellcommand", "until loop", "simple-command", "combined word",
-        "while loop", "generic bash command", "named symbol", "var-use-element").collect(Collectors.toCollection(HashSet::new));
+    private static final Map<String, String> TRANS_TABLE = createTransMap();
 
-    private final Set<String> SKIPNODES = Stream.of("WHITE_SPACE", "linefeed", "string begin",
-        ";", "(", "{", ")", "}", "fi", "fi", "shebang element",
-        "if", "for", "in", "do", "done", "esac", "[ (left conditional)",
-        " ] (right conditional)", "while", "case", "string end",
+    private final Set<String> SKIPTOKENS = Stream.of("FILE", "include-command", "for_shellcommand", "logical_block",
+        "case_pattern", "case_pattern_list", "var-def-element", "function-def-element",
+        "group_element", "if_shellcommand", "conditional_shellcommand", "until_loop", "simple-command", "combined_word",
+        "while_loop", "generic_bash_command", "named_symbol", "var-use-element").collect(Collectors.toCollection(HashSet::new));
+
+    private final Set<String> SKIPNODES = Stream.of("WHITE_SPACE", "linefeed", "string_begin",
+        ";", "(", "{", ")", "}", "fi", "fi", "shebang_element",
+        "if", "for", "in", "do", "done", "esac", "[_(left_conditional)",
+        "]_(right_conditional)", "while", "case", "string_end",
         "until").collect(Collectors.toCollection(HashSet::new));
 
     private final Set<String> ADOPTNEXT = Stream.of("then", "else", "elif")
         .collect(Collectors.toCollection(HashSet::new));
+
+    private static Map<String, String> createTransMap() {
+        Map<String, String> m = new HashMap<String, String>();
+        m.put("File_reference", "file_ref");
+        m.put("unevaluated_string_(STRING2)", "unevaluated_string2");
+        m.put("arith_==", "arith_EQEQ");
+        m.put("arith_<", "arith_LT");
+        m.put("arith_>", "arith_GR");
+        m.put("==", "EQEQ");
+        m.put("=", "EQ");
+        m.put("arith_!=", "arith_NOTEQ");
+        m.put("!=", "NOTEQ");
+        m.put("<<", "LT");
+        m.put("<", "LT");
+        m.put("<=", "LTEQ");
+        m.put(">", "GT");
+        m.put(">>", "GTGT");
+        m.put(">=", "GTEQ");
+        m.put("||", "OROR");
+        m.put("|", "OR");
+        m.put("&&", "ANDAND");
+        m.put("&", "AND");
+        m.put("cond_op_!", "cond_op_NOT");
+        m.put("cond_op_==", "cond_op_EQEQ");
+        m.put("conditional_shellcommand", "conditional_shellcommand");
+        m.put("[_for_arithmetic", "LB_for_arithmetic");
+        m.put("]_for_arithmetic", "RB_for_arithmetic");
+        m.put(":", "COLON");
+        m.put("[_(left_square)", "LB_left_square");
+        m.put("]_(right_square)", "RB_right_square");
+        m.put(";;", "SEMICOLONSEMICOLON");
+        m.put("[[ (left bracket)", "LBLB_left_bracket");
+        m.put("]] (right bracket)", "RBRB_right_bracket");
+        m.put("((", "LPLP");
+        m.put("))", "RPRP");
+        m.put("backquote `", "backquote");
+        m.put("$", "DOLLAR");
+        m.put("composed_variable,_like_subshell", "composed_variable");
+        m.put("&[0-9]_filedescriptor", "numrange_filedescriptor");
+        m.put("Parameter_expansion_operator '@@'", "param_exp_ATAT");
+        m.put("Parameter_expansion_operator '@'", "param_exp_AT");
+        m.put("Parameter_expansion_operator '##'", "param_exp_NUMNUM");
+        m.put("Parameter_expansion_operator '#'", "param_exp_NUM");
+        m.put("Parameter_expansion_operator '%%'", "param_exp_PERCPERC");
+        m.put("Parameter_expansion_operator '%'", "param_exp_PERC");
+        m.put("Parameter_expansion_operator '::'", "param_exp_COLONCOLON");
+        m.put("Parameter_expansion_operator ':'", "param_exp_COLON");
+        m.put("Parameter_expansion_operator '//'", "param_exp_SLASHSLASH");
+        m.put("Parameter_expansion_operator '/'", "param_exp_SLASH");
+        m.put("lazy_LET_expression", "lazy_let_expr");
+        return m;
+    }
+
+    private static String translateType(String type) {
+        return TRANS_TABLE.get(type.replace("[Bash] ", "").replace(" ", "_"));
+    }
 
     public ASTNodeSerializer() {
         this(null);
@@ -46,12 +106,13 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
     }
 
     public void serializeWithChild(ASTNode root, JsonGenerator jG, SerializerProvider provider, ASTNode addChild) throws IOException {
-        final String type = root.getElementType().toString().replace("[Bash] ", "");
+        final String type = translateType(root.getElementType().toString());
         final String text = root.getText();
 
         jG.writeStartObject();
 
-        jG.writeStringField("@type", type);
+        jG.writeStringField("@type", type + "_XXX_" + root.getElementType().toString());
+        jG.writeStringField("XXXOrigType", root.getElementType().toString());
         // Some higher level nodes would write everything on the token without this
         if (!SKIPTOKENS.contains(type)) {
             jG.writeStringField("@token", text);
@@ -81,10 +142,10 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
 
         // Remove some useless nodes to unpolute the AST
         for (ASTNode child: children) {
-            final String childType = child.getElementType().toString().replace("[Bash] ", "");
+            final String childType = translateType(child.getElementType().toString());
             // Skip some redundant nodes (always followed by another more significative one)
             if (SKIPNODES.contains(childType) ||
-                (childType.equals("[Bash] generic bash command") && child.getText().equals("source"))) {
+                (childType.equals("generic_bash_command") && child.getText().equals("source"))) {
                 continue;
             }
             filteredChildren.add(child);
@@ -98,7 +159,8 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
 
             // Bash's AST gives some block nodes not as children of the semantically significative one
             // but as "next one", this fixes it
-            if (ADOPTNEXT.contains(child.getElementType().toString().replace("[Bash] ", "")))
+            // XXX check if this breaks the translation
+            if (ADOPTNEXT.contains(translateType(child.getElementType().toString())))
             {
                 // Reparent the i+1 children to this node
                 blockChild = filteredChildren.get(i+1);

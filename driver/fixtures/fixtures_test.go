@@ -20,9 +20,19 @@ var Suite = &fixtures.Suite{
 	},
 	Transforms: normalizer.Transforms,
 	BenchName: "very_long",
+	// XXX add function type
 	Semantic: fixtures.SemanticConfig{
 		BlacklistTypes: []string{
-			// TODO: list native types that should be converted to semantic UAST
+			"unevaluated string (STRING2)",
+			"string",
+			"string content",
+			"backquote shellcommand",
+			"File reference",
+			"word",
+			"variable",
+			"assignment_word",
+			"comment",
+			"file reference",
 		},
 	},
 	// TODO XXX: not working ("fixtures.test" not found)

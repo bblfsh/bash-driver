@@ -7,15 +7,14 @@
 #==============================
 FROM openjdk:8-slim as native
 
+# install build dependencies
+RUN apt-get update && apt-get install -y make bash wget gradle
+
+
 ADD native /native
 WORKDIR /native
 
 # build native driver
-RUN apt-get update
-RUN apt-get install -y make bash wget gradle
-RUN wget https://services.gradle.org/distributions/gradle-2.13-bin.zip
-RUN unzip gradle-2.13-bin.zip
-RUN rm gradle-2.13-bin.zip
 RUN make
 RUN gradle shadowJar
 
@@ -25,13 +24,13 @@ RUN gradle shadowJar
 #================================
 FROM native as native_test
 # run native driver tests
-RUN echo tests
+RUN echo test
 
 
 #=================================
 # Stage 2: Go Driver Server Build
 #=================================
-FROM golang:1.10 as driver
+FROM golang:1.10-alpine as driver
 
 ENV DRIVER_REPO=github.com/bblfsh/bash-driver
 ENV DRIVER_REPO_PATH=/go/src/$DRIVER_REPO
@@ -51,6 +50,7 @@ RUN go test -c -o /tmp/fixtures.test ./driver/fixtures/
 #=======================
 FROM openjdk:8-jre-alpine
 
+RUN apk add gradle
 
 
 LABEL maintainer="source{d}" \
@@ -58,8 +58,12 @@ LABEL maintainer="source{d}" \
 
 WORKDIR /opt/driver
 
+# copy static files from driver source directory
+ADD ./native/src/main/sh/native.sh ./bin/native
+
+
 # copy build artifacts for native driver
-COPY --from=native /native/ ./bin/native
+COPY --from=native /native/build/libs/native-jar-with-dependencies.jar ./bin/
 
 
 # copy driver server binary

@@ -93,11 +93,11 @@ var Normalizers = []Mapping{
 		},
 	)),
 
-	mapString("unevaluated string (STRING2)"),
+	mapString("unevaluated_string2"),
 	mapString("string"),
-	mapString("string content"),
-	mapString("backquote shellcommand"),
-	mapString("File reference"),
+	mapString("string_content"),
+	mapString("backquote_shellcommand"),
+	mapString("File_reference"),
 
 	mapIdentifier("word"),
 	mapIdentifier("variable"),
@@ -110,7 +110,7 @@ var Normalizers = []Mapping{
 		CommentNode(false, "comm", nil),
 	)),
 
-	MapSemantic("file reference", uast.RuntimeImport{}, MapObj(
+	MapSemantic("file_reference", uast.RuntimeImport{}, MapObj(
 		Obj{
 			uast.KeyToken: Var("file"),
 		},

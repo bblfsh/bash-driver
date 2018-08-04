@@ -1,24 +1,26 @@
 sdk: '2'
+language: bash
 go-runtime:
-  version: '1.10'
+  version: '1.10-alpine'
 native:
   image: 'openjdk:8-jre-alpine'
+  static:
+      - path: src/main/sh/native.sh
+        dest: native
+  deps:
+      - 'apk add gradle'
   build:
     image: 'openjdk:8-slim'
-    static:
-      - path: src/main/ash/native.ash
-        dest: native
+    deps:
+      - 'apt-get update && apt-get install -y make bash wget gradle'
     run:
-      - 'apt-get update'
-      - 'apt-get install -y make bash wget gradle'
-      - 'wget https://services.gradle.org/distributions/gradle-2.13-bin.zip'
-      - 'unzip gradle-2.13-bin.zip'
-      - 'rm gradle-2.13-bin.zip'
       - 'make'
       - 'gradle shadowJar'
     artifacts:
-      - path: '/native/'
-        dest: 'native'
+      - path: '/native/build/libs/native-jar-with-dependencies.jar'
   test:
     run:
-      - 'echo tests'
+      - 'echo test'
+      # XXX
+      #- 'make'
+      #- 'gradle test --stacktrace'
