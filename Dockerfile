@@ -24,7 +24,10 @@ RUN gradle shadowJar
 #================================
 FROM native as native_test
 # run native driver tests
-RUN echo test
+RUN wget https://services.gradle.org/distributions/gradle-4.9-bin.zip
+RUN unzip -o gradle-4.9-bin.zip
+RUN gradle-4.9/bin/gradle test --info --stacktrace
+RUN rm -rf gradle-4.9*
 
 
 #=================================

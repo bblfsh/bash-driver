@@ -23,7 +23,7 @@ var Suite = &fixtures.Suite{
 	},
 	Transforms: normalizer.Transforms,
 	BenchName:  "very_long",
-	// XXX add function type
+	// FIXME XXX: add function type when fixed
 	Semantic: fixtures.SemanticConfig{
 		BlacklistTypes: []string{
 			"unevaluated string (STRING2)",
@@ -38,10 +38,9 @@ var Suite = &fixtures.Suite{
 			"file reference",
 		},
 	},
-	// TODO XXX: not working ("fixtures.test" not found)
-	//Docker:fixtures.DockerConfig{
-	//Image:"bash:latest",
-	//},
+	Docker: fixtures.DockerConfig{
+		Image: "bash:latest",
+	},
 }
 
 func TestBashDriver(t *testing.T) {

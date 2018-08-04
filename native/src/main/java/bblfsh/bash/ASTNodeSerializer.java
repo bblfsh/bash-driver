@@ -42,7 +42,7 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
         m.put("unevaluated_string_(STRING2)", "unevaluated_string2");
         m.put("arith_==", "arith_EQEQ");
         m.put("arith_<", "arith_LT");
-        m.put("arith_>", "arith_GR");
+        m.put("arith_>", "arith_GT");
         m.put("==", "EQEQ");
         m.put("=", "EQ");
         m.put("arith_!=", "arith_NOTEQ");
@@ -66,30 +66,30 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
         m.put("[_(left_square)", "LB_left_square");
         m.put("]_(right_square)", "RB_right_square");
         m.put(";;", "SEMICOLONSEMICOLON");
-        m.put("[[ (left bracket)", "LBLB_left_bracket");
-        m.put("]] (right bracket)", "RBRB_right_bracket");
+        m.put("[[_(left_bracket)", "LBLB_left_bracket");
+        m.put("]]_(right_bracket)", "RBRB_right_bracket");
         m.put("((", "LPLP");
         m.put("))", "RPRP");
-        m.put("backquote `", "backquote");
+        m.put("backquote_`", "backquote");
         m.put("$", "DOLLAR");
         m.put("composed_variable,_like_subshell", "composed_variable");
         m.put("&[0-9]_filedescriptor", "numrange_filedescriptor");
-        m.put("Parameter_expansion_operator '@@'", "param_exp_ATAT");
-        m.put("Parameter_expansion_operator '@'", "param_exp_AT");
-        m.put("Parameter_expansion_operator '##'", "param_exp_NUMNUM");
-        m.put("Parameter_expansion_operator '#'", "param_exp_NUM");
-        m.put("Parameter_expansion_operator '%%'", "param_exp_PERCPERC");
-        m.put("Parameter_expansion_operator '%'", "param_exp_PERC");
-        m.put("Parameter_expansion_operator '::'", "param_exp_COLONCOLON");
-        m.put("Parameter_expansion_operator ':'", "param_exp_COLON");
-        m.put("Parameter_expansion_operator '//'", "param_exp_SLASHSLASH");
-        m.put("Parameter_expansion_operator '/'", "param_exp_SLASH");
+        m.put("Parameter_expansion_operator_'@@'", "param_exp_ATAT");
+        m.put("Parameter_expansion_operator_'@'", "param_exp_AT");
+        m.put("Parameter_expansion_operator_'##'", "param_exp_NUMNUM");
+        m.put("Parameter_expansion_operator_'#'", "param_exp_NUM");
+        m.put("Parameter_expansion_operator_'%%'", "param_exp_PERCPERC");
+        m.put("Parameter_expansion_operator_'%'", "param_exp_PERC");
+        m.put("Parameter_expansion_operator_'::'", "param_exp_COLONCOLON");
+        m.put("Parameter_expansion_operator_':'", "param_exp_COLON");
+        m.put("Parameter_expansion_operator_'//'", "param_exp_SLASHSLASH");
+        m.put("Parameter_expansion_operator_'/'", "param_exp_SLASH");
         m.put("lazy_LET_expression", "lazy_let_expr");
         return m;
     }
 
     private static String translateType(String type) {
-        String t = type.replace("[Bash] ", "").replace(" ", "_");
+        String t = type.replace("[Bash] ", "").trim().replace(" ", "_");
         return TRANS_TABLE.getOrDefault(t, t);
     }
 
@@ -112,8 +112,7 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
 
         jG.writeStartObject();
 
-        jG.writeStringField("@type", type + "_XXX_" + root.getElementType().toString());
-        jG.writeStringField("XXXOrigType", root.getElementType().toString());
+        jG.writeStringField("@type", type);
         // Some higher level nodes would write everything on the token without this
         if (!SKIPTOKENS.contains(type)) {
             jG.writeStringField("@token", text);
@@ -160,7 +159,6 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
 
             // Bash's AST gives some block nodes not as children of the semantically significative one
             // but as "next one", this fixes it
-            // XXX check if this breaks the translation
             if (ADOPTNEXT.contains(translateType(child.getElementType().toString())))
             {
                 // Reparent the i+1 children to this node

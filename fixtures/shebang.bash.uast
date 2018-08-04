@@ -1,5 +1,5 @@
-{ '@type': "FILE_XXX_FILE",
-   '@role': [Unannotated],
+{ '@type': "FILE",
+   '@role': [File],
    '@pos': { '@type': "uast:Positions",
       start: { '@type': "uast:Position",
          offset: 0,
@@ -12,6 +12,5 @@
          col: 1,
       },
    },
-   XXXOrigType: "FILE",
    children: [],
 }

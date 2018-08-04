@@ -24,8 +24,6 @@ func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
 		}, roles...)
 }
 
-// FIXME XXX remove comments prefix
-
 var Annotations = []Mapping{
 	AnnotateType("FILE", nil, role.File),
 	AnnotateType("Comment", nil, role.Comment, role.Noop),
@@ -36,7 +34,7 @@ var Annotations = []Mapping{
 	AnnotateType("let", nil, role.Statement, role.Incomplete),
 	AnnotateType("arithmetic_command", nil, role.Expression, role.Arithmetic, role.Incomplete),
 	AnnotateType("arithmetic_simple", nil, role.Expression, role.Arithmetic, role.Incomplete),
-	AnnotateType("arith_EQRQ", nil, role.Operator, role.Relational, role.Equal),
+	AnnotateType("arith_EQEQ", nil, role.Operator, role.Relational, role.Equal),
 	AnnotateType("arith_LT", nil, role.Operator, role.Arithmetic, role.LeftShift),
 	AnnotateType("arith_GT", nil, role.Operator, role.Arithmetic, role.RightShift),
 	AnnotateType("EQ", nil, role.Operator, role.Assignment),

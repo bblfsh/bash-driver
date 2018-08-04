@@ -54,7 +54,7 @@ public class ResponseWriterTest {
         writer.write(response);
 
         final String obtained = out.toString(StandardCharsets.UTF_8.name());
+        System.out.println(obtained);
         assertThat(obtained).isEqualTo(expected);
     }
-
 }
