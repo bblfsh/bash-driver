@@ -19,8 +19,8 @@
 [[projects]]
   name = "github.com/Microsoft/go-winio"
   packages = ["."]
-  revision = "a6d595ae73cf27a1b8fc32930668708f45ce1c85"
-  version = "v0.4.9"
+  revision = "67921128fb397dd80339870d2193d6b1e6856fd4"
+  version = "v0.4.8"
 
 [[projects]]
   branch = "master"
@@ -87,6 +87,12 @@
   packages = ["."]
   revision = "0360b2af4f38e8d38c7fce2a9f4e702702d73a39"
   version = "v0.0.3"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/mcuadros/go-lookup"
+  packages = ["."]
+  revision = "5650f26be7675b629fff8356a50d906fa03e9c8b"
 
 [[projects]]
   branch = "master"
@@ -160,8 +166,8 @@
 [[projects]]
   name = "github.com/sirupsen/logrus"
   packages = ["."]
-  revision = "3e01752db0189b9157070a0e1668a620f9a85da2"
-  version = "v1.0.6"
+  revision = "c155da19408a8799da419ed3eeb0cb5db0ad5dbc"
+  version = "v1.0.5"
 
 [[projects]]
   name = "github.com/stretchr/testify"
@@ -182,7 +188,7 @@
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "c126467f60eb25f8f27e5a981f32a87e3965053f"
+  revision = "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
 
 [[projects]]
   branch = "master"
@@ -196,7 +202,7 @@
     "internal/timeseries",
     "trace"
   ]
-  revision = "f4c29de78a2a91c00474a2e689954305c350adf9"
+  revision = "32a936f46389aa10549d60bd7833e54b01685d09"
 
 [[projects]]
   branch = "master"
@@ -205,7 +211,7 @@
     "unix",
     "windows"
   ]
-  revision = "3dc4335d56c789b04b0ba99b7a37249d9b614314"
+  revision = "ce36f3865eeb42541ce3f87f32f8462c5687befa"
 
 [[projects]]
   name = "golang.org/x/text"
@@ -232,7 +238,7 @@
   branch = "master"
   name = "google.golang.org/genproto"
   packages = ["googleapis/rpc/status"]
-  revision = "daca94659cb50e9f37c1b834680f2e46358f10b0"
+  revision = "ff3583edef7de132f219f0efc00e097cabcc0ec0"
 
 [[projects]]
   name = "google.golang.org/grpc"
@@ -250,9 +256,7 @@
     "internal",
     "internal/backoff",
     "internal/channelz",
-    "internal/envconfig",
     "internal/grpcrand",
-    "internal/transport",
     "keepalive",
     "metadata",
     "naming",
@@ -262,31 +266,45 @@
     "resolver/passthrough",
     "stats",
     "status",
-    "tap"
+    "tap",
+    "transport"
   ]
-  revision = "32fb0ac620c32ba40a4626ddf94d90d12cce3455"
-  version = "v1.14.0"
+  revision = "168a6198bcb0ef175f7dacec0b8691fc141dc9b8"
+  version = "v1.13.0"
+
+[[projects]]
+  name = "gopkg.in/bblfsh/sdk.v1"
+  packages = [
+    "manifest",
+    "protocol",
+    "uast"
+  ]
+  revision = "94e3b212553e761677da180f321d9a7a60ebec5f"
+  version = "v1.16.1"
 
 [[projects]]
   branch = "v2"
   name = "gopkg.in/bblfsh/sdk.v2"
   packages = [
+    "driver",
+    "driver/fixtures",
+    "driver/manifest",
+    "driver/native",
+    "driver/native/jsonlines",
+    "driver/server",
     "internal/docker",
-    "manifest",
     "protocol",
-    "sdk/driver",
-    "sdk/driver/fixtures",
-    "sdk/jsonlines",
-    "sdk/server",
-    "sdk/viewer",
+    "protocol/v1",
     "uast",
     "uast/nodes",
+    "uast/nodes/nodesproto",
+    "uast/nodes/nodesproto/pio",
     "uast/role",
     "uast/transformer",
-    "uast/transformer/positioner",
+    "uast/viewer",
     "uast/yaml"
   ]
-  revision = "2aca0d0dad8fe47b8ed5e87d2f3616c7e3f4ef16"
+  revision = "d129d7e699d8cf18b8b07075090127e57b2be2a6"
 
 [[projects]]
   name = "gopkg.in/src-d/go-errors.v1"
@@ -303,6 +321,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "2083c198ae2821679f2d7670f077dd7df8f785d9a0b496c33258d50032a10c86"
+  inputs-digest = "4173589d3e2f01027808e3f203595e7b69694af515468640ad0a5cdb85095f61"
   solver-name = "gps-cdcl"
   solver-version = 1

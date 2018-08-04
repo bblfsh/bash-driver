@@ -21,6 +21,7 @@ native:
   test:
     run:
       - 'echo test'
-      # XXX
+      # XXX download and use gradle 4.9 since alpine version is bugged
+      # for tests
       #- 'make'
       #- 'gradle test --stacktrace'
