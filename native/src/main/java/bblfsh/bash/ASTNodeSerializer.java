@@ -89,7 +89,8 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
     }
 
     private static String translateType(String type) {
-        return TRANS_TABLE.get(type.replace("[Bash] ", "").replace(" ", "_"));
+        String t = type.replace("[Bash] ", "").replace(" ", "_");
+        return TRANS_TABLE.getOrDefault(t, t);
     }
 
     public ASTNodeSerializer() {

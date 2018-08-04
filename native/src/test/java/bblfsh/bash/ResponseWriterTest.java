@@ -46,11 +46,10 @@ public class ResponseWriterTest {
         final ByteArrayOutputStream out = new ByteArrayOutputStream();
         final ObjectMapper mapper = Registry.objectMapper();
         final ResponseWriter writer = new ResponseWriter(out, mapper);
-        final Parser parser = new Parser();
 
         Response response = new Response();
         response.status = "ok";
-        response.ast = parser.parse(source);
+        response.ast = Parser.parse(source);
 
         writer.write(response);
 

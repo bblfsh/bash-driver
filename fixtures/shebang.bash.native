@@ -1,5 +1,6 @@
-{ '@type': "FILE",
+{ '@type': "FILE_XXX_FILE",
    '@role': [Unannotated],
+   XXXOrigType: "FILE",
    children: [],
    endOffset: 12,
    startOffset: 0,
