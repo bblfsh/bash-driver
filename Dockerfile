@@ -53,7 +53,6 @@ RUN go test -c -o /tmp/fixtures.test ./driver/fixtures/
 #=======================
 FROM openjdk:8-jre-alpine
 
-RUN apk add gradle
 
 
 LABEL maintainer="source{d}" \

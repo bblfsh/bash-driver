@@ -7,8 +7,6 @@ native:
   static:
       - path: src/main/sh/native.sh
         dest: native
-  deps:
-      - 'apk add gradle'
   build:
     image: 'openjdk:8-slim'
     deps:
@@ -19,6 +17,7 @@ native:
     artifacts:
       - path: '/native/build/libs/native-jar-with-dependencies.jar'
   test:
+    image: 'openjdk:8-jre-alpine'
     run:
       # download and use gradle 4.9 since alpine's version is bugged for tests
       - 'wget https://services.gradle.org/distributions/gradle-4.9-bin.zip'
