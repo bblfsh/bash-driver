@@ -488,13 +488,6 @@
       { '@type': "function-def-element",
          '@role': [Unannotated],
          children: [
-            { '@type': "function",
-               '@token': "function",
-               '@role': [Unannotated],
-               children: [],
-               endOffset: 1795,
-               startOffset: 1787,
-            },
             { '@type': "named_symbol",
                '@role': [Unannotated],
                children: [
@@ -1928,13 +1921,6 @@
       { '@type': "function-def-element",
          '@role': [Unannotated],
          children: [
-            { '@type': "function",
-               '@token': "function",
-               '@role': [Unannotated],
-               children: [],
-               endOffset: 3036,
-               startOffset: 3028,
-            },
             { '@type': "named_symbol",
                '@role': [Unannotated],
                children: [
@@ -2132,13 +2118,6 @@
       { '@type': "function-def-element",
          '@role': [Unannotated],
          children: [
-            { '@type': "function",
-               '@token': "function",
-               '@role': [Unannotated],
-               children: [],
-               endOffset: 3142,
-               startOffset: 3134,
-            },
             { '@type': "named_symbol",
                '@role': [Unannotated],
                children: [
@@ -3639,13 +3618,6 @@
       { '@type': "function-def-element",
          '@role': [Unannotated],
          children: [
-            { '@type': "function",
-               '@token': "function",
-               '@role': [Unannotated],
-               children: [],
-               endOffset: 5270,
-               startOffset: 5262,
-            },
             { '@type': "named_symbol",
                '@role': [Unannotated],
                children: [
@@ -5413,13 +5385,6 @@
       { '@type': "function-def-element",
          '@role': [Unannotated],
          children: [
-            { '@type': "function",
-               '@token': "function",
-               '@role': [Unannotated],
-               children: [],
-               endOffset: 6652,
-               startOffset: 6644,
-            },
             { '@type': "named_symbol",
                '@role': [Unannotated],
                children: [

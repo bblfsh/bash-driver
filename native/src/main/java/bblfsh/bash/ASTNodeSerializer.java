@@ -31,7 +31,7 @@ public class ASTNodeSerializer extends StdSerializer<ASTNode> {
         ";", "(", "{", ")", "}", "fi", "fi", "shebang_element",
         "if", "for", "in", "do", "done", "esac", "[_(left_conditional)",
         "]_(right_conditional)", "while", "case", "string_end",
-        "until").collect(Collectors.toCollection(HashSet::new));
+        "until", "function").collect(Collectors.toCollection(HashSet::new));
 
     private final Set<String> ADOPTNEXT = Stream.of("then", "else", "elif")
         .collect(Collectors.toCollection(HashSet::new));

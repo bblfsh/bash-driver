@@ -4,13 +4,6 @@
       { '@type': "function-def-element",
          '@role': [Unannotated],
          children: [
-            { '@type': "function",
-               '@token': "function",
-               '@role': [Unannotated],
-               children: [],
-               endOffset: 8,
-               startOffset: 0,
-            },
             { '@type': "named_symbol",
                '@role': [Unannotated],
                children: [

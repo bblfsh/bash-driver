@@ -60,13 +60,6 @@
       { '@type': "function-def-element",
          '@role': [Unannotated],
          children: [
-            { '@type': "function",
-               '@token': "function",
-               '@role': [Unannotated],
-               children: [],
-               endOffset: 31,
-               startOffset: 23,
-            },
             { '@type': "named_symbol",
                '@role': [Unannotated],
                children: [

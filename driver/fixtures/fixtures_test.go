@@ -23,7 +23,6 @@ var Suite = &fixtures.Suite{
 	},
 	Transforms: normalizer.Transforms,
 	BenchName:  "very_long",
-	// FIXME XXX: add function type when fixed
 	Semantic: fixtures.SemanticConfig{
 		BlacklistTypes: []string{
 			"unevaluated string (STRING2)",
@@ -36,6 +35,7 @@ var Suite = &fixtures.Suite{
 			"assignment_word",
 			"comment",
 			"file reference",
+			"function-def-element",
 		},
 	},
 	Docker: fixtures.DockerConfig{
