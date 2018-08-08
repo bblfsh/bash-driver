@@ -49,26 +49,19 @@ var Normalizers = []Mapping{
 		Obj{
 			"children": Arr(
 				Obj{
-					uast.KeyType: Var("_type1"),
-					"startOffset": Var("_startOffset1"),
-					"endOffset": Var("_endOffset1"),
-					//uast.KeyPos: Var("_pos1"),
+					uast.KeyType: Var("_type_namedsymbol"),
+					uast.KeyPos: Var("_pos_namedsymbol"),
 					"children": Arr(
 						Obj{
-							uast.KeyType: Var("_type3"),
-							uast.KeyToken: Var("name"),
-							"startOffset": Var("_startOffset3"),
-							"endOffset": Var("_endOffset3"),
-							//uast.KeyPos: Var("_pos2"),
-							"children": Var("_children"),
+							uast.KeyType: Var("_type_identifier"),
+							uast.KeyPos: Var("_pos_identifier"),
+							"Name": Var("name"),
 						},
 					),
 				},
 				Obj{
-					uast.KeyType: Var("_type2"),
-					"startOffset": Var("_startOffset2"),
-					"endOffset": Var("_endOffset2"),
-					//uast.KeyPos: Var("_pos3"),
+					uast.KeyType: Var("_type_groupelem"),
+					uast.KeyPos: Var("_pos_groupelem"),
 					"children": Var("body"),
 				},
 			),
@@ -81,8 +74,6 @@ var Normalizers = []Mapping{
 					}),
 					"Node": UASTType(uast.Function{}, Obj{
 						"Type": UASTType(uast.FunctionType{}, Obj{
-							//"Arguments": Var("args"),
-							"Arguments": nil,
 						}),
 						"Body": UASTType(uast.Block{}, Obj{
 							"Statements": Var("body"),
