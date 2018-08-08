@@ -96,7 +96,7 @@ var Normalizers = []Mapping{
 
 	MapSemantic("comment", uast.Comment{}, MapObj(
 		Obj{
-			uast.KeyToken: CommentText([2]string{}, "comm"),
+			uast.KeyToken: CommentText([2]string{"#", "\n"}, "comm"),
 		},
 		CommentNode(false, "comm", nil),
 	)),

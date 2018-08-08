@@ -6,7 +6,8 @@ import (
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
 	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
 
-	)
+	"strings"
+)
 
 var Native = Transformers([][]Transformer{
 	{Mappings(Annotations...)},
@@ -24,9 +25,29 @@ func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
 		}, roles...)
 }
 
+func uncomment_bash(s string) (string, error) {
+	if strings.HasPrefix(s, "#") {
+		s = s[1:]
+	}
+	return s, nil
+}
+
+func comment_bash(s string) (string, error) {
+	return "#" + s, nil
+}
+
+func UncommentBashLike(vr string) Op {
+	return StringConv(Var(vr), uncomment_bash, comment_bash)
+}
+
+
 var Annotations = []Mapping{
 	AnnotateType("FILE", nil, role.File),
-	AnnotateType("Comment", nil, role.Comment, role.Noop),
+	AnnotateType("Comment", MapObj(Obj{
+		uast.KeyToken: UncommentBashLike("text"),
+	}, Obj{
+		uast.KeyToken: Var("text"),
+	}), role.Comment, role.Noop),
 	AnnotateType("int_literal", nil, role.Number, role.Literal, role.Primitive),
 	AnnotateType("unevaluated_string2", nil, role.Expression, role.String, role.Literal),
 	AnnotateType("string_content", nil, role.Expression, role.String, role.Literal),
