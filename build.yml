@@ -1,0 +1,21 @@
+sdk: '2'
+language: bash
+go-runtime:
+  version: '1.10-alpine'
+native:
+  image: 'openjdk:8-jre-alpine'
+  static:
+      - path: src/main/sh/native.sh
+        dest: native
+  build:
+    image: 'openjdk:8-slim'
+    deps:
+      - 'apt-get update && apt-get install -y make bash wget gradle'
+    run:
+      - 'make'
+      - 'gradle shadowJar'
+    artifacts:
+      - path: '/native/build/libs/native-jar-with-dependencies.jar'
+  test:
+    run:
+        - 'gradle test --info --stacktrace'

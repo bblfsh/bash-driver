@@ -46,16 +46,15 @@ public class ResponseWriterTest {
         final ByteArrayOutputStream out = new ByteArrayOutputStream();
         final ObjectMapper mapper = Registry.objectMapper();
         final ResponseWriter writer = new ResponseWriter(out, mapper);
-        final Parser parser = new Parser();
 
         Response response = new Response();
         response.status = "ok";
-        response.ast = parser.parse(source);
+        response.ast = Parser.parse(source);
 
         writer.write(response);
 
         final String obtained = out.toString(StandardCharsets.UTF_8.name());
+        System.out.println(obtained);
         assertThat(obtained).isEqualTo(expected);
     }
-
 }

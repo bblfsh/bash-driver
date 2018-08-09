@@ -4,3 +4,5 @@ build
 native/.gradle
 native/build
 native/vendor
+vendor/
+fixtures/*_got
