@@ -18,8 +18,4 @@ native:
       - path: '/native/build/libs/native-jar-with-dependencies.jar'
   test:
     run:
-      # download and use gradle 4.9 since alpine's version is bugged for tests
-      - 'wget https://services.gradle.org/distributions/gradle-4.9-bin.zip'
-      - 'unzip -o gradle-4.9-bin.zip'
-      - 'gradle-4.9/bin/gradle test --info --stacktrace'
-      - 'rm -rf gradle-4.9*'
+        - 'gradle test --info --stacktrace'
