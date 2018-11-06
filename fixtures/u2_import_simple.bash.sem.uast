@@ -1,4 +1,4 @@
-{ '@type': "FILE",
+{ '@type': "bash:FILE",
    '@role': [File],
    '@pos': { '@type': "uast:Positions",
       start: { '@type': "uast:Position",
@@ -13,7 +13,7 @@
       },
    },
    children: [
-      { '@type': "include-command",
+      { '@type': "bash:include-command",
          '@role': [Import, Statement],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -28,7 +28,7 @@
             },
          },
          children: [
-            { '@type': "file_ref",
+            { '@type': "bash:file_ref",
                '@token': "\"a\"",
                '@role': [Identifier, Import, Pathname],
                '@pos': { '@type': "uast:Positions",
@@ -64,7 +64,7 @@
             },
          ],
       },
-      { '@type': "include-command",
+      { '@type': "bash:include-command",
          '@role': [Import, Statement],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -79,7 +79,7 @@
             },
          },
          children: [
-            { '@type': "file_ref",
+            { '@type': "bash:file_ref",
                '@token': "\"b\"",
                '@role': [Identifier, Import, Pathname],
                '@pos': { '@type': "uast:Positions",

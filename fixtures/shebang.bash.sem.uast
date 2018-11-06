@@ -1,4 +1,4 @@
-{ '@type': "FILE",
+{ '@type': "bash:FILE",
    '@role': [File],
    '@pos': { '@type': "uast:Positions",
       start: { '@type': "uast:Position",

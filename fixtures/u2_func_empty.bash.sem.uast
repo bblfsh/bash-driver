@@ -1,4 +1,4 @@
-{ '@type': "FILE",
+{ '@type': "bash:FILE",
    '@role': [File],
    '@pos': { '@type': "uast:Positions",
       start: { '@type': "uast:Position",
@@ -34,7 +34,7 @@
                Node: { '@type': "uast:Function",
                   Body: { '@type': "uast:Block",
                      Statements: [
-                        { '@type': "simple-command",
+                        { '@type': "bash:simple-command",
                            '@role': [Expression],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -49,7 +49,7 @@
                               },
                            },
                            children: [
-                              { '@type': "generic_bash_command",
+                              { '@type': "bash:generic_bash_command",
                                  '@role': [Expression, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
@@ -64,7 +64,7 @@
                                     },
                                  },
                                  children: [
-                                    { '@type': "combined_word",
+                                    { '@type': "bash:combined_word",
                                        '@role': [Expression, Identifier, Incomplete],
                                        '@pos': { '@type': "uast:Positions",
                                           start: { '@type': "uast:Position",
@@ -131,7 +131,7 @@
                Node: { '@type': "uast:Function",
                   Body: { '@type': "uast:Block",
                      Statements: [
-                        { '@type': "simple-command",
+                        { '@type': "bash:simple-command",
                            '@role': [Expression],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -146,7 +146,7 @@
                               },
                            },
                            children: [
-                              { '@type': "generic_bash_command",
+                              { '@type': "bash:generic_bash_command",
                                  '@role': [Expression, Incomplete],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
@@ -161,7 +161,7 @@
                                     },
                                  },
                                  children: [
-                                    { '@type': "combined_word",
+                                    { '@type': "bash:combined_word",
                                        '@role': [Expression, Identifier, Incomplete],
                                        '@pos': { '@type': "uast:Positions",
                                           start: { '@type': "uast:Position",
