@@ -1,6 +1,8 @@
 package bblfsh.bash;
 
 import java.io.IOException;
+import java.io.StringWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Driver {
@@ -19,13 +21,23 @@ public class Driver {
         }
     }
 
+    private void printStdError(Throwable ex) {
+        StringWriter outError = new StringWriter();
+        ex.printStackTrace(new PrintWriter(outError));
+        String errorString = outError.toString();
+        System.err.println(errorString);
+    }
+
     public void processOne() throws DriverException, CloseException {
         Request request;
         try {
             request = this.reader.read();
-        } catch (CloseException ex) {
-            throw ex;
+            final Response response = this.processRequest(request);
+            this.writer.write(response);
         } catch (Exception ex) {
+            // Show the error on stderr too to help with debugging
+            printStdError(ex);
+
             final Response response = createFatalResponse(ex);
             try {
                 this.writer.write(response);
@@ -34,13 +46,6 @@ public class Driver {
             }
 
             return;
-        }
-
-        final Response response = this.processRequest(request);
-        try {
-            this.writer.write(response);
-        } catch (IOException ex) {
-            throw new DriverException("exception writing response", ex);
         }
     }
 
