@@ -1,4 +1,6 @@
 #!/bin/sh
+# NOTE: disabled because it causes a NPE on a call to root.getChildren() with a non
+# null root, reported at: https://github.com/BashSupport/BashSupport/issues/643
 accumulator() {
 	# Define a global function named $1
 	# with a global variable named ${1}_sum.
