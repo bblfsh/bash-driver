@@ -17,7 +17,7 @@ dependencies {
     compile fileTree(dir: 'vendor/idea-IU-171.4694.73/lib', include: ['*.jar'])
     compile group: 'com.github.jansorg', name: 'BashSupport', version: '1c92743a01'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.6'
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile group: 'org.easytesting', name: 'fest-assert', version: '1.4'
     testCompile group: 'commons-io', name: 'commons-io', version: '2.5'
