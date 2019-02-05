@@ -5,8 +5,6 @@ import (
 	"gopkg.in/bblfsh/sdk.v2/uast/role"
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
 	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
-
-	"strings"
 )
 
 var Native = Transformers([][]Transformer{
@@ -18,6 +16,8 @@ var Code = []CodeTransformer{
 	positioner.NewFillLineColFromOffset(),
 }
 
+var PreprocessCode = []CodeTransformer{}
+
 func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
 	return AnnotateType(typ,
 		FieldRoles{
@@ -25,26 +25,10 @@ func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
 		}, roles...)
 }
 
-func uncomment_bash(s string) (string, error) {
-	if strings.HasPrefix(s, "#") {
-		s = s[1:]
-	}
-	return s, nil
-}
-
-func comment_bash(s string) (string, error) {
-	return "#" + s, nil
-}
-
-func UncommentBashLike(vr string) Op {
-	return StringConv(Var(vr), uncomment_bash, comment_bash)
-}
-
-
 var Annotations = []Mapping{
 	AnnotateType("FILE", nil, role.File),
 	AnnotateType("Comment", MapObj(Obj{
-		uast.KeyToken: UncommentBashLike("text"),
+		uast.KeyToken: Var("text"),
 	}, Obj{
 		uast.KeyToken: Var("text"),
 	}), role.Comment, role.Noop),
@@ -253,5 +237,4 @@ var Annotations = []Mapping{
 			ObjectRoles("condition", role.While, role.Expression, role.Condition),
 			ObjectRoles("body", role.While, role.Body, role.Block)),
 	}), role.While, role.Statement),
-
 }

@@ -94,9 +94,10 @@ var Normalizers = []Mapping{
 	mapIdentifier("variable"),
 	mapIdentifier("assignment_word"),
 
-	MapSemantic("comment", uast.Comment{}, MapObj(
+	MapSemantic("Comment", uast.Comment{}, MapObj(
 		Obj{
-			uast.KeyToken: CommentText([2]string{"#", "\n"}, "comm"),
+			uast.KeyToken: CommentText([2]string{"#", ""}, "comm"),
+			"children": Arr(),
 		},
 		CommentNode(false, "comm", nil),
 	)),
