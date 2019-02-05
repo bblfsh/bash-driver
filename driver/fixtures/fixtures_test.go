@@ -33,7 +33,7 @@ var Suite = &fixtures.Suite{
 			"word",
 			"variable",
 			"assignment_word",
-			"comment",
+			"Comment",
 			"file reference",
 			"function-def-element",
 		},
