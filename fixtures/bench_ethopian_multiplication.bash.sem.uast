@@ -1830,7 +1830,7 @@
          ],
       },
       { '@type': "bash:Comment",
-         '@token': " => 578",
+         '@token': "# => 578",
          '@role': [Comment, Noop],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",

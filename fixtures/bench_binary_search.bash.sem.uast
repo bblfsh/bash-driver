@@ -910,7 +910,7 @@
          children: [],
       },
       { '@type': "bash:Comment",
-         '@token': "\techo \"$left\t$mid(${array[$mid]})\t$right\"",
+         '@token': "#\techo \"$left\t$mid(${array[$mid]})\t$right\"",
          '@role': [Comment, Noop],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",

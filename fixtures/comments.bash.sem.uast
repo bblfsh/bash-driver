@@ -14,7 +14,7 @@
    },
    children: [
       { '@type': "bash:Comment",
-         '@token': " comment 1",
+         '@token': "# comment 1",
          '@role': [Comment, Noop],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -199,7 +199,7 @@
          ],
       },
       { '@type': "bash:Comment",
-         '@token': " comment 2",
+         '@token': "# comment 2",
          '@role': [Comment, Noop],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
