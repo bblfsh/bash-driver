@@ -1,15 +1,11 @@
 { '@type': "FILE",
-   '@role': [Unannotated],
    children: [
       { '@type': "function-def-element",
-         '@role': [Unannotated],
          children: [
             { '@type': "named_symbol",
-               '@role': [Unannotated],
                children: [
                   { '@type': "word",
                      '@token': "testfnc1",
-                     '@role': [Unannotated],
                      children: [],
                      endOffset: 8,
                      startOffset: 0,
@@ -19,23 +15,17 @@
                startOffset: 0,
             },
             { '@type': "group_element",
-               '@role': [Unannotated],
                children: [
                   { '@type': "simple-command",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "generic_bash_command",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "combined_word",
-                                 '@role': [Unannotated],
                                  children: [
                                     { '@type': "var-use-element",
-                                       '@role': [Unannotated],
                                        children: [
                                           { '@type': "variable",
                                              '@token': "$2",
-                                             '@role': [Unannotated],
                                              children: [],
                                              endOffset: 19,
                                              startOffset: 17,
@@ -53,11 +43,9 @@
                            startOffset: 17,
                         },
                         { '@type': "combined_word",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "word",
                                  '@token': "=",
-                                 '@role': [Unannotated],
                                  children: [],
                                  endOffset: 21,
                                  startOffset: 20,
@@ -67,14 +55,11 @@
                            startOffset: 20,
                         },
                         { '@type': "combined_word",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "var-use-element",
-                                 '@role': [Unannotated],
                                  children: [
                                     { '@type': "variable",
                                        '@token': "$1",
-                                       '@role': [Unannotated],
                                        children: [],
                                        endOffset: 24,
                                        startOffset: 22,
@@ -92,17 +77,13 @@
                      startOffset: 17,
                   },
                   { '@type': "simple-command",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "generic_bash_command",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "combined_word",
-                                 '@role': [Unannotated],
                                  children: [
                                     { '@type': "word",
                                        '@token': "return",
-                                       '@role': [Unannotated],
                                        children: [],
                                        endOffset: 35,
                                        startOffset: 29,
@@ -116,11 +97,9 @@
                            startOffset: 29,
                         },
                         { '@type': "combined_word",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "int_literal",
                                  '@token': "1",
-                                 '@role': [Unannotated],
                                  children: [],
                                  endOffset: 37,
                                  startOffset: 36,

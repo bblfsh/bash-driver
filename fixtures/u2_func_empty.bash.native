@@ -1,15 +1,11 @@
 { '@type': "FILE",
-   '@role': [Unannotated],
    children: [
       { '@type': "function-def-element",
-         '@role': [Unannotated],
          children: [
             { '@type': "named_symbol",
-               '@role': [Unannotated],
                children: [
                   { '@type': "word",
                      '@token': "testfnc1",
-                     '@role': [Unannotated],
                      children: [],
                      endOffset: 8,
                      startOffset: 0,
@@ -19,20 +15,15 @@
                startOffset: 0,
             },
             { '@type': "group_element",
-               '@role': [Unannotated],
                children: [
                   { '@type': "simple-command",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "generic_bash_command",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "combined_word",
-                                 '@role': [Unannotated],
                                  children: [
                                     { '@type': "word",
                                        '@token': ":",
-                                       '@role': [Unannotated],
                                        children: [],
                                        endOffset: 19,
                                        startOffset: 18,
@@ -58,14 +49,11 @@
          startOffset: 0,
       },
       { '@type': "function-def-element",
-         '@role': [Unannotated],
          children: [
             { '@type': "named_symbol",
-               '@role': [Unannotated],
                children: [
                   { '@type': "word",
                      '@token': "testfnc2",
-                     '@role': [Unannotated],
                      children: [],
                      endOffset: 40,
                      startOffset: 32,
@@ -75,20 +63,15 @@
                startOffset: 32,
             },
             { '@type': "group_element",
-               '@role': [Unannotated],
                children: [
                   { '@type': "simple-command",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "generic_bash_command",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "combined_word",
-                                 '@role': [Unannotated],
                                  children: [
                                     { '@type': "word",
                                        '@token': ":",
-                                       '@role': [Unannotated],
                                        children: [],
                                        endOffset: 49,
                                        startOffset: 48,

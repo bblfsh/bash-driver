@@ -1,15 +1,11 @@
 { '@type': "FILE",
-   '@role': [Unannotated],
    children: [
       { '@type': "function-def-element",
-         '@role': [Unannotated],
          children: [
             { '@type': "named_symbol",
-               '@role': [Unannotated],
                children: [
                   { '@type': "word",
                      '@token': "foo",
-                     '@role': [Unannotated],
                      children: [],
                      endOffset: 12,
                      startOffset: 9,
@@ -19,20 +15,15 @@
                startOffset: 9,
             },
             { '@type': "group_element",
-               '@role': [Unannotated],
                children: [
                   { '@type': "simple-command",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "generic_bash_command",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "combined_word",
-                                 '@role': [Unannotated],
                                  children: [
                                     { '@type': "word",
                                        '@token': "echo",
-                                       '@role': [Unannotated],
                                        children: [],
                                        endOffset: 23,
                                        startOffset: 19,
@@ -47,11 +38,9 @@
                         },
                         { '@type': "string",
                            '@token': "\"bla\"",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "string_content",
                                  '@token': "bla",
-                                 '@role': [Unannotated],
                                  children: [],
                                  endOffset: 28,
                                  startOffset: 25,

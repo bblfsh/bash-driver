@@ -1,15 +1,11 @@
 { '@type': "FILE",
-   '@role': [Unannotated],
    children: [
       { '@type': "for_shellcommand",
-         '@role': [Unannotated],
          children: [
             { '@type': "var-def-element",
-               '@role': [Unannotated],
                children: [
                   { '@type': "word",
                      '@token': "a",
-                     '@role': [Unannotated],
                      children: [],
                      endOffset: 5,
                      startOffset: 4,
@@ -19,11 +15,9 @@
                startOffset: 4,
             },
             { '@type': "combined_word",
-               '@role': [Unannotated],
                children: [
                   { '@type': "word",
                      '@token': "b",
-                     '@role': [Unannotated],
                      children: [],
                      endOffset: 10,
                      startOffset: 9,
@@ -33,20 +27,15 @@
                startOffset: 9,
             },
             { '@type': "logical_block",
-               '@role': [Unannotated],
                children: [
                   { '@type': "simple-command",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "generic_bash_command",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "combined_word",
-                                 '@role': [Unannotated],
                                  children: [
                                     { '@type': "word",
                                        '@token': "continue",
-                                       '@role': [Unannotated],
                                        children: [],
                                        endOffset: 27,
                                        startOffset: 19,
@@ -72,14 +61,11 @@
          startOffset: 0,
       },
       { '@type': "for_shellcommand",
-         '@role': [Unannotated],
          children: [
             { '@type': "var-def-element",
-               '@role': [Unannotated],
                children: [
                   { '@type': "word",
                      '@token': "c",
-                     '@role': [Unannotated],
                      children: [],
                      endOffset: 39,
                      startOffset: 38,
@@ -89,11 +75,9 @@
                startOffset: 38,
             },
             { '@type': "combined_word",
-               '@role': [Unannotated],
                children: [
                   { '@type': "word",
                      '@token': "d",
-                     '@role': [Unannotated],
                      children: [],
                      endOffset: 44,
                      startOffset: 43,
@@ -103,20 +87,15 @@
                startOffset: 43,
             },
             { '@type': "logical_block",
-               '@role': [Unannotated],
                children: [
                   { '@type': "simple-command",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "generic_bash_command",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "combined_word",
-                                 '@role': [Unannotated],
                                  children: [
                                     { '@type': "word",
                                        '@token': "break",
-                                       '@role': [Unannotated],
                                        children: [],
                                        endOffset: 58,
                                        startOffset: 53,

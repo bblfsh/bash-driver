@@ -1,21 +1,15 @@
 { '@type': "FILE",
-   '@role': [Unannotated],
    children: [
       { '@type': "simple-command",
-         '@role': [Unannotated],
          children: [
             { '@type': "generic_bash_command",
-               '@role': [Unannotated],
                children: [
                   { '@type': "combined_word",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "var-use-element",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "variable",
                                  '@token': "$A",
-                                 '@role': [Unannotated],
                                  children: [],
                                  endOffset: 2,
                                  startOffset: 0,
@@ -37,35 +31,27 @@
          startOffset: 0,
       },
       { '@type': "simple-command",
-         '@role': [Unannotated],
          children: [
             { '@type': "generic_bash_command",
-               '@role': [Unannotated],
                children: [
                   { '@type': "combined_word",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "composed_variable",
                            '@token': "${B}",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "DOLLAR",
                                  '@token': "$",
-                                 '@role': [Unannotated],
                                  children: [],
                                  endOffset: 4,
                                  startOffset: 3,
                               },
                               { '@type': "var_substitution",
                                  '@token': "{B}",
-                                 '@role': [Unannotated],
                                  children: [
                                     { '@type': "var-use-element",
-                                       '@role': [Unannotated],
                                        children: [
                                           { '@type': "word",
                                              '@token': "B",
-                                             '@role': [Unannotated],
                                              children: [],
                                              endOffset: 6,
                                              startOffset: 5,
@@ -95,21 +81,16 @@
          startOffset: 3,
       },
       { '@type': "simple-command",
-         '@role': [Unannotated],
          children: [
             { '@type': "generic_bash_command",
-               '@role': [Unannotated],
                children: [
                   { '@type': "string",
                      '@token': "\"$C\"",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "var-use-element",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "variable",
                                  '@token': "$C",
-                                 '@role': [Unannotated],
                                  children: [],
                                  endOffset: 11,
                                  startOffset: 9,
@@ -131,36 +112,28 @@
          startOffset: 8,
       },
       { '@type': "simple-command",
-         '@role': [Unannotated],
          children: [
             { '@type': "generic_bash_command",
-               '@role': [Unannotated],
                children: [
                   { '@type': "string",
                      '@token': "\"${D}\"",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "composed_variable",
                            '@token': "${D}",
-                           '@role': [Unannotated],
                            children: [
                               { '@type': "DOLLAR",
                                  '@token': "$",
-                                 '@role': [Unannotated],
                                  children: [],
                                  endOffset: 15,
                                  startOffset: 14,
                               },
                               { '@type': "var_substitution",
                                  '@token': "{D}",
-                                 '@role': [Unannotated],
                                  children: [
                                     { '@type': "var-use-element",
-                                       '@role': [Unannotated],
                                        children: [
                                           { '@type': "word",
                                              '@token': "D",
-                                             '@role': [Unannotated],
                                              children: [],
                                              endOffset: 17,
                                              startOffset: 16,
