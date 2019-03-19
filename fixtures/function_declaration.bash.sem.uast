@@ -112,7 +112,7 @@
                                     },
                                  },
                                  Format: "",
-                                 Value: "\"bla\"",
+                                 Value: "bla",
                               },
                            ],
                         },

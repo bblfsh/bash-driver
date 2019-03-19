@@ -1,20 +1,15 @@
 { '@type': "FILE",
-   '@role': [Unannotated],
    children: [
       { '@type': "include-command",
-         '@role': [Unannotated],
          children: [
             { '@type': "file_ref",
                '@token': "\"a\"",
-               '@role': [Unannotated],
                children: [
                   { '@type': "string",
                      '@token': "\"a\"",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "string_content",
                            '@token': "a",
-                           '@role': [Unannotated],
                            children: [],
                            endOffset: 9,
                            startOffset: 8,
@@ -32,19 +27,15 @@
          startOffset: 0,
       },
       { '@type': "include-command",
-         '@role': [Unannotated],
          children: [
             { '@type': "file_ref",
                '@token': "\"b\"",
-               '@role': [Unannotated],
                children: [
                   { '@type': "string",
                      '@token': "\"b\"",
-                     '@role': [Unannotated],
                      children: [
                         { '@type': "string_content",
                            '@token': "b",
-                           '@role': [Unannotated],
                            children: [],
                            endOffset: 20,
                            startOffset: 19,

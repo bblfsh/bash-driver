@@ -1,5 +1,4 @@
 { '@type': "FILE",
-   '@role': [Unannotated],
    children: [],
    endOffset: 12,
    startOffset: 0,

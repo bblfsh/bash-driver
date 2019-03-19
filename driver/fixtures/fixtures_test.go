@@ -25,21 +25,16 @@ var Suite = &fixtures.Suite{
 	BenchName:  "very_long",
 	Semantic: fixtures.SemanticConfig{
 		BlacklistTypes: []string{
-			"unevaluated string (STRING2)",
-			"string",
-			"string content",
-			"backquote shellcommand",
-			"File reference",
+			"unevaluated_string2",
+			"string_content",
+			"File_reference",
 			"word",
 			"variable",
 			"assignment_word",
 			"Comment",
-			"file reference",
+			"file_reference",
 			"function-def-element",
 		},
-	},
-	Docker: fixtures.DockerConfig{
-		Image: "bash:latest",
 	},
 }
 
