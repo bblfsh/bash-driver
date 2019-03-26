@@ -10,5 +10,5 @@ bash driver for [babelfish](https://github.com/bblfsh/bblfshd).
 
 [runtime]
 os = "alpine"
-go_version = "1.9"
+go_version = "1.11"
 native_version = ["8.131.11-r2"]
