@@ -1,22 +1,15 @@
 package normalizer
 
 import (
-	"gopkg.in/bblfsh/sdk.v2/uast"
-	"gopkg.in/bblfsh/sdk.v2/uast/role"
-	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
-	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
+	"github.com/bblfsh/sdk/v3/uast"
+	"github.com/bblfsh/sdk/v3/uast/role"
+	. "github.com/bblfsh/sdk/v3/uast/transformer"
 )
 
 var Native = Transformers([][]Transformer{
 	{Mappings(Annotations...)},
 	{RolesDedup()},
 }...)
-
-var Code = []CodeTransformer{
-	positioner.NewFillLineColFromOffset(),
-}
-
-var PreprocessCode = []CodeTransformer{}
 
 func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
 	return AnnotateType(typ,
