@@ -1,8 +1,9 @@
 package normalizer
 
 import (
-	"gopkg.in/bblfsh/sdk.v2/uast"
-	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
+	"github.com/bblfsh/sdk/v3/uast"
+	. "github.com/bblfsh/sdk/v3/uast/transformer"
+	"github.com/bblfsh/sdk/v3/uast/transformer/positioner"
 )
 
 var Preprocess = Transformers([][]Transformer{
@@ -13,6 +14,10 @@ var Preprocess = Transformers([][]Transformer{
 	},
 	{Mappings(Preprocessors...)},
 }...)
+
+var PreprocessCode = []CodeTransformer{
+	positioner.FromOffset(),
+}
 
 var Normalize = Transformers([][]Transformer{
 	{Mappings(Normalizers...)},
