@@ -1,4 +1,4 @@
-# Bash driver for [Babelfish](https://github.com/bblfsh/bblfshd) ![Driver Status](https://img.shields.io/badge/status-beta-dbd25c.svg) [![Build Status](https://travis-ci.org/bblfsh/bash-driver.svg?branch=master)](https://travis-ci.org/bblfsh/bash-driver) ![Native Version](https://img.shields.io/badge/bash%20version-8.131.11--r2-aa93ea.svg) ![Go Version](https://img.shields.io/badge/go%20version-1.12-63afbf.svg)
+# Bash driver for [Babelfish](https://github.com/bblfsh/bblfshd) ![Driver Status](https://img.shields.io/badge/status-beta-dbd25c.svg) [![Build Status](https://travis-ci.org/bblfsh/bash-driver.svg?branch=master)](https://travis-ci.org/bblfsh/bash-driver) ![Native Version](https://img.shields.io/badge/bash%20version-8-aa93ea.svg) ![Go Version](https://img.shields.io/badge/go%20version-1.12-63afbf.svg)
 
 bash driver for [babelfish](https://github.com/bblfsh/bblfshd).
 

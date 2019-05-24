@@ -1,5 +1,6 @@
 name = "Bash"
 language = "bash"
+aliases = ["shell"]
 status = "beta"
 features = ["ast","uast","roles"]
 
@@ -7,8 +8,3 @@ features = ["ast","uast","roles"]
 description  = """
 bash driver for [babelfish](https://github.com/bblfsh/bblfshd).
 """
-
-[runtime]
-os = "alpine"
-go_version = "1.12"
-native_version = ["8.131.11-r2"]
