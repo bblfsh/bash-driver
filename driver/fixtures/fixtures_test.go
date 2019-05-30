@@ -9,6 +9,7 @@ import (
 	"github.com/bblfsh/sdk/v3/driver"
 	"github.com/bblfsh/sdk/v3/driver/fixtures"
 	"github.com/bblfsh/sdk/v3/driver/native"
+	"github.com/bblfsh/sdk/v3/uast/transformer/positioner"
 )
 
 const projectRoot = "../../"
@@ -35,6 +36,11 @@ var Suite = &fixtures.Suite{
 			"file_reference",
 			"function-def-element",
 		},
+	},
+	VerifyTokens: []positioner.VerifyToken{
+		{Types: []string{
+			"string",
+		}},
 	},
 }
 
