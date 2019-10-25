@@ -38,7 +38,7 @@ RUN gradle test --info --stacktrace
 #=================================
 # Stage 2: Go Driver Server Build
 #=================================
-FROM golang:1.12-alpine as driver
+FROM golang:1.13-alpine as driver
 
 ENV DRIVER_REPO=github.com/bblfsh/bash-driver
 ENV DRIVER_REPO_PATH=/go/src/$DRIVER_REPO
